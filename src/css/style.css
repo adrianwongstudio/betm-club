@@ -185,7 +185,13 @@ button { font: inherit; cursor: pointer; }
   color: var(--nav-rest);
 }
 .nav-gala__trigger:hover { color: var(--rich-maroon); }
-.nav-gala__caret { font-size: 8px; line-height: 1; }
+.nav-gala__caret {
+  font-size: 13px;
+  line-height: 1;
+  display: inline-block;
+  transition: transform 180ms ease;
+}
+.nav-gala[data-open="true"] .nav-gala__caret { transform: rotate(180deg); }
 .nav-gala__panel {
   position: absolute;
   top: 100%;
@@ -196,6 +202,7 @@ button { font: inherit; cursor: pointer; }
 }
 .nav-gala[data-open="true"] .nav-gala__panel { display: block; }
 .nav-gala__inner {
+  display: block;
   background: var(--white);
   border: 1px solid rgba(169, 178, 177, 0.6);
   border-top: 3px solid var(--rich-maroon);
