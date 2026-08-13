@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "betm-website",
+  "compatibility_date": "2025-08-13",
+  // Serve the Eleventy build output as static assets.
+  // No Worker script needed — assets alone is enough for a fully static site.
+  "assets": {
+    "directory": "./_site",
+    "not_found_handling": "404-page"
+  }
+}

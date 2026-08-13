@@ -1,0 +1,25 @@
+---
+layout: layout.njk
+title: Page not found
+description: The page you're looking for isn't here.
+permalink: /404.html
+eleventyExcludeFromCollections: true
+---
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow eyebrow--yellow">404</div>
+    <h1>This page didn't turn up.</h1>
+    <p class="page-hero__intro">The link may be old, or the page moved. Try one of these instead:</p>
+  </div>
+</section>
+
+<section class="section section--white">
+  <div class="wrap">
+    <ul class="roles-list">
+      <li class="roles-list__item"><h3 class="roles-list__name"><a href="{{ '/' | url }}">Home</a></h3><p class="roles-list__body">Back to the front page.</p></li>
+      <li class="roles-list__item"><h3 class="roles-list__name"><a href="{{ '/attend/' | url }}">Attend a Meeting</a></h3><p class="roles-list__body">Tell us you're coming to a Wednesday meeting.</p></li>
+      <li class="roles-list__item"><h3 class="roles-list__name"><a href="{{ '/blog/' | url }}">Blog</a></h3><p class="roles-list__body">Notes on speaking, leadership, and the club.</p></li>
+    </ul>
+  </div>
+</section>
