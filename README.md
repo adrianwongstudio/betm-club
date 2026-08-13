@@ -66,6 +66,6 @@ Colors, typography, and spacing follow the Toastmasters International brand and 
 ## To do before launch
 - Replace all image placeholders (hero slideshow, member cards, gallery, map) with real photography.
 - Confirm the About paragraph typo (`tor` → `for`) with the club and correct in `src/_data/home.json`.
-- Confirm `hello@burnabyentrepreneurs.org`, District number, and venue details in `src/_data/site.json`.
+- Confirm the contact email, District number, and venue details in `src/_data/site.json`.
 - Wire the guest form to a real endpoint: set `data-endpoint="…"` on the form (or add a server-side handler); today it falls back to a `mailto:` compose window with the guest details.
 - Add a Google Maps embed URL to `map_embed_url` in `site.json`, or upload a static map image.
