@@ -83,13 +83,13 @@ button { font: inherit; cursor: pointer; }
 
 .eyebrow {
   font-family: var(--mono);
-  font-size: 11.5px;
-  letter-spacing: 0.2em;
+  font-size: 15px;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--rich-maroon);
 }
-.eyebrow--yellow { color: var(--happy-yellow); font-size: 12px; }
-.eyebrow--small { font-size: 10.5px; }
+.eyebrow--yellow { color: var(--happy-yellow); font-size: 15px; }
+.eyebrow--small { font-size: 13px; }
 
 /* ==========================================================================
    Header
@@ -441,8 +441,8 @@ button { font: inherit; cursor: pointer; }
 }
 .info-cell__label {
   font-family: var(--mono);
-  font-size: 10.5px;
-  letter-spacing: 0.2em;
+  font-size: 13px;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--happy-yellow);
 }
@@ -572,7 +572,7 @@ button { font: inherit; cursor: pointer; }
   gap: 14px;
   flex: 1;
 }
-.card__eyebrow { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rich-maroon); }
+.card__eyebrow { font-family: var(--mono); font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--rich-maroon); }
 .card__title {
   font-family: var(--sans);
   font-size: 22px;
@@ -697,8 +697,8 @@ button { font: inherit; cursor: pointer; }
 .blog-card:hover { background: rgba(255, 255, 255, 0.11); border-color: var(--happy-yellow); color: var(--white); }
 .blog-card__category {
   font-family: var(--mono);
-  font-size: 10.5px;
-  letter-spacing: 0.2em;
+  font-size: 13px;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--happy-yellow);
 }
