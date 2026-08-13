@@ -1,0 +1,13 @@
+---
+layout: layout.njk
+title: Gallery
+description: A Wednesday night at Burnaby Entrepreneurs Toastmasters, in pictures.
+permalink: /gallery/
+---
+
+{% set ph = gallery.page_hero %}
+{% include "sections/page-hero.njk" %}
+
+{# Render the full gallery cell list on this page. #}
+{% set gl_cells = gallery.cells %}
+{% include "sections/gallery.njk" %}

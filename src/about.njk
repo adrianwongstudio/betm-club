@@ -1,0 +1,23 @@
+---
+layout: layout.njk
+title: About the Club
+description: Established March 1, 2016, the Burnaby Entrepreneurs Toastmasters Club is a supportive community in Metrotown, Burnaby BC.
+permalink: /about/
+---
+
+{% set ph = about.page_hero %}
+{% include "sections/page-hero.njk" %}
+{% include "sections/about.njk" %}
+
+{% if about.extras and about.extras.length %}
+<section class="section section--alt">
+  <div class="wrap page-body">
+    {% for block in about.extras %}
+      <div class="page-body__block">
+        <h2 class="section-h2" style="font-size: 28px;">{{ block.heading }}</h2>
+        <p>{{ block.body }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}

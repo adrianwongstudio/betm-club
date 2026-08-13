@@ -19,11 +19,17 @@ npm run build    # outputs to _site/
 
 1. Push this repo to GitHub.
 2. Sign in at [app.pagescms.org](https://app.pagescms.org) with GitHub and add the repo.
-3. The `.pages.yml` at the root drives the CMS UI. Editors can update:
+3. The `.pages.yml` at the root drives the CMS UI. Editors can update, each as its own item in the CMS sidebar:
    - **Site settings** — club name, email, meeting time, map embed, logo.
-   - **Homepage** — every field on the front page, including hero copy, hero slideshow images, About text, Members cards, Gala past-events, Gallery tiles, Attend section.
-   - **Blog posts** — a full collection with title, date, category, excerpt, featured image, and rich-text body. Saved to `src/posts/*.md`.
-4. Saving in PagesCMS commits to `main`; the host rebuilds automatically.
+   - **Home — hero band** — hero copy, slideshow, stat bar.
+   - **About page** — `/about/`
+   - **Members page** — `/members/` (cards + meeting-roles list)
+   - **Gallery page** — `/gallery/` (separate lists for homepage preview and full page)
+   - **Gala page** — `/gala/` (past events also drive the header Gala menu)
+   - **Attend page** — `/attend/` (guest form, map, "what to expect" steps)
+   - **Blog posts** — collection at `/blog/`, saved to `src/posts/*.md`.
+4. Every page's section content also appears as a preview on the homepage. Editing About/Members/Gala/Gallery/Attend updates both the page and the homepage preview.
+5. Saving in PagesCMS commits to `main`; the host rebuilds automatically.
 
 The design philosophy mirrors the admin setup on the ak-wong-made / shaolin-hung-gar-kung-fu sites: content lives in the repo as data files, editors work in a friendly UI, deploys are just git pushes.
 
@@ -31,14 +37,24 @@ The design philosophy mirrors the admin setup on the ak-wong-made / shaolin-hung
 
 ```
 src/
-  _data/         site.json, home.json  (edited via PagesCMS)
-  _includes/     layout.njk, post.njk
+  _data/         site.json, hero.json, about.json, members.json,
+                 gallery.json, gala.json, attend.json (all edited via PagesCMS)
+  _includes/
+    layout.njk           shared header/footer/nav
+    post.njk             blog post layout
+    sections/            reusable section partials — used by both the
+                         homepage and each full page so they stay in sync
   css/style.css
   js/site.js
-  images/        toastmasters-logo.png + all uploaded photos
+  images/        toastmasters-logo.png + uploaded photos
   posts/         *.md blog posts (edited via PagesCMS)
-  index.njk      homepage — nine bands per the design handoff
-  blog.njk       /blog/ listing
+  index.njk      homepage — hero + previews of every page
+  about.njk      /about/
+  members.njk    /members/
+  gallery.njk    /gallery/
+  gala.njk       /gala/
+  attend.njk     /attend/
+  blog.njk       /blog/
 .pages.yml       PagesCMS schema
 .eleventy.js     Eleventy config
 ```

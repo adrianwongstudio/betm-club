@@ -38,28 +38,28 @@
 
       <nav class="nav" id="primary-nav" aria-label="Primary">
         <a href="{{ '/' | url }}" class="{{ 'active' if page.url == '/' }}">Home</a>
-        <a href="{{ '/#members' | url }}">Members</a>
-        <a href="{{ '/#gallery' | url }}">Gallery</a>
+        <a href="{{ '/members/' | url }}" class="{{ 'active' if '/members/' in page.url }}">Members</a>
+        <a href="{{ '/gallery/' | url }}" class="{{ 'active' if '/gallery/' in page.url }}">Gallery</a>
         <a href="{{ '/blog/' | url }}" class="{{ 'active' if '/blog/' in page.url }}">Blog</a>
 
-        <span class="nav-gala" data-nav-gala>
-          <button type="button" class="nav-gala__trigger" aria-expanded="false" aria-haspopup="true" aria-controls="nav-gala-panel">
+        <span class="nav-gala {{ 'is-current' if '/gala/' in page.url }}" data-nav-gala>
+          <button type="button" class="nav-gala__trigger {{ 'active' if '/gala/' in page.url }}" aria-expanded="false" aria-haspopup="true" aria-controls="nav-gala-panel">
             Gala <span class="nav-gala__caret" aria-hidden="true">▾</span>
           </button>
           <span id="nav-gala-panel" class="nav-gala__panel" role="menu">
             <span class="nav-gala__inner">
-              <a href="{{ '/#gala' | url }}" role="menuitem" class="is-next">Next Gala — registration soon</a>
-              {% for evt in home.gala.past_events | limit(2) %}
-                <a href="{{ evt.href }}" role="menuitem">{{ evt.label }}</a>
+              <a href="{{ '/gala/' | url }}" role="menuitem" class="is-next">{{ 'Register for the Gala' if gala.registration_open else 'Next Gala — registration soon' }}</a>
+              {% for evt in gala.past_events | limit(2) %}
+                <a href="{{ evt.href | url }}" role="menuitem">{{ evt.label }}</a>
               {% endfor %}
             </span>
           </span>
         </span>
 
-        <a href="{{ '/#about' | url }}">About</a>
+        <a href="{{ '/about/' | url }}" class="{{ 'active' if '/about/' in page.url }}">About</a>
       </nav>
 
-      <a href="{{ '/#attend' | url }}" class="header-cta">Attend Meeting</a>
+      <a href="{{ '/attend/' | url }}" class="header-cta">Attend Meeting</a>
     </div>
   </header>
 
@@ -79,12 +79,12 @@
       <div class="footer-col">
         <h4>Quick Links</h4>
         <ul>
-          <li><a href="{{ '/#members' | url }}">Members</a></li>
-          <li><a href="{{ '/#gallery' | url }}">Gallery</a></li>
+          <li><a href="{{ '/members/' | url }}">Members</a></li>
+          <li><a href="{{ '/gallery/' | url }}">Gallery</a></li>
           <li><a href="{{ '/blog/' | url }}">Blog</a></li>
-          <li><a href="{{ '/#gala' | url }}">Gala</a></li>
-          <li><a href="{{ '/#about' | url }}">About</a></li>
-          <li><a href="{{ '/#attend' | url }}">Attend Meeting</a></li>
+          <li><a href="{{ '/gala/' | url }}">Gala</a></li>
+          <li><a href="{{ '/about/' | url }}">About</a></li>
+          <li><a href="{{ '/attend/' | url }}">Attend Meeting</a></li>
         </ul>
       </div>
       <div class="footer-col">

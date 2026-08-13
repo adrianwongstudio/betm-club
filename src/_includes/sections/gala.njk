@@ -1,0 +1,26 @@
+{% set g = gala %}
+<section id="gala" class="section--yellow gala">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow gala__eyebrow">{{ g.eyebrow }}</div>
+      <h2 class="section-h2">{{ g.headline }}</h2>
+      <p class="gala__lead">{{ g.lead }}</p>
+      {% if g.registration_open %}
+        <p class="gala__register"><a href="{{ g.registration_cta.href }}" class="btn btn--maroon">{{ g.registration_cta.label }}</a></p>
+      {% endif %}
+    </div>
+    <div class="years" data-years>
+      <div class="eyebrow years__label">Past events</div>
+      <button type="button" class="years__toggle" aria-expanded="false" aria-controls="years-list" data-years-toggle>
+        <span>Select a year</span>
+        <span class="years__caret" aria-hidden="true" data-years-caret>▼</span>
+      </button>
+      <div class="years__list" id="years-list">
+        {% for evt in g.past_events %}
+          <a href="{{ evt.href | url }}">{{ evt.label }}</a>
+        {% endfor %}
+      </div>
+      <p class="years__note">{{ g.note }}</p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,23 @@
+{% set a = about %}
+<section id="about" class="section section--white about">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">{{ a.eyebrow }}</div>
+      <h2 class="section-h2">{{ a.headline }}</h2>
+      <dl class="about__facts">
+        {% for fact in a.facts %}
+          <div class="about__fact"><span>{{ fact.label }}</span><strong>{{ fact.value }}</strong></div>
+        {% endfor %}
+      </dl>
+    </div>
+    <div>
+      <p class="about__lead">{{ a.lead }}</p>
+      <p class="about__second">{{ a.second }}</p>
+      <div class="about__callout">
+        <div class="eyebrow">{{ a.callout_eyebrow }}</div>
+        <p class="about__callout-lead">{{ a.callout_lead }}</p>
+        <p class="about__callout-sub">{{ a.callout_sub }}</p>
+      </div>
+    </div>
+  </div>
+</section>

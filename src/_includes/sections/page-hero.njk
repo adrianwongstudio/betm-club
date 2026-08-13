@@ -1,0 +1,8 @@
+{# Renders a compact page hero. Expects a local `ph` variable. #}
+<section class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow eyebrow--yellow">{{ ph.eyebrow }}</div>
+    <h1>{{ ph.headline }}</h1>
+    {% if ph.intro %}<p class="page-hero__intro">{{ ph.intro }}</p>{% endif %}
+  </div>
+</section>

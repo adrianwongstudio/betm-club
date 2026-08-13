@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "title": "The Burnaby Entrepreneurs Gala",
+    "description": "Our annual celebration of the year's speeches, awards, and members."
+  },
+  "page_hero": {
+    "eyebrow": "Annual event",
+    "headline": "The Burnaby Entrepreneurs Gala",
+    "intro": "Once a year we put on our best and celebrate the speeches, the awards, and the members behind them."
+  },
+  "eyebrow": "Annual event",
+  "headline": "The Burnaby Entrepreneurs Gala",
+  "lead": "Once a year we put on our best and celebrate the speeches, the awards, and the members behind them. Registration for the next Gala opens later this year — until then, look back at how the last two went.",
+  "past_events": [
+    { "year": 2025, "label": "2025 Gala — recap & photos", "href": "/gala/" },
+    { "year": 2024, "label": "2024 Gala — recap & photos", "href": "/gala/" },
+    { "year": 2023, "label": "2023 Gala — recap & photos", "href": "/gala/" }
+  ],
+  "note": "Next year's registration isn't open yet. Attend a Wednesday meeting and we'll tell you first.",
+  "registration_open": false,
+  "registration_cta": { "label": "Register for the Gala", "href": "#" },
+  "extras": [
+    {
+      "heading": "What to expect",
+      "body": "An evening of prepared speeches, awards for the year's standout speakers, and dinner. Dress code: business formal. Guests welcome."
+    },
+    {
+      "heading": "Awards",
+      "body": "Speaker of the Year, Evaluator of the Year, Rookie of the Year, and the President's Award."
+    }
+  ]
+}

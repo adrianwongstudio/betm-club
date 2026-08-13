@@ -1,0 +1,22 @@
+<section id="blog" class="section section--sm section--dark">
+  <div class="wrap">
+    <div class="section-head blog-head">
+      <h2 class="section-h2">From the Blog</h2>
+      <a href="{{ '/blog/' | url }}" class="text-link">View all articles</a>
+    </div>
+    <div class="blog-cards">
+      {% if collections.posts.length %}
+        {% for post in collections.posts | limit(3) %}
+          <a class="blog-card" href="{{ post.url }}">
+            <span class="blog-card__category">{{ post.data.category or 'Post' }}</span>
+            <span class="blog-card__title">{{ post.data.title }}</span>
+            <span class="blog-card__date">{{ post.data.date | formatDate }}</span>
+            <span class="blog-card__excerpt">{{ post.data.excerpt }}</span>
+          </a>
+        {% endfor %}
+      {% else %}
+        <div class="blog-card"><span class="blog-card__category">Coming soon</span><span class="blog-card__title">Posts are on the way.</span><span class="blog-card__excerpt">Add your first blog post from the CMS.</span></div>
+      {% endif %}
+    </div>
+  </div>
+</section>

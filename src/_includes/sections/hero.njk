@@ -1,0 +1,36 @@
+{% set h = hero %}
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow eyebrow--yellow hero__eyebrow">{{ h.eyebrow }}</div>
+      <h1>{{ h.headline_html | safe }}</h1>
+      <p class="hero__lead">{{ h.lead }}</p>
+      <div class="hero__ctas">
+        <a href="{{ h.primary_cta.href | url }}" class="btn btn--yellow">{{ h.primary_cta.label }}</a>
+        <a href="{{ h.secondary_cta.href | url }}" class="btn btn--ghost">{{ h.secondary_cta.label }}</a>
+      </div>
+    </div>
+
+    <div class="slideshow" data-slideshow data-interval="5000">
+      <div class="slideshow__panel" aria-roledescription="carousel" aria-label="Photos from the club">
+        {% for slide in h.slides %}
+          <div class="slideshow__scene ph" role="group" aria-roledescription="slide" aria-label="{{ loop.index }} of {{ h.slides.length }}: {{ slide.caption }}" data-slide-index="{{ loop.index0 }}" {% if loop.first %}data-active="true"{% endif %}>
+            {% if slide.image %}<img src="{{ slide.image }}" alt="{{ slide.caption }}">{% endif %}
+            <span class="ph__chip">{{ slide.caption }}</span>
+          </div>
+        {% endfor %}
+        <button type="button" class="slideshow__arrow slideshow__arrow--prev" aria-label="Previous scene" data-slide-prev>‹</button>
+        <button type="button" class="slideshow__arrow slideshow__arrow--next" aria-label="Next scene" data-slide-next>›</button>
+      </div>
+      <div class="slideshow__dots" role="tablist" aria-label="Slide indicators">
+        {% for slide in h.slides %}
+          <button type="button" class="slideshow__dot" role="tab" aria-label="Go to slide {{ loop.index }}: {{ slide.caption }}" data-slide-goto="{{ loop.index0 }}" {% if loop.first %}aria-current="true"{% endif %}></button>
+        {% endfor %}
+      </div>
+      <div class="hero__stat">
+        <div class="hero__stat-num">{{ h.stat_number }}</div>
+        <div class="hero__stat-label">{{ h.stat_label }}</div>
+      </div>
+    </div>
+  </div>
+</section>

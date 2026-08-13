@@ -865,6 +865,72 @@ button { font: inherit; cursor: pointer; }
   margin: 12px 0 0;
 }
 .page-hero .eyebrow { color: var(--happy-yellow); font-size: 12px; }
+.page-hero__intro {
+  margin: 20px 0 0;
+  font-size: 19px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 44em;
+}
+
+/* Page body blocks (extras on About/Gala/etc.) */
+.page-body { display: grid; grid-template-columns: repeat(2, 1fr); gap: 48px; }
+.page-body__block h2 { margin: 0 0 12px; }
+.page-body__block p { font-size: 17px; line-height: 1.68; color: var(--secondary-ink); }
+
+/* Roles list (Members page) */
+.roles-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.roles-list__item {
+  border-top: 3px solid var(--rich-maroon);
+  padding: 20px 0 0;
+}
+.roles-list__name {
+  font-family: var(--sans);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--loyal-blue);
+  margin: 0 0 8px;
+}
+.roles-list__body { font-size: 15.5px; line-height: 1.6; color: var(--secondary-ink); margin: 0; }
+
+/* Steps list (Attend page) */
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.steps__item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-top: 3px solid var(--happy-yellow);
+  padding-top: 20px;
+}
+.steps__num {
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: 32px;
+  color: var(--rich-maroon);
+  line-height: 1;
+}
+.steps__step {
+  font-family: var(--sans);
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--loyal-blue);
+  margin: 0 0 6px;
+}
+.steps__body { font-size: 15.5px; line-height: 1.62; color: var(--secondary-ink); margin: 0; }
 
 .post-list {
   display: grid;
@@ -954,6 +1020,10 @@ button { font: inherit; cursor: pointer; }
   .section--yellow { padding: 56px 24px; }
 
   .site-footer__top { grid-template-columns: 1fr; gap: 32px; padding: 48px 24px 20px; }
+
+  .page-body, .roles-list, .steps { grid-template-columns: 1fr; }
+  .page-hero { padding: 64px 24px 40px; }
+  .page-hero h1 { font-size: 36px; }
 }
 
 @media (max-width: 640px) {

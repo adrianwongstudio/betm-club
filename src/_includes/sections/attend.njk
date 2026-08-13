@@ -1,0 +1,65 @@
+{% set at = attend %}
+<section id="attend" class="section section--white attend">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">{{ at.eyebrow }}</div>
+      <h2 class="section-h2">{{ at.headline }}</h2>
+      <p class="attend__lead">{{ at.lead }}</p>
+
+      <form class="guest-form" data-guest-form
+            action="mailto:{{ site.email }}" method="post" enctype="text/plain"
+            {% if at.form_endpoint %}data-endpoint="{{ at.form_endpoint }}"{% endif %}
+            novalidate>
+        <label>
+          <span class="guest-form__label">Your name</span>
+          <input type="text" name="name" placeholder="First and last name" required>
+          <span class="guest-form__error" data-error-for="name">Please share your name.</span>
+        </label>
+        <label>
+          <span class="guest-form__label">Email</span>
+          <input type="email" name="email" placeholder="you@example.com" required>
+          <span class="guest-form__error" data-error-for="email">Please share a valid email address.</span>
+        </label>
+        <label>
+          <span class="guest-form__label">Which Wednesday?</span>
+          <input type="date" name="date" required data-wednesday-only>
+          <span class="guest-form__error" data-error-for="date">Please pick a Wednesday.</span>
+        </label>
+        <label>
+          <span class="guest-form__label">Anything we should know? <span class="guest-form__hint">(optional)</span></span>
+          <textarea name="notes" rows="3" placeholder="Bringing a friend, running late, questions…"></textarea>
+        </label>
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;" aria-hidden="true">
+        <button type="submit" class="guest-form__submit" data-guest-submit>Let us know I'm coming</button>
+        <p class="guest-form__status" data-guest-status role="status" aria-live="polite"></p>
+      </form>
+    </div>
+
+    <div>
+      <div class="attend__map">
+        {% if site.map_embed_url %}
+          <iframe src="{{ site.map_embed_url }}" title="Map — Metropolis at Metrotown" loading="lazy" allowfullscreen></iframe>
+        {% elif at.map_image %}
+          <img src="{{ at.map_image }}" alt="Map — Metropolis at Metrotown">
+        {% else %}
+          <div class="ph" style="width:100%;height:100%;padding:14px;">
+            <span class="ph__chip">{{ at.map_caption }}</span>
+          </div>
+        {% endif %}
+      </div>
+      <div class="attend__side">
+        <div>
+          <div class="eyebrow">Finding the room</div>
+          <p>{{ at.finding_the_room }}</p>
+        </div>
+        <div>
+          <div class="eyebrow">Contact</div>
+          <div class="attend__contact">
+            <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+            <span>Burnaby, BC — {{ site.district }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

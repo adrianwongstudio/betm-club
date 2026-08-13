@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "title": "Members",
+    "description": "Three ways members grow every week: prepared speeches, table topics, and roles."
+  },
+  "page_hero": {
+    "eyebrow": "Members",
+    "headline": "Three ways members grow every week",
+    "intro": "Every Wednesday meeting is built around three practices: prepared speeches, impromptu Table Topics, and the meeting roles that keep the room running."
+  },
+  "eyebrow": "Members",
+  "headline": "Three ways members grow every week",
+  "link": { "label": "Join us", "href": "/attend/" },
+  "cards": [
+    {
+      "eyebrow": "Speeches",
+      "title": "Prepared Speeches",
+      "body": "Work through Pathways projects at your own pace, from your icebreaker to a keynote. Every speech gets a written and spoken evaluation.",
+      "cta": { "label": "See the pathways →", "href": "/members/" },
+      "image": "",
+      "placeholder": "photo: prepared speech"
+    },
+    {
+      "eyebrow": "Impromptu",
+      "title": "Table Topics",
+      "body": "One question, one to two minutes, no preparation. The fastest way to get comfortable answering a client, an investor, or a room.",
+      "cta": { "label": "How it works →", "href": "/members/" },
+      "image": "",
+      "placeholder": "photo: table topics"
+    },
+    {
+      "eyebrow": "Network",
+      "title": "Roles & Connections",
+      "body": "Chair a meeting, mentor a newer member, stay for the after-chat. Leadership practice and a network of people building businesses.",
+      "cta": { "label": "Roles explained →", "href": "/members/" },
+      "image": "",
+      "placeholder": "photo: members networking"
+    }
+  ],
+  "roles": {
+    "heading": "Meeting roles",
+    "body": "Each Wednesday, roles rotate among members. Signing up for one is the fastest way to grow — you get real practice under real time pressure, in front of a supportive room.",
+    "items": [
+      { "name": "Toastmaster", "body": "Chairs the meeting and sets its tone." },
+      { "name": "General Evaluator", "body": "Runs the evaluation portion and evaluates the meeting overall." },
+      { "name": "Speech Evaluator", "body": "Provides constructive feedback on one prepared speech." },
+      { "name": "Table Topics Master", "body": "Prepares and delivers the impromptu-speaking questions." },
+      { "name": "Timer", "body": "Tracks each segment and reports back at the close." },
+      { "name": "Ah-Counter", "body": "Notes filler words so speakers can hear them and improve." },
+      { "name": "Grammarian", "body": "Selects a word of the day and comments on language use." }
+    ]
+  }
+}

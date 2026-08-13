@@ -1,16 +1,18 @@
 # PagesCMS configuration — https://pagescms.org
-# Sign in at https://app.pagescms.org with GitHub, connect this repo, and edit
-# content from a friendly UI. Changes are commits on `main`; the site rebuilds
-# automatically on your host (Cloudflare Pages / Netlify / Vercel).
+# Sign in at https://app.pagescms.org with GitHub, add this repo, and edit content
+# from a friendly UI. Every entry below becomes one item in the CMS sidebar.
+# Saving in PagesCMS commits to `main` and the host rebuilds automatically.
 
 media:
   input: src/images
   output: /images
 
 content:
-  # Whole-site settings shown at the top of the CMS
+  # ─────────────────────────────────────────────────────────────────────────
+  #   Site settings
+  # ─────────────────────────────────────────────────────────────────────────
   - name: site
-    label: Site settings
+    label: "⚙︎ Site settings"
     type: file
     path: src/_data/site.json
     format: json
@@ -30,148 +32,297 @@ content:
       - { name: meeting_venue_sub, label: Venue sub-line, type: string }
       - { name: map_embed_url, label: Google Maps embed URL (optional), type: string, required: false }
 
-  # Homepage content — every editable field on the front page
-  - name: home
-    label: Homepage
+  # ─────────────────────────────────────────────────────────────────────────
+  #   Homepage — hero band only. All other homepage sections are previews of
+  #   the page content edited below, so editing About/Members/Gala/Gallery/Attend
+  #   also updates the homepage.
+  # ─────────────────────────────────────────────────────────────────────────
+  - name: hero
+    label: "🏠 Home — hero band"
     type: file
-    path: src/_data/home.json
+    path: src/_data/hero.json
     format: json
     fields:
-      - name: hero
-        label: Hero
+      - { name: eyebrow, label: Eyebrow, type: string }
+      - { name: headline_html, label: Headline (use <br /> for line breaks), type: text }
+      - { name: lead, label: Lead paragraph, type: text }
+      - name: primary_cta
+        label: Primary button
         type: object
         fields:
-          - { name: eyebrow, label: Eyebrow, type: string }
-          - { name: headline_html, label: Headline (use <br /> for line breaks), type: text }
-          - { name: lead, label: Lead paragraph, type: text }
-          - name: primary_cta
-            label: Primary button
-            type: object
-            fields:
-              - { name: label, label: Label, type: string }
-              - { name: href, label: Link, type: string }
-          - name: secondary_cta
-            label: Secondary button
-            type: object
-            fields:
-              - { name: label, label: Label, type: string }
-              - { name: href, label: Link, type: string }
-          - name: slides
-            label: Hero slideshow
-            type: object
-            list: true
-            fields:
-              - { name: caption, label: Caption, type: string }
-              - { name: image, label: Photo (portrait 4:5 works best), type: image, required: false }
-          - { name: stat_number, label: Stat headline (e.g. "10 yrs"), type: string }
-          - { name: stat_label, label: Stat sub-line, type: string }
-      - name: about
-        label: About
+          - { name: label, label: Label, type: string }
+          - { name: href, label: Link, type: string }
+      - name: secondary_cta
+        label: Secondary button
         type: object
         fields:
-          - { name: eyebrow, label: Eyebrow, type: string }
-          - { name: headline, label: Headline, type: string }
-          - name: facts
-            label: Facts list
-            type: object
-            list: true
-            fields:
-              - { name: label, label: Label, type: string }
-              - { name: value, label: Value, type: string }
-          - { name: lead, label: Lead paragraph, type: text }
-          - { name: second, label: Second paragraph, type: text }
-          - { name: callout_eyebrow, label: Callout eyebrow, type: string }
-          - { name: callout_lead, label: Callout lead line, type: string }
-          - { name: callout_sub, label: Callout sub line, type: string }
-      - name: members
-        label: Members section
+          - { name: label, label: Label, type: string }
+          - { name: href, label: Link, type: string }
+      - name: slides
+        label: Hero slideshow
         type: object
+        list: true
         fields:
-          - { name: eyebrow, label: Eyebrow, type: string }
-          - { name: headline, label: Headline, type: string }
-          - name: link
-            label: Corner link
-            type: object
-            fields:
-              - { name: label, label: Label, type: string }
-              - { name: href, label: Link, type: string }
-          - name: cards
-            label: Cards
-            type: object
-            list: true
-            fields:
-              - { name: eyebrow, label: Eyebrow, type: string }
-              - { name: title, label: Title, type: string }
-              - { name: body, label: Body copy, type: text }
-              - { name: image, label: Photo (3:2 landscape), type: image, required: false }
-              - { name: placeholder, label: Placeholder caption, type: string, required: false }
-              - name: cta
-                label: Text link
-                type: object
-                fields:
-                  - { name: label, label: Label, type: string }
-                  - { name: href, label: Link, type: string }
-      - name: gala
-        label: Gala section
-        type: object
-        fields:
-          - { name: eyebrow, label: Eyebrow, type: string }
-          - { name: headline, label: Headline, type: string }
-          - { name: lead, label: Lead paragraph, type: text }
-          - name: past_events
-            label: Past events
-            type: object
-            list: true
-            fields:
-              - { name: year, label: Year, type: number }
-              - { name: label, label: Label, type: string }
-              - { name: href, label: Link, type: string }
-          - { name: note, label: Bottom note, type: text }
-          - { name: registration_open, label: Registration open?, type: boolean }
-          - name: registration_cta
-            label: Registration button (shown when open)
-            type: object
-            fields:
-              - { name: label, label: Label, type: string }
-              - { name: href, label: Link, type: string }
-      - name: gallery
-        label: Gallery
-        type: object
-        fields:
-          - { name: eyebrow, label: Eyebrow, type: string }
-          - { name: headline, label: Headline, type: string }
-          - name: link
-            label: Corner link
-            type: object
-            fields:
-              - { name: label, label: Label, type: string }
-              - { name: href, label: Link, type: string }
-          - name: cells
-            label: Gallery tiles
-            type: object
-            list: true
-            fields:
-              - name: span
-                label: Tile size
-                type: select
-                options:
-                  values: [tall, wide, half, sm]
-              - { name: caption, label: Caption, type: string }
-              - { name: image, label: Photo, type: image, required: false }
-      - name: attend
-        label: Attend a Meeting section
-        type: object
-        fields:
-          - { name: eyebrow, label: Eyebrow, type: string }
-          - { name: headline, label: Headline, type: string }
-          - { name: lead, label: Lead paragraph, type: text }
-          - { name: map_caption, label: Map placeholder caption, type: string }
-          - { name: map_image, label: Static map image (fallback), type: image, required: false }
-          - { name: finding_the_room, label: "Finding the room" paragraph, type: text }
+          - { name: caption, label: Caption, type: string }
+          - { name: image, label: Photo (portrait 4:5 works best), type: image, required: false }
+      - { name: stat_number, label: 'Stat headline (e.g. "10 yrs")', type: string }
+      - { name: stat_label, label: Stat sub-line, type: string }
 
-  # Blog posts
+  # ─────────────────────────────────────────────────────────────────────────
+  #   About page
+  # ─────────────────────────────────────────────────────────────────────────
+  - name: about
+    label: "📖 About page"
+    type: file
+    path: src/_data/about.json
+    format: json
+    fields:
+      - name: meta
+        label: SEO
+        type: object
+        fields:
+          - { name: title, label: Page title, type: string }
+          - { name: description, label: Meta description, type: text }
+      - name: page_hero
+        label: Page top band
+        type: object
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: string }
+          - { name: headline, label: Headline, type: string }
+          - { name: intro, label: Intro paragraph, type: text, required: false }
+      - { name: eyebrow, label: Section eyebrow, type: string }
+      - { name: headline, label: Section headline, type: string }
+      - name: facts
+        label: Facts list (right side)
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Label, type: string }
+          - { name: value, label: Value, type: string }
+      - { name: lead, label: Lead paragraph, type: text }
+      - { name: second, label: Second paragraph, type: text }
+      - { name: callout_eyebrow, label: Callout eyebrow, type: string }
+      - { name: callout_lead, label: Callout lead line, type: string }
+      - { name: callout_sub, label: Callout sub line, type: string }
+      - name: extras
+        label: Extra content blocks (About page only)
+        type: object
+        list: true
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: body, label: Body, type: text }
+
+  # ─────────────────────────────────────────────────────────────────────────
+  #   Members page
+  # ─────────────────────────────────────────────────────────────────────────
+  - name: members
+    label: "👥 Members page"
+    type: file
+    path: src/_data/members.json
+    format: json
+    fields:
+      - name: meta
+        label: SEO
+        type: object
+        fields:
+          - { name: title, label: Page title, type: string }
+          - { name: description, label: Meta description, type: text }
+      - name: page_hero
+        label: Page top band
+        type: object
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: string }
+          - { name: headline, label: Headline, type: string }
+          - { name: intro, label: Intro paragraph, type: text, required: false }
+      - { name: eyebrow, label: Section eyebrow, type: string }
+      - { name: headline, label: Section headline, type: string }
+      - name: link
+        label: Corner link (homepage only)
+        type: object
+        fields:
+          - { name: label, label: Label, type: string }
+          - { name: href, label: Link, type: string }
+      - name: cards
+        label: Cards (3 recommended)
+        type: object
+        list: true
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: string }
+          - { name: title, label: Title, type: string }
+          - { name: body, label: Body copy, type: text }
+          - { name: image, label: Photo (3:2 landscape), type: image, required: false }
+          - { name: placeholder, label: Placeholder caption, type: string, required: false }
+          - name: cta
+            label: Text link
+            type: object
+            fields:
+              - { name: label, label: Label, type: string }
+              - { name: href, label: Link, type: string }
+      - name: roles
+        label: Meeting roles (Members page only)
+        type: object
+        fields:
+          - { name: heading, label: Section heading, type: string }
+          - { name: body, label: Intro paragraph, type: text }
+          - name: items
+            label: Roles
+            type: object
+            list: true
+            fields:
+              - { name: name, label: Role name, type: string }
+              - { name: body, label: What they do, type: text }
+
+  # ─────────────────────────────────────────────────────────────────────────
+  #   Gallery page
+  # ─────────────────────────────────────────────────────────────────────────
+  - name: gallery
+    label: "📸 Gallery page"
+    type: file
+    path: src/_data/gallery.json
+    format: json
+    fields:
+      - name: meta
+        label: SEO
+        type: object
+        fields:
+          - { name: title, label: Page title, type: string }
+          - { name: description, label: Meta description, type: text }
+      - name: page_hero
+        label: Page top band
+        type: object
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: string }
+          - { name: headline, label: Headline, type: string }
+          - { name: intro, label: Intro paragraph, type: text, required: false }
+      - { name: eyebrow, label: Section eyebrow, type: string }
+      - { name: headline, label: Section headline, type: string }
+      - name: link
+        label: Corner link (homepage only)
+        type: object
+        fields:
+          - { name: label, label: Label, type: string }
+          - { name: href, label: Link, type: string }
+      - name: preview_cells
+        label: Homepage preview tiles (5 recommended)
+        type: object
+        list: true
+        fields:
+          - name: span
+            label: Tile size
+            type: select
+            options:
+              values: [tall, wide, half, sm]
+          - { name: caption, label: Caption, type: string }
+          - { name: image, label: Photo, type: image, required: false }
+      - name: cells
+        label: Full gallery tiles (Gallery page)
+        type: object
+        list: true
+        fields:
+          - name: span
+            label: Tile size
+            type: select
+            options:
+              values: [tall, wide, half, sm]
+          - { name: caption, label: Caption, type: string }
+          - { name: image, label: Photo, type: image, required: false }
+
+  # ─────────────────────────────────────────────────────────────────────────
+  #   Gala page
+  # ─────────────────────────────────────────────────────────────────────────
+  - name: gala
+    label: "🎉 Gala page"
+    type: file
+    path: src/_data/gala.json
+    format: json
+    fields:
+      - name: meta
+        label: SEO
+        type: object
+        fields:
+          - { name: title, label: Page title, type: string }
+          - { name: description, label: Meta description, type: text }
+      - name: page_hero
+        label: Page top band
+        type: object
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: string }
+          - { name: headline, label: Headline, type: string }
+          - { name: intro, label: Intro paragraph, type: text, required: false }
+      - { name: eyebrow, label: Section eyebrow, type: string }
+      - { name: headline, label: Section headline, type: string }
+      - { name: lead, label: Lead paragraph, type: text }
+      - name: past_events
+        label: Past events (also appears in header Gala menu)
+        type: object
+        list: true
+        fields:
+          - { name: year, label: Year, type: number }
+          - { name: label, label: Label, type: string }
+          - { name: href, label: Link, type: string }
+      - { name: note, label: Bottom note, type: text }
+      - { name: registration_open, label: Registration open?, type: boolean }
+      - name: registration_cta
+        label: Registration button (shown when open)
+        type: object
+        fields:
+          - { name: label, label: Label, type: string }
+          - { name: href, label: Link, type: string }
+      - name: extras
+        label: Extra content blocks (Gala page only)
+        type: object
+        list: true
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: body, label: Body, type: text }
+
+  # ─────────────────────────────────────────────────────────────────────────
+  #   Attend page
+  # ─────────────────────────────────────────────────────────────────────────
+  - name: attend
+    label: "✅ Attend page"
+    type: file
+    path: src/_data/attend.json
+    format: json
+    fields:
+      - name: meta
+        label: SEO
+        type: object
+        fields:
+          - { name: title, label: Page title, type: string }
+          - { name: description, label: Meta description, type: text }
+      - name: page_hero
+        label: Page top band
+        type: object
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: string }
+          - { name: headline, label: Headline, type: string }
+          - { name: intro, label: Intro paragraph, type: text, required: false }
+      - { name: eyebrow, label: Section eyebrow, type: string }
+      - { name: headline, label: Section headline, type: string }
+      - { name: lead, label: Lead paragraph, type: text }
+      - { name: map_caption, label: Map placeholder caption, type: string }
+      - { name: map_image, label: Static map image (fallback), type: image, required: false }
+      - { name: finding_the_room, label: '"Finding the room" paragraph', type: text }
+      - { name: form_endpoint, label: Guest form endpoint (leave blank to use mailto), type: string, required: false }
+      - name: expect
+        label: "What to expect on your first visit"
+        type: object
+        fields:
+          - { name: heading, label: Section heading, type: string }
+          - name: items
+            label: Steps
+            type: object
+            list: true
+            fields:
+              - { name: step, label: Step title, type: string }
+              - { name: body, label: Description, type: text }
+
+  # ─────────────────────────────────────────────────────────────────────────
+  #   Blog posts
+  # ─────────────────────────────────────────────────────────────────────────
   - name: posts
-    label: Blog posts
+    label: "✍︎ Blog posts"
     type: collection
     path: src/posts
     format: yaml-frontmatter

@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "title": "About the Club",
+    "description": "Established March 1, 2016, the Burnaby Entrepreneurs Toastmasters Club is a supportive community in Metrotown, Burnaby BC."
+  },
+  "page_hero": {
+    "eyebrow": "About us",
+    "headline": "A supportive room in Metrotown",
+    "intro": "Established March 1, 2016. Chartered by Toastmasters International. Meeting every Wednesday in Metrotown, Burnaby."
+  },
+  "eyebrow": "About us",
+  "headline": "A supportive room in Metrotown",
+  "facts": [
+    { "label": "Established", "value": "March 1, 2016" },
+    { "label": "Meets", "value": "Wednesdays" },
+    { "label": "Where", "value": "Metrotown, Burnaby" }
+  ],
+  "lead": "Established on March 1, 2016, The Burnaby Entrepreneurs Toastmasters Club in Metrotown is a supportive community tor people who want to build confidence in communication, public speaking, and leadership.",
+  "second": "With an entrepreneurial mindset, our club welcomes business owners, professionals, creatives, and anyone looking to speak with more clarity and authority. Through mentorship, peer feedback, and hands-on practice, members grow their skills, build meaningful connections, and turn goals into action.",
+  "callout_eyebrow": "Who fits in here",
+  "callout_lead": "Entrepreneurial-minded people. You don't need to be an entrepreneur.",
+  "callout_sub": "For people who want to build a network with entrepreneurs.",
+  "extras": [
+    {
+      "heading": "How the club started",
+      "body": "The club was chartered on March 1, 2016 by a small group of Metrotown-area business owners who wanted a communication practice space of their own. It has met every Wednesday since."
+    },
+    {
+      "heading": "Toastmasters International",
+      "body": "We are a member club of Toastmasters International, a non-profit that has helped people improve their communication and leadership skills since 1924. Members work through the Pathways learning path at their own pace."
+    }
+  ]
+}

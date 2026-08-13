@@ -1,0 +1,34 @@
+---
+layout: layout.njk
+title: Attend a Meeting
+description: Tell us you're coming to a Wednesday-evening meeting in Metrotown, Burnaby BC.
+permalink: /attend/
+---
+
+{% set ph = attend.page_hero %}
+{% include "sections/page-hero.njk" %}
+{% include "sections/attend.njk" %}
+
+{% if attend.expect %}
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">First visit</div>
+        <h2 class="section-h2">{{ attend.expect.heading }}</h2>
+      </div>
+    </div>
+    <ol class="steps">
+      {% for item in attend.expect.items %}
+        <li class="steps__item">
+          <div class="steps__num">{{ loop.index }}</div>
+          <div>
+            <h3 class="steps__step">{{ item.step }}</h3>
+            <p class="steps__body">{{ item.body }}</p>
+          </div>
+        </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+{% endif %}

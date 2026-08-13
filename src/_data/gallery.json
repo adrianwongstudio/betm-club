@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "title": "Gallery",
+    "description": "A Wednesday night at Burnaby Entrepreneurs Toastmasters, in pictures."
+  },
+  "page_hero": {
+    "eyebrow": "Gallery",
+    "headline": "A Wednesday night, in pictures",
+    "intro": "Meetings, evaluations, table topics, and the annual Gala."
+  },
+  "eyebrow": "Gallery",
+  "headline": "A Wednesday night, in pictures",
+  "link": { "label": "View all photos", "href": "/gallery/" },
+  "preview_cells": [
+    { "span": "tall", "caption": "club photo — full room", "image": "" },
+    { "span": "wide", "caption": "award handover", "image": "" },
+    { "span": "wide", "caption": "table topics", "image": "" },
+    { "span": "half", "caption": "gala 2025 — head table", "image": "" },
+    { "span": "sm",   "caption": "timer", "image": "" }
+  ],
+  "cells": [
+    { "span": "tall", "caption": "club photo — full room", "image": "" },
+    { "span": "wide", "caption": "award handover", "image": "" },
+    { "span": "wide", "caption": "table topics", "image": "" },
+    { "span": "half", "caption": "gala 2025 — head table", "image": "" },
+    { "span": "sm",   "caption": "timer", "image": "" },
+    { "span": "wide", "caption": "prepared speech", "image": "" },
+    { "span": "wide", "caption": "evaluation round", "image": "" },
+    { "span": "wide", "caption": "after-meeting networking", "image": "" },
+    { "span": "tall", "caption": "annual awards", "image": "" },
+    { "span": "wide", "caption": "new-member welcome", "image": "" }
+  ]
+}

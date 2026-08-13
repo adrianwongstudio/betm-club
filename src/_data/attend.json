@@ -1,0 +1,26 @@
+{
+  "meta": {
+    "title": "Attend a Meeting",
+    "description": "Tell us you're coming to a Wednesday-evening meeting in Metrotown, Burnaby BC. Guests visit for free."
+  },
+  "page_hero": {
+    "eyebrow": "Attend a meeting",
+    "headline": "Tell us you're coming",
+    "intro": "Wednesdays, 6:00 – 8:00 pm at Metropolis at Metrotown. Guests are always free."
+  },
+  "eyebrow": "Attend a meeting",
+  "headline": "Tell us you're coming",
+  "lead": "Guests sit in, watch, and leave whenever they like — no speaking required on your first visit. Let us know you're planning to come and someone will meet you at the door.",
+  "map_caption": "map — metropolis at metrotown",
+  "map_image": "",
+  "finding_the_room": "Winners Community Room, Metropolis at Metrotown, Burnaby. Enter through the two double doors beside Winners.",
+  "form_endpoint": "",
+  "expect": {
+    "heading": "What to expect on your first visit",
+    "items": [
+      { "step": "Arrive a few minutes early", "body": "The Toastmaster of the evening will greet you at the door and show you to a seat." },
+      { "step": "Meeting starts at 6:00", "body": "Two hours of prepared speeches, impromptu Table Topics, and structured evaluations. Guests are welcome to try Table Topics, but nobody is called on without asking first." },
+      { "step": "Stay for a few minutes after", "body": "This is when the real introductions happen. Everyone is friendly — most members were guests once." }
+    ]
+  }
+}
