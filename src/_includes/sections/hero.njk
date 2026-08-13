@@ -19,14 +19,18 @@
             <span class="ph__chip">{{ slide.caption }}</span>
           </div>
         {% endfor %}
+        {% if h.slides.length > 1 %}
         <button type="button" class="slideshow__arrow slideshow__arrow--prev" aria-label="Previous scene" data-slide-prev>‹</button>
         <button type="button" class="slideshow__arrow slideshow__arrow--next" aria-label="Next scene" data-slide-next>›</button>
+        {% endif %}
       </div>
+      {% if h.slides.length > 1 %}
       <div class="slideshow__dots" role="tablist" aria-label="Slide indicators">
         {% for slide in h.slides %}
           <button type="button" class="slideshow__dot" role="tab" aria-label="Go to slide {{ loop.index }}: {{ slide.caption }}" data-slide-goto="{{ loop.index0 }}" {% if loop.first %}aria-current="true"{% endif %}></button>
         {% endfor %}
       </div>
+      {% endif %}
       <div class="hero__stat">
         <div class="hero__stat-num">{{ h.stat_number }}</div>
         <div class="hero__stat-label">{{ h.stat_label }}</div>

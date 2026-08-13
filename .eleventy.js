@@ -17,6 +17,15 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("limit", (arr, n) => (Array.isArray(arr) ? arr.slice(0, n) : []));
 
+  // Convert newlines in a plain-text field into <br> tags. Editors can add a
+  // line break just by pressing Enter in a text field in PagesCMS.
+  const escapeHtml = (s) =>
+    String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+  eleventyConfig.addFilter("nl2br", (value) => {
+    if (value == null) return "";
+    return escapeHtml(value).replace(/\r?\n/g, "<br>");
+  });
+
   eleventyConfig.setServerPassthroughCopyBehavior("copy");
 
   return {

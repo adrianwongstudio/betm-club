@@ -557,6 +557,8 @@ button { font: inherit; cursor: pointer; }
   transition: border-color 180ms ease;
 }
 .card:hover { border-color: var(--rich-maroon); }
+.card--noimg { border-top: 3px solid var(--rich-maroon); }
+.card--noimg .card__body { padding-top: 34px; }
 .card__media {
   aspect-ratio: 3 / 2;
   position: relative;
