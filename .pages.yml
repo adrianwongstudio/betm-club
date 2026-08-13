@@ -30,7 +30,15 @@ content:
       - { name: meeting_time, label: Meeting time, type: string }
       - { name: meeting_venue, label: Meeting venue, type: string }
       - { name: meeting_venue_sub, label: Venue sub-line, type: string }
-      - { name: map_embed_url, label: Google Maps embed URL (optional), type: string, required: false }
+      - name: map_embed_url
+        label: Google Maps embed URL (optional)
+        type: string
+        required: false
+        description: |
+          Must be the "Embed a map" URL (starts with https://www.google.com/maps/embed).
+          Get it from Google Maps → Share → Embed a map → copy the src= value.
+          Regular share URLs (maps.app.goo.gl/...) do NOT work — Google blocks them from iframes.
+          If left blank or set to a non-embed URL, the site falls back to a link-out map placeholder.
 
   # ─────────────────────────────────────────────────────────────────────────
   #   Homepage — hero band only. All other homepage sections are previews of

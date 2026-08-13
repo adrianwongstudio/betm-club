@@ -36,15 +36,18 @@
     </div>
 
     <div>
+      {% set is_embed = site.map_embed_url and ('/maps/embed' in site.map_embed_url) %}
       <div class="attend__map">
-        {% if site.map_embed_url %}
-          <iframe src="{{ site.map_embed_url }}" title="Map — Metropolis at Metrotown" loading="lazy" allowfullscreen></iframe>
+        {% if is_embed %}
+          <iframe src="{{ site.map_embed_url }}" title="Map — Metropolis at Metrotown" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
         {% elif at.map_image %}
-          <img src="{{ at.map_image }}" alt="Map — Metropolis at Metrotown">
+          <a href="{{ site.map_embed_url or 'https://www.google.com/maps/place/Metropolis+at+Metrotown' }}" target="_blank" rel="noopener">
+            <img src="{{ at.map_image }}" alt="Map — Metropolis at Metrotown">
+          </a>
         {% else %}
-          <div class="ph" style="width:100%;height:100%;padding:14px;">
+          <a class="ph" href="{{ site.map_embed_url or 'https://www.google.com/maps/place/Metropolis+at+Metrotown' }}" target="_blank" rel="noopener" style="width:100%;height:100%;padding:14px;text-decoration:none;">
             <span class="ph__chip">{{ at.map_caption }}</span>
-          </div>
+          </a>
         {% endif %}
       </div>
       <div class="attend__side">
