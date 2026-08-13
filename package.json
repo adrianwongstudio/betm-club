@@ -1,0 +1,16 @@
+{
+  "name": "betm-website",
+  "version": "1.0.0",
+  "description": "Marketing site for the Burnaby Entrepreneurs Toastmasters Club (Metrotown, Burnaby BC).",
+  "private": true,
+  "license": "MIT",
+  "type": "commonjs",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "clean": "rm -rf _site"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

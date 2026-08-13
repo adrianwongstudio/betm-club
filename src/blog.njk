@@ -1,0 +1,40 @@
+---
+layout: layout.njk
+title: Blog
+description: Notes on speaking, leadership, and the club's Wednesday evenings.
+permalink: /blog/
+---
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow eyebrow--yellow">Blog</div>
+    <h1>From the Blog</h1>
+  </div>
+</section>
+
+<section class="section section--sm section--white">
+  <div class="wrap">
+    {% if collections.posts.length %}
+      <div class="post-list cards">
+        {% for post in collections.posts %}
+          <a class="card" href="{{ post.url }}" style="color: inherit;">
+            <div class="card__media ph ph--card">
+              {% if post.data.image %}
+                <img src="{{ post.data.image }}" alt="{{ post.data.title }}">
+              {% else %}
+                <span class="ph__chip">{{ post.data.category or 'Post' }}</span>
+              {% endif %}
+            </div>
+            <div class="card__body">
+              <span class="card__eyebrow">{{ post.data.category or 'Post' }} · {{ post.data.date | formatDate }}</span>
+              <h3 class="card__title">{{ post.data.title }}</h3>
+              <p class="card__excerpt">{{ post.data.excerpt }}</p>
+            </div>
+          </a>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p>No posts yet. Add one from the CMS.</p>
+    {% endif %}
+  </div>
+</section>

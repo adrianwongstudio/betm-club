@@ -1,0 +1,14 @@
+---
+layout: layout.njk
+---
+
+<article class="post">
+  <p class="post__meta">{{ category or 'Post' }} · {{ date | formatDate }}</p>
+  <h1>{{ title }}</h1>
+  {% if image %}
+    <div class="post__hero"><img src="{{ image }}" alt="{{ title }}"></div>
+  {% endif %}
+  <div class="post__body">
+    {{ content | safe }}
+  </div>
+</article>

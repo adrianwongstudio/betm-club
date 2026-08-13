@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }}{% if title != site.name %} | {{ site.name }}{% endif %}</title>
+  <meta name="description" content="{{ description or site.description }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <link rel="icon" href="{{ site.logo | url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Gantari:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description or site.description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="site-header">
+    <div class="wrap">
+      <a class="brand" href="{{ '/' | url }}" aria-label="{{ site.name }} — home">
+        <img src="{{ site.logo | url }}" alt="Toastmasters International">
+        <span class="brand__name">
+          <span class="brand__primary">Burnaby Entrepreneurs</span>
+          <span class="brand__secondary">Toastmasters Club</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+      <nav class="nav" id="primary-nav" aria-label="Primary">
+        <a href="{{ '/' | url }}" class="{{ 'active' if page.url == '/' }}">Home</a>
+        <a href="{{ '/#members' | url }}">Members</a>
+        <a href="{{ '/#gallery' | url }}">Gallery</a>
+        <a href="{{ '/blog/' | url }}" class="{{ 'active' if '/blog/' in page.url }}">Blog</a>
+
+        <span class="nav-gala" data-nav-gala>
+          <button type="button" class="nav-gala__trigger" aria-expanded="false" aria-haspopup="true" aria-controls="nav-gala-panel">
+            Gala <span class="nav-gala__caret" aria-hidden="true">▾</span>
+          </button>
+          <span id="nav-gala-panel" class="nav-gala__panel" role="menu">
+            <span class="nav-gala__inner">
+              <a href="{{ '/#gala' | url }}" role="menuitem" class="is-next">Next Gala — registration soon</a>
+              {% for evt in home.gala.past_events | limit(2) %}
+                <a href="{{ evt.href }}" role="menuitem">{{ evt.label }}</a>
+              {% endfor %}
+            </span>
+          </span>
+        </span>
+
+        <a href="{{ '/#about' | url }}">About</a>
+      </nav>
+
+      <a href="{{ '/#attend' | url }}" class="header-cta">Attend Meeting</a>
+    </div>
+  </header>
+
+  <main id="main">
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__top">
+      <div>
+        <div class="footer-brand">
+          <img src="{{ site.logo | url }}" alt="Toastmasters International">
+          <span>Burnaby Entrepreneurs<br>Toastmasters Club</span>
+        </div>
+        <p class="footer-blurb">{{ site.tagline }}</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="{{ '/#members' | url }}">Members</a></li>
+          <li><a href="{{ '/#gallery' | url }}">Gallery</a></li>
+          <li><a href="{{ '/blog/' | url }}">Blog</a></li>
+          <li><a href="{{ '/#gala' | url }}">Gala</a></li>
+          <li><a href="{{ '/#about' | url }}">About</a></li>
+          <li><a href="{{ '/#attend' | url }}">Attend Meeting</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Meetings</h4>
+        <ul>
+          <li><span>Wednesdays, 6:00 – 8:00 pm</span></li>
+          <li><span>Winners Community Room</span></li>
+          <li><span>Metropolis at Metrotown</span></li>
+          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      © {% year %} {{ site.name }}. A member club of Toastmasters International.
+    </div>
+  </footer>
+
+  <script src="{{ '/js/site.js' | url }}" defer></script>
+</body>
+</html>

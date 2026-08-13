@@ -1,0 +1,254 @@
+---
+layout: layout.njk
+title: Burnaby Entrepreneurs Toastmasters Club
+description: A friendly Wednesday-evening Toastmasters club in Metrotown, Burnaby BC. Practise speaking, get honest feedback, and build a network among entrepreneurial-minded people.
+---
+
+{% set h = home.hero %}
+{% set a = home.about %}
+{% set m = home.members %}
+{% set g = home.gala %}
+{% set gl = home.gallery %}
+{% set at = home.attend %}
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow eyebrow--yellow hero__eyebrow">{{ h.eyebrow }}</div>
+      <h1>{{ h.headline_html | safe }}</h1>
+      <p class="hero__lead">{{ h.lead }}</p>
+      <div class="hero__ctas">
+        <a href="{{ h.primary_cta.href }}" class="btn btn--yellow">{{ h.primary_cta.label }}</a>
+        <a href="{{ h.secondary_cta.href }}" class="btn btn--ghost">{{ h.secondary_cta.label }}</a>
+      </div>
+    </div>
+
+    <div class="slideshow" data-slideshow data-interval="5000">
+      <div class="slideshow__panel" aria-roledescription="carousel" aria-label="Photos from the club">
+        {% for slide in h.slides %}
+          <div class="slideshow__scene ph" role="group" aria-roledescription="slide" aria-label="{{ loop.index }} of {{ h.slides.length }}: {{ slide.caption }}" data-slide-index="{{ loop.index0 }}" {% if loop.first %}data-active="true"{% endif %}>
+            {% if slide.image %}<img src="{{ slide.image }}" alt="{{ slide.caption }}">{% endif %}
+            <span class="ph__chip">{{ slide.caption }}</span>
+          </div>
+        {% endfor %}
+        <button type="button" class="slideshow__arrow slideshow__arrow--prev" aria-label="Previous scene" data-slide-prev>‹</button>
+        <button type="button" class="slideshow__arrow slideshow__arrow--next" aria-label="Next scene" data-slide-next>›</button>
+      </div>
+      <div class="slideshow__dots" role="tablist" aria-label="Slide indicators">
+        {% for slide in h.slides %}
+          <button type="button" class="slideshow__dot" role="tab" aria-label="Go to slide {{ loop.index }}: {{ slide.caption }}" data-slide-goto="{{ loop.index0 }}" {% if loop.first %}aria-current="true"{% endif %}></button>
+        {% endfor %}
+      </div>
+      <div class="hero__stat">
+        <div class="hero__stat-num">{{ h.stat_number }}</div>
+        <div class="hero__stat-label">{{ h.stat_label }}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="info-bar">
+  <div class="wrap">
+    <div class="info-cell">
+      <span class="info-cell__label">When</span>
+      <span class="info-cell__value">{{ site.meeting_time }}</span>
+    </div>
+    <div class="info-cell">
+      <span class="info-cell__label">Where</span>
+      <span class="info-cell__value">{{ site.meeting_venue }}</span>
+      <span class="info-cell__sub">{{ site.meeting_venue_sub }}</span>
+    </div>
+    <div class="info-cell">
+      <span class="info-cell__label">Guests</span>
+      <span class="info-cell__value">Free — visit as often as you like</span>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section section--white about">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">{{ a.eyebrow }}</div>
+      <h2 class="section-h2">{{ a.headline }}</h2>
+      <dl class="about__facts">
+        {% for fact in a.facts %}
+          <div class="about__fact"><span>{{ fact.label }}</span><strong>{{ fact.value }}</strong></div>
+        {% endfor %}
+      </dl>
+    </div>
+    <div>
+      <p class="about__lead">{{ a.lead }}</p>
+      <p class="about__second">{{ a.second }}</p>
+      <div class="about__callout">
+        <div class="eyebrow">{{ a.callout_eyebrow }}</div>
+        <p class="about__callout-lead">{{ a.callout_lead }}</p>
+        <p class="about__callout-sub">{{ a.callout_sub }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="members" class="section section--alt">
+  <div class="wrap">
+    <div class="section-head section-head--large">
+      <div>
+        <div class="eyebrow">{{ m.eyebrow }}</div>
+        <h2 class="section-h2" style="max-width: 24em;">{{ m.headline }}</h2>
+      </div>
+      <a href="{{ m.link.href }}" class="text-link">{{ m.link.label }}</a>
+    </div>
+    <div class="cards">
+      {% for card in m.cards %}
+        <article class="card">
+          <div class="card__media ph ph--card">
+            {% if card.image %}
+              <img src="{{ card.image }}" alt="{{ card.title }}">
+            {% else %}
+              <span class="ph__chip">{{ card.placeholder }}</span>
+            {% endif %}
+          </div>
+          <div class="card__body">
+            <span class="card__eyebrow">{{ card.eyebrow }}</span>
+            <h3 class="card__title">{{ card.title }}</h3>
+            <p class="card__excerpt">{{ card.body }}</p>
+            <a href="{{ card.cta.href }}" class="card__link text-link text-link--sm">{{ card.cta.label }}</a>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="gala" class="section--yellow gala">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow gala__eyebrow">{{ g.eyebrow }}</div>
+      <h2 class="section-h2">{{ g.headline }}</h2>
+      <p class="gala__lead">{{ g.lead }}</p>
+      {% if g.registration_open %}
+        <p class="gala__register"><a href="{{ g.registration_cta.href }}" class="btn btn--maroon">{{ g.registration_cta.label }}</a></p>
+      {% endif %}
+    </div>
+    <div class="years" data-years>
+      <div class="eyebrow years__label">Past events</div>
+      <button type="button" class="years__toggle" aria-expanded="false" aria-controls="years-list" data-years-toggle>
+        <span>Select a year</span>
+        <span class="years__caret" aria-hidden="true" data-years-caret>▼</span>
+      </button>
+      <div class="years__list" id="years-list">
+        {% for evt in g.past_events %}
+          <a href="{{ evt.href }}">{{ evt.label }}</a>
+        {% endfor %}
+      </div>
+      <p class="years__note">{{ g.note }}</p>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" class="section section--sm section--white">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">{{ gl.eyebrow }}</div>
+        <h2 class="section-h2">{{ gl.headline }}</h2>
+      </div>
+      <a href="{{ gl.link.href }}" class="text-link">{{ gl.link.label }}</a>
+    </div>
+    <div class="mosaic">
+      {% for cell in gl.cells %}
+        <div class="mosaic__cell mosaic__cell--{{ cell.span }} ph">
+          {% if cell.image %}
+            <img src="{{ cell.image }}" alt="{{ cell.caption }}">
+          {% else %}
+            <span class="ph__chip">{{ cell.caption }}</span>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="blog" class="section section--sm section--dark">
+  <div class="wrap">
+    <div class="section-head blog-head">
+      <h2 class="section-h2">From the Blog</h2>
+      <a href="{{ '/blog/' | url }}" class="text-link">View all articles</a>
+    </div>
+    <div class="blog-cards">
+      {% if collections.posts.length %}
+        {% for post in collections.posts | limit(3) %}
+          <a class="blog-card" href="{{ post.url }}">
+            <span class="blog-card__category">{{ post.data.category or 'Post' }}</span>
+            <span class="blog-card__title">{{ post.data.title }}</span>
+            <span class="blog-card__date">{{ post.data.date | formatDate }}</span>
+            <span class="blog-card__excerpt">{{ post.data.excerpt }}</span>
+          </a>
+        {% endfor %}
+      {% else %}
+        <div class="blog-card"><span class="blog-card__category">Coming soon</span><span class="blog-card__title">Posts are on the way.</span><span class="blog-card__excerpt">Add your first blog post from the CMS.</span></div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section id="attend" class="section section--white attend">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">{{ at.eyebrow }}</div>
+      <h2 class="section-h2">{{ at.headline }}</h2>
+      <p class="attend__lead">{{ at.lead }}</p>
+
+      <form class="guest-form" data-guest-form action="mailto:{{ site.email }}" method="post" enctype="text/plain" novalidate>
+        <label>
+          <span class="guest-form__label">Your name</span>
+          <input type="text" name="name" placeholder="First and last name" required>
+          <span class="guest-form__error" data-error-for="name">Please share your name.</span>
+        </label>
+        <label>
+          <span class="guest-form__label">Email</span>
+          <input type="email" name="email" placeholder="you@example.com" required>
+          <span class="guest-form__error" data-error-for="email">Please share a valid email address.</span>
+        </label>
+        <label>
+          <span class="guest-form__label">Which Wednesday?</span>
+          <input type="date" name="date" required data-wednesday-only>
+          <span class="guest-form__error" data-error-for="date">Please pick a Wednesday.</span>
+        </label>
+        <label>
+          <span class="guest-form__label">Anything we should know? <span class="guest-form__hint">(optional)</span></span>
+          <textarea name="notes" rows="3" placeholder="Bringing a friend, running late, questions…"></textarea>
+        </label>
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;" aria-hidden="true">
+        <button type="submit" class="guest-form__submit" data-guest-submit>Let us know I'm coming</button>
+        <p class="guest-form__status" data-guest-status role="status" aria-live="polite"></p>
+      </form>
+    </div>
+
+    <div>
+      <div class="attend__map">
+        {% if site.map_embed_url %}
+          <iframe src="{{ site.map_embed_url }}" title="Map — Metropolis at Metrotown" loading="lazy" allowfullscreen></iframe>
+        {% elif at.map_image %}
+          <img src="{{ at.map_image }}" alt="Map — Metropolis at Metrotown">
+        {% else %}
+          <div class="ph" style="width:100%;height:100%;padding:14px;">
+            <span class="ph__chip">{{ at.map_caption }}</span>
+          </div>
+        {% endif %}
+      </div>
+      <div class="attend__side">
+        <div>
+          <div class="eyebrow">Finding the room</div>
+          <p>{{ at.finding_the_room }}</p>
+        </div>
+        <div>
+          <div class="eyebrow">Contact</div>
+          <div class="attend__contact">
+            <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+            <span>Burnaby, BC — {{ site.district }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
