@@ -186,7 +186,7 @@ button { font: inherit; cursor: pointer; }
 }
 .nav-gala__trigger:hover { color: var(--rich-maroon); }
 .nav-gala__caret {
-  font-size: 13px;
+  font-size: 26px;
   line-height: 1;
   display: inline-block;
   transition: transform 180ms ease;
