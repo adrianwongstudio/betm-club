@@ -10,21 +10,103 @@
   },
   "eyebrow": "Annual event",
   "headline": "The Burnaby Entrepreneurs Gala",
-  "lead": "Once a year we put on our best and celebrate the speeches, the awards, and the members behind them. Registration for the next Gala opens later this year — until then, look back at how the last two went.",
+  "lead": "Once a year we put on our best and celebrate the speeches, the awards, and the members behind them. Registration for the next Gala opens later this year — until then, look back at how the last one went.",
   "past_events": [
     { "year": 2025, "label": "2025 Gala — recap & photos", "href": "/gala/" }
   ],
   "note": "Next year's registration isn't open yet. Attend a Wednesday meeting and we'll tell you first.",
   "registration_open": false,
   "registration_cta": { "label": "Register for the Gala", "href": "#" },
-  "extras": [
-    {
-      "heading": "What to expect",
-      "body": "An evening of prepared speeches, awards for the year's standout speakers, and dinner. Dress code: business formal. Guests welcome."
-    },
-    {
-      "heading": "Awards",
-      "body": "Speaker of the Year, Evaluator of the Year, Rookie of the Year, and the President's Award."
-    }
-  ]
+  "recap": {
+    "heading": "2025 Gala — in pictures",
+    "rows": [
+      {
+        "eyebrow": "Arrivals",
+        "heading": "A room full of familiar faces",
+        "text": "The 2025 Gala opened with warm welcomes and reconnections as members, guests, and alumni gathered for the evening.",
+        "images": [{ "src": "/images/gala-2025/1.JPG", "alt": "Gala 2025 arrivals" }]
+      },
+      {
+        "eyebrow": "The venue",
+        "heading": "Set for the night",
+        "text": "Tables set, lights dimmed, and the room ready for a night celebrating a year of speeches and growth.",
+        "images": [{ "src": "/images/gala-2025/2.JPG", "alt": "Gala 2025 venue set" }]
+      },
+      {
+        "eyebrow": "Toast",
+        "heading": "Raising a glass",
+        "text": "A toast to the year's members — new voices, returning speakers, and the mentors who kept the room honest.",
+        "images": [{ "src": "/images/gala-2025/3.JPG", "alt": "A toast at the Gala" }]
+      },
+      {
+        "eyebrow": "Program",
+        "heading": "The evening begins",
+        "text": "Our MC welcomed the room, walked through the program, and set the tone: celebrate the year, honour the speakers, share the wins.",
+        "images": [{ "src": "/images/gala-2025/4.JPG", "alt": "The Gala program begins" }]
+      },
+      {
+        "eyebrow": "Speeches",
+        "heading": "Voices from the year",
+        "text": "Prepared speeches from members of the year — the ones who logged the practice, took the notes, and came back the next Wednesday.",
+        "images": [
+          { "src": "/images/gala-2025/5.JPG", "alt": "Speaker at the Gala" },
+          { "src": "/images/gala-2025/5.1.JPG", "alt": "Another speaker at the Gala" }
+        ]
+      },
+      {
+        "eyebrow": "Recognition",
+        "heading": "Speaker of the Year",
+        "text": "The Speaker of the Year award recognises the member who set the standard on the lectern this year.",
+        "images": [{ "src": "/images/gala-2025/6.JPG", "alt": "Speaker of the Year award" }]
+      },
+      {
+        "eyebrow": "Recognition",
+        "heading": "Evaluator of the Year",
+        "text": "Great evaluation is a craft. This award celebrates the member whose feedback made everyone else better.",
+        "images": [{ "src": "/images/gala-2025/7.JPG", "alt": "Evaluator of the Year award" }]
+      },
+      {
+        "eyebrow": "Recognition",
+        "heading": "Rookie of the Year",
+        "text": "Every year one new member stands out for the progress they made from Icebreaker to today. This is that member.",
+        "images": [{ "src": "/images/gala-2025/8.JPG", "alt": "Rookie of the Year award" }]
+      },
+      {
+        "eyebrow": "President's award",
+        "heading": "The President's Award",
+        "text": "For the member whose leadership, mentorship, or service shaped the club this year.",
+        "images": [{ "src": "/images/gala-2025/9.JPG", "alt": "President's Award" }]
+      },
+      {
+        "eyebrow": "Group",
+        "heading": "Members of the year",
+        "text": "A group shot with the members who carried the program this year — the officers, mentors, and regulars.",
+        "images": [{ "src": "/images/gala-2025/11.JPG", "alt": "Members group shot" }]
+      },
+      {
+        "eyebrow": "Dinner",
+        "heading": "Around the table",
+        "text": "Between the speeches, the awards, and the toasts — the part of the evening where the real conversations happen.",
+        "images": [{ "src": "/images/gala-2025/12.JPG", "alt": "Dinner at the Gala" }]
+      },
+      {
+        "eyebrow": "Guests",
+        "heading": "Friends of the club",
+        "text": "Guests from partner clubs, past members, and the friends and families who came along for the celebration.",
+        "images": [{ "src": "/images/gala-2025/13.JPG", "alt": "Guests at the Gala" }]
+      },
+      {
+        "eyebrow": "Behind the mic",
+        "heading": "The evening's hosts",
+        "text": "Our Toastmaster and General Evaluator kept the evening moving on time and on tone.",
+        "images": [{ "src": "/images/gala-2025/14.JPG", "alt": "Hosts of the Gala" }]
+      },
+      {
+        "eyebrow": "Farewell",
+        "heading": "See you next year",
+        "text": "The last of the applause, the last of the photos, and a room already looking forward to 2026.",
+        "images": [{ "src": "/images/gala-2025/15.JPG", "alt": "Closing the Gala" }]
+      }
+    ]
+  }
 }

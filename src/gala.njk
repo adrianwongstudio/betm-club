@@ -9,8 +9,39 @@ permalink: /gala/
 {% include "sections/page-hero.njk" %}
 {% include "sections/gala.njk" %}
 
-{% if gala.extras and gala.extras.length %}
+{% if gala.recap and gala.recap.rows.length %}
 <section class="section section--white">
+  <div class="wrap">
+    {% if gala.recap.heading %}
+      <div class="section-head" style="margin-bottom: 56px;">
+        <div>
+          <div class="eyebrow">Recap</div>
+          <h2 class="section-h2">{{ gala.recap.heading }}</h2>
+        </div>
+      </div>
+    {% endif %}
+    <div class="feature-rows">
+      {% for row in gala.recap.rows %}
+        <article class="feature-row {{ 'feature-row--image-right' if loop.index0 % 2 == 1 }}">
+          <div class="feature-row__media {{ 'feature-row__media--pair' if row.images.length > 1 }}">
+            {% for img in row.images %}
+              <img src="{{ img.src }}" alt="{{ img.alt or row.heading }}" loading="lazy">
+            {% endfor %}
+          </div>
+          <div class="feature-row__body">
+            {% if row.eyebrow %}<span class="feature-row__eyebrow">{{ row.eyebrow }}</span>{% endif %}
+            <h3 class="feature-row__heading">{{ row.heading }}</h3>
+            {% if row.text %}<p class="feature-row__text">{{ row.text }}</p>{% endif %}
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if gala.extras and gala.extras.length %}
+<section class="section section--alt">
   <div class="wrap page-body">
     {% for block in gala.extras %}
       <div class="page-body__block">

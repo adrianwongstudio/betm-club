@@ -909,6 +909,58 @@ button { font: inherit; cursor: pointer; }
 }
 .roles-list__body { font-size: 15.5px; line-height: 1.6; color: var(--secondary-ink); margin: 0; }
 
+/* Feature rows — alternating image/text (used on the Gala page) */
+.feature-rows { display: flex; flex-direction: column; gap: 88px; }
+.feature-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+.feature-row--image-right .feature-row__media { order: 2; }
+.feature-row__media {
+  display: grid;
+  gap: 12px;
+}
+.feature-row__media--pair {
+  grid-template-columns: 1fr 1fr;
+}
+.feature-row__media img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+.feature-row__media--pair img { aspect-ratio: 3 / 4; }
+.feature-row__body { max-width: 42em; }
+.feature-row__eyebrow {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--rich-maroon);
+  margin: 0 0 14px;
+  display: inline-block;
+}
+.feature-row__heading {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--loyal-blue);
+  margin: 0 0 16px;
+}
+.feature-row__text { font-size: 17px; line-height: 1.7; color: var(--secondary-ink); margin: 0; }
+
+@media (max-width: 900px) {
+  .feature-rows { gap: 56px; }
+  .feature-row { grid-template-columns: 1fr; gap: 24px; }
+  .feature-row--image-right .feature-row__media { order: 0; }
+  .feature-row__heading { font-size: 24px; }
+}
+
 /* Steps list (Attend page) */
 .steps {
   list-style: none;

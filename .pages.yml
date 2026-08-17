@@ -276,6 +276,26 @@ content:
         fields:
           - { name: label, label: Label, type: string }
           - { name: href, label: Link, type: string }
+      - name: recap
+        label: Gala recap (alternating photo + text rows)
+        type: object
+        fields:
+          - { name: heading, label: Section heading (e.g. "2025 Gala — in pictures"), type: string, required: false }
+          - name: rows
+            label: Recap rows
+            type: object
+            list: true
+            fields:
+              - { name: eyebrow, label: Eyebrow label (optional), type: string, required: false }
+              - { name: heading, label: Row heading, type: string }
+              - { name: text, label: Body text, type: text, required: false }
+              - name: images
+                label: Photo(s) — add 2 to show side-by-side
+                type: object
+                list: true
+                fields:
+                  - { name: src, label: Photo, type: image }
+                  - { name: alt, label: Alt text (describe the photo), type: string, required: false }
       - name: extras
         label: Extra content blocks (Gala page only)
         type: object
