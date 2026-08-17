@@ -108,5 +108,28 @@
         "images": [{ "src": "/images/gala-2025/15.JPG", "alt": "Closing the Gala" }]
       }
     ]
+  },
+  "supporters": {
+    "heading": "Thank you",
+    "intro": "The 2025 Gala was made possible by the sponsors and auction contributors below.",
+    "sponsors": {
+      "eyebrow": "Sponsors",
+      "title": "With thanks to our sponsors",
+      "items": [
+        { "name": "She is Bold", "image": "/images/gala-2025/sponsors/she-is-bold.jpeg", "url": "" },
+        { "name": "WFG", "image": "/images/gala-2025/sponsors/wfg.png", "url": "" }
+      ]
+    },
+    "auction": {
+      "eyebrow": "Auction contributors",
+      "title": "Auction items generously donated by",
+      "items": [
+        { "name": "Sutton", "image": "/images/gala-2025/auction/sutton.jpeg", "url": "" },
+        { "name": "Springfield", "image": "/images/gala-2025/auction/springfield.jpeg", "url": "" },
+        { "name": "Northstar", "image": "/images/gala-2025/auction/northstar.jpeg", "url": "" },
+        { "name": "Evolving Hair Studio", "image": "/images/gala-2025/auction/evolving-hair-studio.jpeg", "url": "" },
+        { "name": "Octave", "image": "/images/gala-2025/auction/octave.jpg", "url": "" }
+      ]
+    }
   }
 }

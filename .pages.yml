@@ -296,6 +296,40 @@ content:
                 fields:
                   - { name: src, label: Photo, type: image }
                   - { name: alt, label: Alt text (describe the photo), type: string, required: false }
+      - name: supporters
+        label: Sponsors & auction contributors (bottom of Gala page)
+        type: object
+        fields:
+          - { name: heading, label: Section heading (e.g. "Thank you"), type: string, required: false }
+          - { name: intro, label: Intro paragraph, type: text, required: false }
+          - name: sponsors
+            label: Sponsors group
+            type: object
+            fields:
+              - { name: eyebrow, label: Eyebrow label, type: string, required: false }
+              - { name: title, label: Group heading, type: string, required: false }
+              - name: items
+                label: Sponsors
+                type: object
+                list: true
+                fields:
+                  - { name: name, label: Name, type: string }
+                  - { name: image, label: Logo, type: image, required: false }
+                  - { name: url, label: Website URL (optional), type: string, required: false }
+          - name: auction
+            label: Auction contributors group
+            type: object
+            fields:
+              - { name: eyebrow, label: Eyebrow label, type: string, required: false }
+              - { name: title, label: Group heading, type: string, required: false }
+              - name: items
+                label: Auction contributors
+                type: object
+                list: true
+                fields:
+                  - { name: name, label: Name, type: string }
+                  - { name: image, label: Logo, type: image, required: false }
+                  - { name: url, label: Website URL (optional), type: string, required: false }
       - name: extras
         label: Extra content blocks (Gala page only)
         type: object

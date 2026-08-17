@@ -51,3 +51,79 @@ permalink: /gala/
   </div>
 </section>
 {% endif %}
+
+{% if gala.supporters and ((gala.supporters.sponsors.items | length) or (gala.supporters.auction.items | length)) %}
+<section class="section section--alt">
+  <div class="wrap">
+    {% if gala.supporters.heading %}
+      <div class="section-head" style="margin-bottom: 40px;">
+        <div>
+          <div class="eyebrow">Thanks</div>
+          <h2 class="section-h2">{{ gala.supporters.heading }}</h2>
+          {% if gala.supporters.intro %}
+            <p style="max-width: 44em; margin: 16px 0 0; font-size: 17px; color: var(--secondary-ink);">{{ gala.supporters.intro }}</p>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+
+    <div class="logo-groups">
+      {% if gala.supporters.sponsors.items and gala.supporters.sponsors.items.length %}
+        <div class="logo-group">
+          <div class="logo-group__head">
+            <div>
+              <div class="logo-group__eyebrow">{{ gala.supporters.sponsors.eyebrow or 'Sponsors' }}</div>
+              {% if gala.supporters.sponsors.title %}
+                <h3 class="logo-group__title" style="margin-top: 8px;">{{ gala.supporters.sponsors.title }}</h3>
+              {% endif %}
+            </div>
+          </div>
+          <div class="logo-grid">
+            {% for item in gala.supporters.sponsors.items %}
+              {% if item.url %}
+                <a class="logo-tile" href="{{ item.url }}" target="_blank" rel="noopener" title="{{ item.name }}">
+                  {% if item.image %}<img src="{{ item.image }}" alt="{{ item.name }}" loading="lazy">
+                  {% else %}<span class="logo-tile__name">{{ item.name }}</span>{% endif %}
+                </a>
+              {% else %}
+                <div class="logo-tile" title="{{ item.name }}">
+                  {% if item.image %}<img src="{{ item.image }}" alt="{{ item.name }}" loading="lazy">
+                  {% else %}<span class="logo-tile__name">{{ item.name }}</span>{% endif %}
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+
+      {% if gala.supporters.auction.items and gala.supporters.auction.items.length %}
+        <div class="logo-group">
+          <div class="logo-group__head">
+            <div>
+              <div class="logo-group__eyebrow">{{ gala.supporters.auction.eyebrow or 'Auction contributors' }}</div>
+              {% if gala.supporters.auction.title %}
+                <h3 class="logo-group__title" style="margin-top: 8px;">{{ gala.supporters.auction.title }}</h3>
+              {% endif %}
+            </div>
+          </div>
+          <div class="logo-grid">
+            {% for item in gala.supporters.auction.items %}
+              {% if item.url %}
+                <a class="logo-tile" href="{{ item.url }}" target="_blank" rel="noopener" title="{{ item.name }}">
+                  {% if item.image %}<img src="{{ item.image }}" alt="{{ item.name }}" loading="lazy">
+                  {% else %}<span class="logo-tile__name">{{ item.name }}</span>{% endif %}
+                </a>
+              {% else %}
+                <div class="logo-tile" title="{{ item.name }}">
+                  {% if item.image %}<img src="{{ item.image }}" alt="{{ item.name }}" loading="lazy">
+                  {% else %}<span class="logo-tile__name">{{ item.name }}</span>{% endif %}
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endif %}
