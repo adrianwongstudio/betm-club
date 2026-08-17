@@ -593,6 +593,8 @@ button { font: inherit; cursor: pointer; }
   gap: 64px;
   align-items: start;
 }
+.gala .wrap.gala--single { display: block; }
+.gala--single .gala__lead { max-width: 44em; }
 .gala__lead {
   font-size: 17px;
   line-height: 1.62;
