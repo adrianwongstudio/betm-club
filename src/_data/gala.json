@@ -128,7 +128,8 @@
         { "name": "Springfield", "image": "/images/gala-2025/auction/springfield.jpeg", "url": "" },
         { "name": "Northstar", "image": "/images/gala-2025/auction/northstar.jpeg", "url": "" },
         { "name": "Evolving Hair Studio", "image": "/images/gala-2025/auction/evolving-hair-studio.jpeg", "url": "" },
-        { "name": "Octave", "image": "/images/gala-2025/auction/octave.jpg", "url": "" }
+        { "name": "Octave", "image": "/images/gala-2025/auction/octave.jpg", "url": "" },
+        { "name": "Take", "image": "/images/gala-2025/auction/take.jpg", "url": "" }
       ]
     }
   }
