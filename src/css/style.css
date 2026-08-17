@@ -930,11 +930,13 @@ button { font: inherit; cursor: pointer; }
 .feature-row__media img {
   width: 100%;
   height: auto;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
   display: block;
 }
-.feature-row__media--pair img { aspect-ratio: 3 / 4; }
+.feature-row__media--pair img {
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center top;
+}
 .feature-row__body { max-width: 42em; }
 .feature-row__eyebrow {
   font-family: var(--mono);
