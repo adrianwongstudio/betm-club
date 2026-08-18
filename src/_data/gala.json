@@ -195,20 +195,24 @@
   },
   "supporters": {
     "heading": "Thank you",
-    "intro": "The 2025 Gala was made possible by the sponsors and auction contributors below.",
+    "intro": "The 2025 Gala was made possible by the sponsors and auction contributors below. Click any logo to learn more about the company.",
     "sponsors": {
       "eyebrow": "Sponsors",
       "title": "With thanks to our sponsors",
       "items": [
         {
-          "name": "She is Bold",
+          "name": "She is Bold Beauty",
           "image": "/images/gala-2025/sponsors/she-is-bold.jpeg",
-          "url": ""
+          "url": "https://sheisboldbeauty.com/",
+          "description": "She is Bold Beauty is a beauty brand built around confidence, curated makeup, and helping women feel like the boldest version of themselves.",
+          "products_services": "Makeup, beauty essentials, and confidence-forward products for everyday and event looks."
         },
         {
-          "name": "WFG",
+          "name": "World Financial Group",
           "image": "/images/gala-2025/sponsors/wfg.png",
-          "url": ""
+          "url": "https://legacyfinancialplanning.ca/",
+          "description": "World Financial Group, through Legacy Financial Planning, helps individuals and families in BC build a plan for retirement, protection, and long-term wealth.",
+          "products_services": "Life insurance, retirement planning, investment strategies, and estate planning."
         }
       ]
     },
@@ -217,34 +221,46 @@
       "title": "Auction items generously donated by",
       "items": [
         {
-          "name": "Sutton",
+          "name": "Sutton 1st West Realty",
           "image": "/images/gala-2025/auction/sutton.jpeg",
-          "url": ""
+          "url": "https://www.sutton1stwest.com/",
+          "description": "Sutton 1st West Realty is a Metro Vancouver real estate brokerage helping buyers, sellers, and investors move with confidence.",
+          "products_services": "Residential and commercial real estate services across Metro Vancouver."
         },
         {
-          "name": "Springfield",
+          "name": "Springfield Pens",
           "image": "/images/gala-2025/auction/springfield.jpeg",
-          "url": ""
+          "url": "https://springfieldpens.ca/",
+          "description": "Springfield Pens is a Canadian retailer of fine writing instruments and stationery — for the everyday writer and the collector.",
+          "products_services": "Fountain pens, rollerballs, ballpoints, inks, notebooks, and gifting."
         },
         {
           "name": "Northstar",
           "image": "/images/gala-2025/auction/northstar.jpeg",
-          "url": ""
+          "url": "",
+          "description": "Generous contributor to the 2025 Gala auction.",
+          "products_services": ""
         },
         {
           "name": "Evolving Hair Studio",
           "image": "/images/gala-2025/auction/evolving-hair-studio.jpeg",
-          "url": ""
+          "url": "https://evolvinghairstudio.com/",
+          "description": "Evolving Hair Studio is a boutique salon focused on modern cuts, colour, and styling.",
+          "products_services": "Haircuts, styling, colour, and hair treatments."
         },
         {
           "name": "Octave",
           "image": "/images/gala-2025/auction/octave.jpg",
-          "url": ""
+          "url": "",
+          "description": "Generous contributor to the 2025 Gala auction.",
+          "products_services": ""
         },
         {
-          "name": "Take",
+          "name": "Take Sushi Restaurant",
           "image": "/images/gala-2025/auction/take.jpg",
-          "url": ""
+          "url": "https://takesushirestaurant.com/",
+          "description": "Take Sushi Restaurant serves fresh, thoughtfully prepared Japanese cuisine.",
+          "products_services": "Sushi, sashimi, and Japanese dishes for dine-in and takeout."
         }
       ]
     }

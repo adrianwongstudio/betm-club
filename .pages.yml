@@ -330,8 +330,10 @@ content:
                 type: object
                 list: true
                 fields:
-                  - { name: name, label: Name, type: string }
+                  - { name: name, label: Company name, type: string }
                   - { name: image, label: Logo, type: image, required: false }
+                  - { name: description, label: Description (shown in the pop-out panel), type: text, required: false }
+                  - { name: products_services, label: Products & services, type: text, required: false }
                   - { name: url, label: Website URL (optional), type: string, required: false }
           - name: auction
             label: Auction contributors group
@@ -344,8 +346,10 @@ content:
                 type: object
                 list: true
                 fields:
-                  - { name: name, label: Name, type: string }
+                  - { name: name, label: Company name, type: string }
                   - { name: image, label: Logo, type: image, required: false }
+                  - { name: description, label: Description (shown in the pop-out panel), type: text, required: false }
+                  - { name: products_services, label: Products & services, type: text, required: false }
                   - { name: url, label: Website URL (optional), type: string, required: false }
       - name: extras
         label: Extra content blocks (Gala page only)

@@ -110,17 +110,10 @@ permalink: /gala/
           </div>
           <div class="logo-grid logo-grid--lg">
             {% for item in gala.supporters.sponsors.items %}
-              {% if item.url %}
-                <a class="logo-tile" href="{{ item.url }}" target="_blank" rel="noopener" title="{{ item.name }}">
-                  {% if item.image %}<img src="{{ item.image }}" alt="{{ item.name }}" loading="lazy">
-                  {% else %}<span class="logo-tile__name">{{ item.name }}</span>{% endif %}
-                </a>
-              {% else %}
-                <div class="logo-tile" title="{{ item.name }}">
-                  {% if item.image %}<img src="{{ item.image }}" alt="{{ item.name }}" loading="lazy">
-                  {% else %}<span class="logo-tile__name">{{ item.name }}</span>{% endif %}
-                </div>
-              {% endif %}
+              <button type="button" class="logo-tile" data-supporter="sponsors:{{ loop.index0 }}" title="{{ item.name }}" aria-label="{{ item.name }} — details">
+                {% if item.image %}<img src="{{ item.image }}" alt="{{ item.name }}" loading="lazy">
+                {% else %}<span class="logo-tile__name">{{ item.name }}</span>{% endif %}
+              </button>
             {% endfor %}
           </div>
         </div>
@@ -138,17 +131,10 @@ permalink: /gala/
           </div>
           <div class="logo-grid">
             {% for item in gala.supporters.auction.items %}
-              {% if item.url %}
-                <a class="logo-tile" href="{{ item.url }}" target="_blank" rel="noopener" title="{{ item.name }}">
-                  {% if item.image %}<img src="{{ item.image }}" alt="{{ item.name }}" loading="lazy">
-                  {% else %}<span class="logo-tile__name">{{ item.name }}</span>{% endif %}
-                </a>
-              {% else %}
-                <div class="logo-tile" title="{{ item.name }}">
-                  {% if item.image %}<img src="{{ item.image }}" alt="{{ item.name }}" loading="lazy">
-                  {% else %}<span class="logo-tile__name">{{ item.name }}</span>{% endif %}
-                </div>
-              {% endif %}
+              <button type="button" class="logo-tile" data-supporter="auction:{{ loop.index0 }}" title="{{ item.name }}" aria-label="{{ item.name }} — details">
+                {% if item.image %}<img src="{{ item.image }}" alt="{{ item.name }}" loading="lazy">
+                {% else %}<span class="logo-tile__name">{{ item.name }}</span>{% endif %}
+              </button>
             {% endfor %}
           </div>
         </div>
@@ -156,4 +142,24 @@ permalink: /gala/
     </div>
   </div>
 </section>
+
+{# ─── Company details panel (populated by JS on tile click) ─── #}
+<div class="company-panel__backdrop" data-company-panel-backdrop></div>
+<aside class="company-panel" role="dialog" aria-modal="true" aria-labelledby="company-panel-name" aria-hidden="true" data-company-panel hidden>
+  <button type="button" class="company-panel__close" aria-label="Close panel" data-company-panel-close>×</button>
+  <div class="company-panel__body">
+    <div class="company-panel__logo" data-company-panel-logo hidden><img src="" alt=""></div>
+    <h2 class="company-panel__name" id="company-panel-name" data-company-panel-name></h2>
+    <p class="company-panel__description" data-company-panel-description hidden></p>
+    <div class="company-panel__section" data-company-panel-ps hidden>
+      <h3 class="company-panel__section-label">Products &amp; services</h3>
+      <p class="company-panel__section-body" data-company-panel-ps-body></p>
+    </div>
+    <div class="company-panel__section" data-company-panel-url hidden>
+      <h3 class="company-panel__section-label">Website</h3>
+      <a class="company-panel__link" href="" target="_blank" rel="noopener" data-company-panel-url-link>Visit website →</a>
+    </div>
+  </div>
+</aside>
+<script type="application/json" id="gala-supporters-data">{{ { "sponsors": gala.supporters.sponsors.items, "auction": gala.supporters.auction.items } | dump | safe }}</script>
 {% endif %}

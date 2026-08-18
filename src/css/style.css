@@ -1079,6 +1079,138 @@ button { font: inherit; cursor: pointer; }
   .logo-tile { padding: 16px; }
 }
 
+/* Company details slide-in panel (Gala supporters) */
+.logo-tile[data-supporter] {
+  background: var(--white);
+  border: 1px solid rgba(169, 178, 177, 0.55);
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+}
+.logo-tile[data-supporter]:hover { border-color: var(--rich-maroon); }
+
+.company-panel__backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 320ms ease;
+  pointer-events: none;
+  z-index: 90;
+}
+.company-panel__backdrop[data-open="true"] { opacity: 1; pointer-events: auto; }
+
+.company-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(480px, 100vw);
+  background: var(--white);
+  transform: translateX(100%);
+  transition: transform 320ms cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -18px 0 40px -18px rgba(0, 65, 101, 0.35);
+}
+.company-panel[data-open="true"] { transform: translateX(0); }
+
+.company-panel__close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 1px solid rgba(169, 178, 177, 0.55);
+  font-size: 22px;
+  line-height: 1;
+  color: var(--nav-rest);
+  transition: background 180ms ease, border-color 180ms ease, color 180ms ease;
+  z-index: 2;
+}
+.company-panel__close:hover { border-color: var(--rich-maroon); color: var(--rich-maroon); }
+
+.company-panel__body {
+  padding: 72px 40px 40px;
+  overflow-y: auto;
+  flex: 1;
+}
+.company-panel__logo {
+  width: 100%;
+  height: 140px;
+  background: var(--alt-bg);
+  border: 1px solid rgba(169, 178, 177, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+.company-panel__logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.company-panel__name {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  color: var(--loyal-blue);
+  margin: 0 0 20px;
+}
+.company-panel__description {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--secondary-ink);
+  margin: 0 0 28px;
+}
+.company-panel__section {
+  border-top: 1px solid rgba(169, 178, 177, 0.5);
+  padding-top: 24px;
+  margin-bottom: 24px;
+}
+.company-panel__section-label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--rich-maroon);
+  margin: 0 0 12px;
+}
+.company-panel__section-body {
+  font-size: 15.5px;
+  line-height: 1.62;
+  color: var(--secondary-ink);
+  margin: 0;
+}
+.company-panel__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--white);
+  background: var(--rich-maroon);
+  padding: 14px 22px;
+  transition: background 180ms ease;
+  word-break: break-word;
+}
+.company-panel__link:hover { background: var(--true-maroon); color: var(--white); }
+
+body.panel-open { overflow: hidden; }
+
+@media (max-width: 640px) {
+  .company-panel__body { padding: 64px 24px 32px; }
+  .company-panel__logo { height: 110px; }
+  .company-panel__name { font-size: 22px; }
+}
+
 /* Steps list (Attend page) */
 .steps {
   list-style: none;

@@ -99,6 +99,107 @@
     });
   });
 
+  // ---------- Company details slide-in panel (Gala supporters) ----------
+  (() => {
+    const panel = document.querySelector('[data-company-panel]');
+    const backdrop = document.querySelector('[data-company-panel-backdrop]');
+    const dataScript = document.getElementById('gala-supporters-data');
+    if (!panel || !backdrop || !dataScript) return;
+
+    let data;
+    try { data = JSON.parse(dataScript.textContent); } catch (e) { return; }
+
+    const $ = (sel) => panel.querySelector(sel);
+    const el = {
+      close: $('[data-company-panel-close]'),
+      logoWrap: $('[data-company-panel-logo]'),
+      logoImg: $('[data-company-panel-logo] img'),
+      name: $('[data-company-panel-name]'),
+      description: $('[data-company-panel-description]'),
+      psWrap: $('[data-company-panel-ps]'),
+      psBody: $('[data-company-panel-ps-body]'),
+      urlWrap: $('[data-company-panel-url]'),
+      urlLink: $('[data-company-panel-url-link]'),
+    };
+
+    let lastTrigger = null;
+
+    const populate = (item) => {
+      if (item.image) {
+        el.logoImg.src = item.image;
+        el.logoImg.alt = item.name || '';
+        el.logoWrap.hidden = false;
+      } else {
+        el.logoWrap.hidden = true;
+      }
+      el.name.textContent = item.name || '';
+
+      if (item.description) {
+        el.description.textContent = item.description;
+        el.description.hidden = false;
+      } else {
+        el.description.hidden = true;
+      }
+
+      if (item.products_services) {
+        el.psBody.textContent = item.products_services;
+        el.psWrap.hidden = false;
+      } else {
+        el.psWrap.hidden = true;
+      }
+
+      if (item.url) {
+        el.urlLink.href = item.url;
+        try {
+          el.urlLink.textContent = new URL(item.url).host.replace(/^www\./, '') + ' →';
+        } catch (e) {
+          el.urlLink.textContent = 'Visit website →';
+        }
+        el.urlWrap.hidden = false;
+      } else {
+        el.urlWrap.hidden = true;
+      }
+    };
+
+    const open = (group, index) => {
+      const item = data[group] && data[group][index];
+      if (!item) return;
+      populate(item);
+      panel.hidden = false;
+      // Force a frame so the transition can run from the initial off-screen state.
+      requestAnimationFrame(() => {
+        panel.setAttribute('data-open', 'true');
+        backdrop.setAttribute('data-open', 'true');
+        panel.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('panel-open');
+        el.close.focus();
+      });
+    };
+
+    const close = () => {
+      panel.setAttribute('data-open', 'false');
+      backdrop.setAttribute('data-open', 'false');
+      panel.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('panel-open');
+      setTimeout(() => { panel.hidden = true; }, 350);
+      if (lastTrigger && document.contains(lastTrigger)) lastTrigger.focus();
+    };
+
+    document.querySelectorAll('[data-supporter]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        lastTrigger = btn;
+        const [group, index] = btn.getAttribute('data-supporter').split(':');
+        open(group, parseInt(index, 10));
+      });
+    });
+
+    el.close.addEventListener('click', close);
+    backdrop.addEventListener('click', close);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && panel.getAttribute('data-open') === 'true') close();
+    });
+  })();
+
   // ---------- Guest form ----------
   document.querySelectorAll('[data-guest-form]').forEach((form) => {
     const submit = form.querySelector('[data-guest-submit]');
