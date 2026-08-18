@@ -1,9 +1,10 @@
-name: Auto-compress oversized JPEGs
+name: Auto-compress oversized images
 
-# Catches images that bypass the local pre-commit hook — most importantly,
-# PagesCMS uploads (which commit via the GitHub API and never run local hooks).
-# Compresses any JPEG larger than 400 KB down to max 1600 px long-edge at
-# quality 80, then commits the result back to main.
+# Catches JPEG / PNG images that bypass the local pre-commit hook — most
+# importantly, PagesCMS uploads (which commit via the GitHub API and never
+# run local hooks). JPEGs get resized to max 1600 px long-edge at quality
+# 80; PNGs get resized to the same dimension with metadata stripped.
+# Any file already under 400 KB is left alone.
 
 on:
   push:
@@ -13,6 +14,8 @@ on:
       - '**.jpeg'
       - '**.JPG'
       - '**.JPEG'
+      - '**.png'
+      - '**.PNG'
   workflow_dispatch:
 
 # Avoid two runs stepping on each other's push.
@@ -35,20 +38,20 @@ jobs:
         with:
           fetch-depth: 2  # need HEAD~1 to diff against the push
 
-      - name: Compress oversized JPEGs
+      - name: Compress oversized images
         id: compress
         run: |
           set -euo pipefail
           MAX_LONG_EDGE=1600
-          QUALITY=80
+          JPEG_QUALITY=80
           MIN_KB=400
 
           # Files changed in this push (fall back to full repo for manual runs).
           before="${{ github.event.before }}"
           if [ -n "$before" ] && [ "$before" != "0000000000000000000000000000000000000000" ]; then
-            files=$(git diff --name-only --diff-filter=ACMR "$before" "${{ github.sha }}" -- '*.jpg' '*.jpeg' '*.JPG' '*.JPEG' 2>/dev/null || true)
+            files=$(git diff --name-only --diff-filter=ACMR "$before" "${{ github.sha }}" -- '*.jpg' '*.jpeg' '*.JPG' '*.JPEG' '*.png' '*.PNG' 2>/dev/null || true)
           else
-            files=$(git ls-files -- '*.jpg' '*.jpeg' '*.JPG' '*.JPEG')
+            files=$(git ls-files -- '*.jpg' '*.jpeg' '*.JPG' '*.JPEG' '*.png' '*.PNG')
           fi
 
           if [ -z "$files" ]; then
@@ -67,7 +70,15 @@ jobs:
             fi
             echo "::group::compress: $f"
             echo "before: ${size_kb} KB"
-            convert "$f" -resize "${MAX_LONG_EDGE}x${MAX_LONG_EDGE}>" -quality "$QUALITY" -strip "$f"
+            case "$f" in
+              *.png|*.PNG)
+                # PNG is lossless — resize + strip metadata only.
+                convert "$f" -resize "${MAX_LONG_EDGE}x${MAX_LONG_EDGE}>" -strip "$f"
+                ;;
+              *)
+                convert "$f" -resize "${MAX_LONG_EDGE}x${MAX_LONG_EDGE}>" -quality "$JPEG_QUALITY" -strip "$f"
+                ;;
+            esac
             new_kb=$(du -k "$f" | cut -f1)
             echo "after:  ${new_kb} KB"
             echo "::endgroup::"
@@ -82,5 +93,5 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -m "Auto-compress oversized JPEGs [skip ci]"
+          git commit -m "Auto-compress oversized images [skip ci]"
           git push

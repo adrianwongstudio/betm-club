@@ -9,7 +9,7 @@ Marketing site for the Burnaby Entrepreneurs Toastmasters Club (Metrotown, Burna
 
 ## Image compression (automatic)
 
-A git pre-commit hook auto-compresses any staged JPEG larger than 400 KB — resizes it to a max long-edge of 1600 px at quality 80 and re-stages it before the commit lands. This means PagesCMS-uploaded photos never bloat the repo, and mobile users don't pay for 2 MB source-camera JPEGs.
+A git pre-commit hook auto-compresses any staged JPEG or PNG larger than 400 KB. JPEGs are resized to a max long-edge of 1600 px at quality 80; PNGs are resized to the same dimension losslessly with metadata stripped. Anything under 400 KB is left alone. The compressed file is re-staged before the commit lands, so oversized photos never make it into the repo — and mobile users don't pay for 2 MB source-camera images.
 
 - Script: [`scripts/compress-staged-images.sh`](scripts/compress-staged-images.sh)
 - Hook: [`.githooks/pre-commit`](.githooks/pre-commit)
@@ -17,7 +17,7 @@ A git pre-commit hook auto-compresses any staged JPEG larger than 400 KB — res
 
 Requires macOS (uses the built-in `sips`). On other OSes the hook exits silently and the commit proceeds unchanged.
 
-**PagesCMS safety net:** the pre-commit hook only runs on local commits. PagesCMS commits via the GitHub API and skips local hooks entirely. To cover that, a GitHub Action ([`.github/workflows/compress-images.yml`](.github/workflows/compress-images.yml)) runs on every push that touches a JPEG, applies the same compression with ImageMagick, and commits the result back with `[skip ci]`. So any oversized photo an editor uploads gets shrunk within seconds of arriving on `main`.
+**PagesCMS safety net:** the pre-commit hook only runs on local commits. PagesCMS commits via the GitHub API and skips local hooks entirely. To cover that, a GitHub Action ([`.github/workflows/compress-images.yml`](.github/workflows/compress-images.yml)) runs on every push that touches a JPEG or PNG, applies the same compression with ImageMagick, and commits the result back with `[skip ci]`. So any oversized image an editor uploads gets shrunk within seconds of arriving on `main`.
 
 ## Local development
 
