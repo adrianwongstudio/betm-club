@@ -26,6 +26,20 @@ module.exports = function (eleventyConfig) {
     return escapeHtml(value).replace(/\r?\n/g, "<br>");
   });
 
+  // Turn any YouTube/Vimeo URL an editor pastes into a clean embed URL.
+  // Any other URL passes through unchanged.
+  eleventyConfig.addFilter("videoEmbedUrl", (url) => {
+    if (!url) return "";
+    let m = url.match(/(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/)|youtu\.be\/)([\w-]+)/);
+    if (m) return `https://www.youtube.com/embed/${m[1]}`;
+    m = url.match(/vimeo\.com\/(?:video\/)?(\d+)/);
+    if (m) return `https://player.vimeo.com/video/${m[1]}`;
+    return url;
+  });
+
+  // True when the URL points at a video file we should render with <video>.
+  eleventyConfig.addFilter("isVideoFile", (url) => /\.(mp4|webm|mov|m4v)(\?|#|$)/i.test(url || ""));
+
   eleventyConfig.setServerPassthroughCopyBehavior("copy");
 
   return {

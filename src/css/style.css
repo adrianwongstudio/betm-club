@@ -965,6 +965,53 @@ button { font: inherit; cursor: pointer; }
   .feature-row__heading { font-size: 24px; }
 }
 
+/* Video highlight row — text left, video right (matches feature-row rhythm) */
+.video-row {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 56px;
+  align-items: center;
+}
+.video-row__body { max-width: 34em; }
+.video-row__eyebrow {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--rich-maroon);
+  margin: 0 0 14px;
+  display: inline-block;
+}
+.video-row__heading {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--loyal-blue);
+  margin: 0 0 18px;
+}
+.video-row__text { font-size: 17px; line-height: 1.7; color: var(--secondary-ink); margin: 0; }
+.video-row__frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  overflow: hidden;
+}
+.video-row__frame iframe,
+.video-row__frame video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+@media (max-width: 900px) {
+  .video-row { grid-template-columns: 1fr; gap: 24px; }
+  .video-row__heading { font-size: 26px; }
+}
+
 /* Logo grid — sponsor / auction tiles, all equal-area */
 .logo-groups { display: flex; flex-direction: column; gap: 64px; }
 .logo-group__head {

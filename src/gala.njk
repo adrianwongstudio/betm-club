@@ -39,6 +39,36 @@ permalink: /gala/
 </section>
 {% endif %}
 
+{% if gala.video and gala.video.url %}
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="video-row">
+      <div class="video-row__body">
+        {% if gala.video.eyebrow %}<span class="video-row__eyebrow">{{ gala.video.eyebrow }}</span>{% endif %}
+        <h2 class="video-row__heading">{{ gala.video.heading }}</h2>
+        {% if gala.video.text %}<p class="video-row__text">{{ gala.video.text }}</p>{% endif %}
+      </div>
+      <div class="video-row__frame">
+        {% if gala.video.url | isVideoFile %}
+          <video controls playsinline preload="metadata"
+            {% if gala.video.poster %}poster="{{ gala.video.poster }}"{% endif %}>
+            <source src="{{ gala.video.url }}">
+          </video>
+        {% else %}
+          <iframe
+            src="{{ gala.video.url | videoEmbedUrl }}"
+            title="{{ gala.video.heading }}"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
 {% if gala.extras and gala.extras.length %}
 <section class="section section--alt">
   <div class="wrap page-body">
