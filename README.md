@@ -7,6 +7,16 @@ Marketing site for the Burnaby Entrepreneurs Toastmasters Club (Metrotown, Burna
 - **CMS:** PagesCMS — committed to GitHub, no separate database or auth service to run.
 - **Hosting (recommended):** Cloudflare Pages or Netlify — connect the repo, set build command `npm run build`, output directory `_site`.
 
+## Image compression (automatic)
+
+A git pre-commit hook auto-compresses any staged JPEG larger than 400 KB — resizes it to a max long-edge of 1600 px at quality 80 and re-stages it before the commit lands. This means PagesCMS-uploaded photos never bloat the repo, and mobile users don't pay for 2 MB source-camera JPEGs.
+
+- Script: [`scripts/compress-staged-images.sh`](scripts/compress-staged-images.sh)
+- Hook: [`.githooks/pre-commit`](.githooks/pre-commit)
+- `npm install` runs `postinstall` which sets `git config core.hooksPath .githooks`, so cloning + installing is all it takes to activate.
+
+Requires macOS (uses the built-in `sips`). On other OSes the hook exits silently and the commit proceeds unchanged.
+
 ## Local development
 
 ```bash

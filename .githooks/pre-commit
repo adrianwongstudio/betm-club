@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Git pre-commit hook — compresses oversized JPEGs before commit.
+# Activated by `git config core.hooksPath .githooks` (run by npm postinstall).
+
+exec "$(git rev-parse --show-toplevel)/scripts/compress-staged-images.sh"
