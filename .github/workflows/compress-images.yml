@@ -1,0 +1,86 @@
+name: Auto-compress oversized JPEGs
+
+# Catches images that bypass the local pre-commit hook — most importantly,
+# PagesCMS uploads (which commit via the GitHub API and never run local hooks).
+# Compresses any JPEG larger than 400 KB down to max 1600 px long-edge at
+# quality 80, then commits the result back to main.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**.jpg'
+      - '**.jpeg'
+      - '**.JPG'
+      - '**.JPEG'
+  workflow_dispatch:
+
+# Avoid two runs stepping on each other's push.
+concurrency:
+  group: compress-images-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  compress:
+    # Skip when the workflow itself pushed the commit — safety net; GitHub
+    # already suppresses workflow-triggered pushes from re-triggering workflows.
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2  # need HEAD~1 to diff against the push
+
+      - name: Compress oversized JPEGs
+        id: compress
+        run: |
+          set -euo pipefail
+          MAX_LONG_EDGE=1600
+          QUALITY=80
+          MIN_KB=400
+
+          # Files changed in this push (fall back to full repo for manual runs).
+          before="${{ github.event.before }}"
+          if [ -n "$before" ] && [ "$before" != "0000000000000000000000000000000000000000" ]; then
+            files=$(git diff --name-only --diff-filter=ACMR "$before" "${{ github.sha }}" -- '*.jpg' '*.jpeg' '*.JPG' '*.JPEG' 2>/dev/null || true)
+          else
+            files=$(git ls-files -- '*.jpg' '*.jpeg' '*.JPG' '*.JPEG')
+          fi
+
+          if [ -z "$files" ]; then
+            echo "No image files to inspect."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          changed=false
+          while IFS= read -r f; do
+            [ -n "$f" ] || continue
+            [ -f "$f" ] || continue
+            size_kb=$(du -k "$f" | cut -f1)
+            if [ "$size_kb" -le "$MIN_KB" ]; then
+              continue
+            fi
+            echo "::group::compress: $f"
+            echo "before: ${size_kb} KB"
+            convert "$f" -resize "${MAX_LONG_EDGE}x${MAX_LONG_EDGE}>" -quality "$QUALITY" -strip "$f"
+            new_kb=$(du -k "$f" | cut -f1)
+            echo "after:  ${new_kb} KB"
+            echo "::endgroup::"
+            changed=true
+          done <<< "$files"
+
+          echo "changed=$changed" >> "$GITHUB_OUTPUT"
+
+      - name: Commit compressed images back to main
+        if: steps.compress.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Auto-compress oversized JPEGs [skip ci]"
+          git push

@@ -17,6 +17,8 @@ A git pre-commit hook auto-compresses any staged JPEG larger than 400 KB — res
 
 Requires macOS (uses the built-in `sips`). On other OSes the hook exits silently and the commit proceeds unchanged.
 
+**PagesCMS safety net:** the pre-commit hook only runs on local commits. PagesCMS commits via the GitHub API and skips local hooks entirely. To cover that, a GitHub Action ([`.github/workflows/compress-images.yml`](.github/workflows/compress-images.yml)) runs on every push that touches a JPEG, applies the same compression with ImageMagick, and commits the result back with `[skip ci]`. So any oversized photo an editor uploads gets shrunk within seconds of arriving on `main`.
+
 ## Local development
 
 ```bash
