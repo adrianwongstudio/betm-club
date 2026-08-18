@@ -1040,6 +1040,11 @@ button { font: inherit; cursor: pointer; }
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 20px;
 }
+.logo-grid--lg {
+  /* Sponsors get bigger tiles so they read as the top tier. */
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 28px;
+}
 .logo-tile {
   aspect-ratio: 3 / 2;
   background: var(--white);
@@ -1047,8 +1052,12 @@ button { font: inherit; cursor: pointer; }
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 28px;
+  padding: 20px;
   transition: border-color 180ms ease;
+}
+.logo-grid--lg .logo-tile {
+  aspect-ratio: 5 / 3;
+  padding: 40px 48px;
 }
 .logo-tile:hover { border-color: var(--rich-maroon); }
 .logo-tile img {
