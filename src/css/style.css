@@ -1532,12 +1532,14 @@ button { font: inherit; cursor: pointer; }
 }
 .logo-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  /* min(220px, 100%) prevents the track from forcing a min-width that
+     overflows narrow viewports (same trick as .member-biz). */
+  grid-template-columns: repeat(auto-fill, minmax(min(220px, 100%), 1fr));
   gap: 20px;
 }
 .logo-grid--lg {
   /* Sponsors get bigger tiles so they read as the top tier. */
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr));
   gap: 28px;
 }
 .logo-tile {
@@ -1549,6 +1551,8 @@ button { font: inherit; cursor: pointer; }
   justify-content: center;
   padding: 20px;
   transition: border-color 180ms ease;
+  min-width: 0;
+  overflow: hidden;
 }
 .logo-grid--lg .logo-tile {
   aspect-ratio: 5 / 3;
@@ -1561,6 +1565,7 @@ button { font: inherit; cursor: pointer; }
   width: auto;
   height: auto;
   object-fit: contain;
+  display: block;
 }
 .logo-tile__name {
   font-family: var(--sans);
