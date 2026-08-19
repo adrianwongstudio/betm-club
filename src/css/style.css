@@ -1494,7 +1494,8 @@ button { font: inherit; cursor: pointer; }
 }
 
 /* Logo grid — sponsor / auction tiles, all equal-area */
-.logo-groups { display: flex; flex-direction: column; gap: 64px; }
+.logo-groups { display: flex; flex-direction: column; gap: 64px; padding-bottom: 24px; }
+@media (max-width: 900px) { .logo-groups { padding-bottom: 48px; gap: 48px; } }
 .logo-group__head {
   display: flex;
   align-items: baseline;
