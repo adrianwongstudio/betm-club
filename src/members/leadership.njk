@@ -1,0 +1,39 @@
+---
+layout: layout.njk
+title: Leadership — Members
+description: How members build leadership skills through meeting roles, officer positions, and Pathways.
+permalink: /members/leadership/
+---
+
+{% set ph = leadership.page_hero %}
+{% include "sections/page-hero.njk" %}
+
+{% if leadership.unique_approach and leadership.unique_approach.body %}
+<section class="section--yellow" style="padding: 32px 32px;">
+  <div class="wrap" style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px 32px; justify-content: space-between;">
+    <p style="margin: 0; font-family: var(--sans); font-weight: 600; font-size: 19px; line-height: 1.5; color: var(--loyal-blue); max-width: 44em;">{{ leadership.unique_approach.body }}</p>
+    {% if leadership.unique_approach.cta %}
+      <a href="{{ leadership.unique_approach.cta.href }}" class="btn btn--maroon">{{ leadership.unique_approach.cta.label }}</a>
+    {% endif %}
+  </div>
+</section>
+{% endif %}
+
+{% if leadership.sections and leadership.sections.length %}
+<section class="section section--white">
+  <div class="wrap">
+    <div class="lead-sections">
+      {% for s in leadership.sections %}
+        <div class="lead-section">
+          <div class="eyebrow">{{ s.eyebrow }}</div>
+          <h3 class="section-h2" style="font-size: 26px; margin: 12px 0 14px;">{{ s.heading }}</h3>
+          <p style="font-size: 17px; line-height: 1.7; color: var(--secondary-ink); margin: 0;">{{ s.body }}</p>
+          {% if s.cta %}
+            <p style="margin: 16px 0 0;"><a class="text-link text-link--sm" href="{{ s.cta.href }}">{{ s.cta.label }}</a></p>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}

@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "title": "Leadership — Members",
+    "description": "How members build leadership skills through meeting roles, officer positions, and Toastmasters' leadership pathways."
+  },
+  "page_hero": {
+    "eyebrow": "Members · Leadership",
+    "headline": "Leadership is a practised craft.",
+    "intro": "Members grow into leadership through meeting roles, club officer positions, and the leadership tracks in Pathways."
+  },
+  "unique_approach": {
+    "body": "Our club has a unique approach to leadership development. To learn more, please email us.",
+    "cta": { "label": "betmclub@gmail.com", "href": "mailto:betmclub@gmail.com" }
+  },
+  "sections": [
+    {
+      "eyebrow": "Meeting roles",
+      "heading": "Every meeting is member-run",
+      "body": "Chair the meeting, run Table Topics, evaluate a speech, keep time, or track filler words. Each role is a small, structured leadership rep — you get one every Wednesday. The detailed role guide is on the main Members page.",
+      "cta": { "label": "See the role guide →", "href": "/members/" }
+    },
+    {
+      "eyebrow": "Officer positions",
+      "heading": "Take on a club officer role",
+      "body": "Elected officer terms are six months. Roles include President, VP Education, VP Membership, VP Public Relations, Secretary, Treasurer, and Sergeant-at-Arms. Each role runs a piece of the club and represents real project-management practice — with a supportive board around you."
+    },
+    {
+      "eyebrow": "Leadership Pathways",
+      "heading": "Structured leadership tracks",
+      "body": "Two of the eleven Pathways paths focus directly on leadership: Dynamic Leadership and Leadership Development. Others (Effective Coaching, Team Collaboration, Strategic Relationships) sit close by."
+    }
+  ]
+}

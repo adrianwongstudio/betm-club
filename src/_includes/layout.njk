@@ -38,7 +38,21 @@
 
       <nav class="nav" id="primary-nav" aria-label="Primary">
         <a href="{{ '/' | url }}" class="{{ 'active' if page.url == '/' }}">Home</a>
-        <a href="{{ '/members/' | url }}" class="{{ 'active' if '/members/' in page.url }}">Members</a>
+
+        <span class="nav-gala {{ 'is-current' if '/members/' in page.url }}" data-nav-gala>
+          <button type="button" class="nav-gala__trigger {{ 'active' if '/members/' in page.url }}" aria-expanded="false" aria-haspopup="true" aria-controls="nav-members-panel">
+            Members <span class="nav-gala__caret" aria-hidden="true">▾</span>
+          </button>
+          <span id="nav-members-panel" class="nav-gala__panel" role="menu">
+            <span class="nav-gala__inner">
+              <a href="{{ '/members/' | url }}" role="menuitem" class="is-next">Overview</a>
+              <a href="{{ '/members/communication/' | url }}" role="menuitem">Communication</a>
+              <a href="{{ '/members/leadership/' | url }}" role="menuitem">Leadership</a>
+              <a href="{{ '/members/member-business/' | url }}" role="menuitem">Member business</a>
+            </span>
+          </span>
+        </span>
+
         <a href="{{ '/guests/' | url }}" class="{{ 'active' if '/guests/' in page.url }}">Guests</a>
         <a href="{{ '/gallery/' | url }}" class="{{ 'active' if '/gallery/' in page.url }}">Gallery</a>
         <a href="{{ '/blog/' | url }}" class="{{ 'active' if '/blog/' in page.url }}">Blog</a>

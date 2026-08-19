@@ -1,0 +1,42 @@
+---
+layout: layout.njk
+title: Member business — Members
+description: Meet the businesses our members are building.
+permalink: /members/member-business/
+---
+
+{% set ph = memberBusiness.page_hero %}
+{% include "sections/page-hero.njk" %}
+
+<section class="section section--white">
+  <div class="wrap">
+    <p style="max-width: 60ch; margin: 0 0 24px; font-size: 17px; line-height: 1.7; color: var(--secondary-ink);">{{ memberBusiness.intro }}</p>
+    {% if memberBusiness.cta %}
+      <p style="margin: 0 0 40px;"><a class="btn btn--maroon" href="{{ memberBusiness.cta.href }}">{{ memberBusiness.cta.label }}</a></p>
+    {% endif %}
+
+    {% if memberBusiness.items and memberBusiness.items.length %}
+      <div class="member-biz">
+        {% for it in memberBusiness.items %}
+          <article class="member-biz__card">
+            <div class="member-biz__logo">
+              {% if it.image %}
+                <img src="{{ it.image }}" alt="{{ it.name }}" loading="lazy">
+              {% else %}
+                <span class="member-biz__initials">{{ it.name | truncate(3, true, '') }}</span>
+              {% endif %}
+            </div>
+            <div class="member-biz__body">
+              <h3 class="member-biz__name">{{ it.name }}</h3>
+              {% if it.owner %}<div class="member-biz__owner">{{ it.owner }}</div>{% endif %}
+              {% if it.description %}<p class="member-biz__desc">{{ it.description }}</p>{% endif %}
+              {% if it.url %}
+                <a class="text-link text-link--sm" href="{{ it.url }}" target="_blank" rel="noopener">Visit website →</a>
+              {% endif %}
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</section>

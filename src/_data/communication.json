@@ -1,0 +1,59 @@
+{
+  "meta": {
+    "title": "Communication — Members",
+    "description": "How members build communication skills at Burnaby Entrepreneurs Toastmasters — Competent Communicator and Pathways."
+  },
+  "page_hero": {
+    "eyebrow": "Members · Communication",
+    "headline": "Two programmes for building your voice.",
+    "intro": "Members develop their speaking through two paths: the classic Competent Communicator manual and the current Pathways learning experience."
+  },
+  "unique_approach": {
+    "body": "Our club has a unique approach to our education compared with other Toastmasters clubs. To learn more please email us.",
+    "cta": { "label": "betmclub@gmail.com", "href": "mailto:betmclub@gmail.com" }
+  },
+  "competent_communicator": {
+    "eyebrow": "The classic programme",
+    "heading": "Competent Communicator",
+    "intro": "The Competent Communicator manual is Toastmasters' original ten-project foundation for public speaking. Members work through the projects at their own pace, each one focused on a specific skill and evaluated against clear criteria.",
+    "projects": [
+      { "num": 1,  "name": "Ice Breaker",                     "time": "4–6 min",  "objective": "Introduce yourself to the club and get comfortable in front of the room." },
+      { "num": 2,  "name": "Organize Your Speech",            "time": "5–7 min",  "objective": "Structure a talk around a clear opening, body, and close so an audience can follow it." },
+      { "num": 3,  "name": "Get to the Point",                "time": "5–7 min",  "objective": "Deliver a focused speech with a single specific purpose the audience walks away with." },
+      { "num": 4,  "name": "How to Say It",                   "time": "5–7 min",  "objective": "Choose words with intention — clear, concise, and appropriate to the audience." },
+      { "num": 5,  "name": "Your Body Speaks",                "time": "5–7 min",  "objective": "Use posture, gesture, facial expression, and eye contact to reinforce your message." },
+      { "num": 6,  "name": "Vocal Variety",                   "time": "5–7 min",  "objective": "Vary pitch, pace, volume, and tone so the voice carries the meaning as much as the words." },
+      { "num": 7,  "name": "Research Your Topic",             "time": "5–7 min",  "objective": "Build credibility with well-supported material from reliable sources." },
+      { "num": 8,  "name": "Get Comfortable with Visual Aids", "time": "5–7 min",  "objective": "Design and use visual aids that enhance the message without pulling focus." },
+      { "num": 9,  "name": "Persuade with Power",             "time": "5–7 min",  "objective": "Move an audience to action using logic, emotion, and credibility together." },
+      { "num": 10, "name": "Inspire Your Audience",           "time": "8–10 min", "objective": "Deliver a longer, motivational speech that leaves the room energised." }
+    ]
+  },
+  "pathways": {
+    "eyebrow": "The current programme",
+    "heading": "Pathways",
+    "intro": "Pathways is Toastmasters' modern learning experience. Every project ties to a specific competency, includes a rubric for the evaluator, and progresses through five levels — fundamentals first, then increasingly demanding work.",
+    "features": [
+      "Take a short online assessment when you join; it suggests a path based on your goals.",
+      "Choose from 11 paths. New members receive one path free.",
+      "Each path has 5 levels — fundamentals, mechanics, tools, style, and reflection/mastery.",
+      "Progress is self-paced. You give speeches at club meetings and apply the feedback.",
+      "Over 300 practical workplace skills are covered across the programme, in multiple languages."
+    ],
+    "paths_heading": "The 11 paths",
+    "paths": [
+      "Dynamic Leadership",
+      "Effective Coaching",
+      "Engaging Humor",
+      "Innovative Planning",
+      "Leadership Development",
+      "Motivational Strategies",
+      "Persuasive Influence",
+      "Presentation Mastery",
+      "Strategic Relationships",
+      "Team Collaboration",
+      "Visionary Communication"
+    ],
+    "more_link": { "label": "More at toastmasters.org/Pathways", "href": "https://www.toastmasters.org/Pathways" }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "title": "Member business — Members",
+    "description": "Meet the businesses our members are building."
+  },
+  "page_hero": {
+    "eyebrow": "Members · Member business",
+    "headline": "The businesses our members are building.",
+    "intro": "The club is entrepreneur-friendly — every Wednesday you're in a room of founders and operators. This is a directory of member-run businesses."
+  },
+  "intro": "Are you a member with a business to add? Email us and we'll list you.",
+  "cta": { "label": "betmclub@gmail.com", "href": "mailto:betmclub@gmail.com" },
+  "items": [
+    {
+      "name": "Legacy Financial Planning",
+      "owner": "",
+      "description": "Life insurance, retirement planning, investment strategies, and estate planning.",
+      "image": "/images/gala-2025/sponsors/wfg.png",
+      "url": "https://legacyfinancialplanning.ca/"
+    }
+  ]
+}

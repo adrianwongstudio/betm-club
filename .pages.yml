@@ -371,6 +371,160 @@ content:
               - { name: text, label: What to do, type: text }
 
   # ─────────────────────────────────────────────────────────────────────────
+  #   Members sub-pages
+  # ─────────────────────────────────────────────────────────────────────────
+  - name: communication
+    label: "🎤 Communication (sub-page)"
+    type: file
+    path: src/_data/communication.json
+    format: json
+    fields:
+      - name: meta
+        label: SEO
+        type: object
+        fields:
+          - { name: title, label: Page title, type: string }
+          - { name: description, label: Meta description, type: text }
+      - name: page_hero
+        label: Page top band
+        type: object
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: string }
+          - { name: headline, label: Headline, type: string }
+          - { name: intro, label: Intro paragraph, type: text, required: false }
+      - name: unique_approach
+        label: "Unique-approach yellow callout"
+        type: object
+        fields:
+          - { name: body, label: Body text, type: text, required: false }
+          - name: cta
+            label: Button
+            type: object
+            fields:
+              - { name: label, label: Label, type: string }
+              - { name: href, label: Link, type: string }
+      - name: competent_communicator
+        label: Competent Communicator (shown first)
+        type: object
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: string }
+          - { name: heading, label: Heading, type: string }
+          - { name: intro, label: Intro, type: text }
+          - name: projects
+            label: Projects (10 in the classic manual)
+            type: object
+            list: true
+            fields:
+              - { name: num, label: Number, type: number }
+              - { name: name, label: Project name, type: string }
+              - { name: time, label: "Time (e.g. \"5–7 min\")", type: string }
+              - { name: objective, label: Objective, type: text }
+      - name: pathways
+        label: Pathways
+        type: object
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: string }
+          - { name: heading, label: Heading, type: string }
+          - { name: intro, label: Intro, type: text }
+          - name: features
+            label: "How it works — bullet list"
+            type: string
+            list: true
+          - { name: paths_heading, label: Paths heading, type: string }
+          - name: paths
+            label: Path names
+            type: string
+            list: true
+          - name: more_link
+            label: External link
+            type: object
+            fields:
+              - { name: label, label: Label, type: string }
+              - { name: href, label: URL, type: string }
+
+  - name: leadership
+    label: "⭐ Leadership (sub-page)"
+    type: file
+    path: src/_data/leadership.json
+    format: json
+    fields:
+      - name: meta
+        label: SEO
+        type: object
+        fields:
+          - { name: title, label: Page title, type: string }
+          - { name: description, label: Meta description, type: text }
+      - name: page_hero
+        label: Page top band
+        type: object
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: string }
+          - { name: headline, label: Headline, type: string }
+          - { name: intro, label: Intro paragraph, type: text, required: false }
+      - name: unique_approach
+        label: "Unique-approach yellow callout"
+        type: object
+        fields:
+          - { name: body, label: Body text, type: text, required: false }
+          - name: cta
+            label: Button
+            type: object
+            fields:
+              - { name: label, label: Label, type: string }
+              - { name: href, label: Link, type: string }
+      - name: sections
+        label: Content sections
+        type: object
+        list: true
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: string }
+          - { name: heading, label: Heading, type: string }
+          - { name: body, label: Body, type: text }
+          - name: cta
+            label: Optional text link
+            type: object
+            fields:
+              - { name: label, label: Label, type: string, required: false }
+              - { name: href, label: Link, type: string, required: false }
+
+  - name: memberBusiness
+    label: "💼 Member business (sub-page)"
+    type: file
+    path: src/_data/memberBusiness.json
+    format: json
+    fields:
+      - name: meta
+        label: SEO
+        type: object
+        fields:
+          - { name: title, label: Page title, type: string }
+          - { name: description, label: Meta description, type: text }
+      - name: page_hero
+        label: Page top band
+        type: object
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: string }
+          - { name: headline, label: Headline, type: string }
+          - { name: intro, label: Intro paragraph, type: text, required: false }
+      - { name: intro, label: Intro paragraph, type: text, required: false }
+      - name: cta
+        label: "Get-listed button"
+        type: object
+        fields:
+          - { name: label, label: Label, type: string }
+          - { name: href, label: Link, type: string }
+      - name: items
+        label: Member businesses
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Business name, type: string }
+          - { name: owner, label: Owner / member name (optional), type: string, required: false }
+          - { name: description, label: Description, type: text, required: false }
+          - { name: image, label: Logo, type: image, required: false }
+          - { name: url, label: Website URL, type: string, required: false }
+
+  # ─────────────────────────────────────────────────────────────────────────
   #   Gallery page
   # ─────────────────────────────────────────────────────────────────────────
   - name: gallery
