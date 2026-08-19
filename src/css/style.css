@@ -1562,11 +1562,16 @@ button { font: inherit; cursor: pointer; }
 .logo-tile:hover { border-color: var(--rich-maroon); }
 .logo-tile img {
   max-width: 100%;
-  max-height: 100%;
+  max-height: 88px;   /* explicit pixel cap — % caps are unreliable on button+flex */
   width: auto;
   height: auto;
   object-fit: contain;
   display: block;
+}
+.logo-grid--lg .logo-tile img { max-height: 120px; }
+@media (max-width: 640px) {
+  .logo-tile img { max-height: 60px; }
+  .logo-grid--lg .logo-tile img { max-height: 90px; }
 }
 .logo-tile__name {
   font-family: var(--sans);
