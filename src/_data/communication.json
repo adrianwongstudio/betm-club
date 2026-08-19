@@ -35,23 +35,18 @@
     "intro": "Pathways is Toastmasters' modern learning experience. Every project ties to a specific competency, includes a rubric for the evaluator, and progresses through five levels — fundamentals first, then increasingly demanding work.",
     "features": [
       "Take a short online assessment when you join; it suggests a path based on your goals.",
-      "Choose from 11 paths. New members receive one path free.",
+      "Choose from six paths. New members receive one path free.",
       "Each path has 5 levels — fundamentals, mechanics, tools, style, and reflection/mastery.",
       "Progress is self-paced. You give speeches at club meetings and apply the feedback.",
       "Over 300 practical workplace skills are covered across the programme, in multiple languages."
     ],
-    "paths_heading": "The 11 paths",
+    "paths_heading": "The 6 paths",
     "paths": [
       "Dynamic Leadership",
-      "Effective Coaching",
       "Engaging Humor",
       "Innovative Planning",
-      "Leadership Development",
-      "Motivational Strategies",
-      "Persuasive Influence",
       "Presentation Mastery",
       "Strategic Relationships",
-      "Team Collaboration",
       "Visionary Communication"
     ],
     "more_link": { "label": "More at toastmasters.org/Pathways", "href": "https://www.toastmasters.org/Pathways" }
