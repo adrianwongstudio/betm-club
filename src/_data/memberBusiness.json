@@ -17,6 +17,34 @@
       "description": "Life insurance, retirement planning, investment strategies, and estate planning.",
       "image": "/images/gala-2025/sponsors/wfg.png",
       "url": "https://legacyfinancialplanning.ca/"
+    },
+    {
+      "name": "She is Bold Beauty",
+      "owner": "",
+      "description": "Makeup and beauty essentials built around confidence — for everyday and event looks.",
+      "image": "/images/gala-2025/sponsors/she-is-bold.jpeg",
+      "url": "https://sheisboldbeauty.com/"
+    },
+    {
+      "name": "Springfield Pens",
+      "owner": "",
+      "description": "Fine writing instruments and stationery — fountain pens, rollerballs, inks, and gifting.",
+      "image": "/images/gala-2025/auction/springfield.jpeg",
+      "url": "https://springfieldpens.ca/"
+    },
+    {
+      "name": "Octave Cafe",
+      "owner": "",
+      "description": "Neighbourhood cafe — coffee, tea, and light bites.",
+      "image": "/images/gala-2025/auction/octave.jpg",
+      "url": ""
+    },
+    {
+      "name": "Tommy Gunn",
+      "owner": "",
+      "description": "",
+      "image": "",
+      "url": ""
     }
   ]
 }
