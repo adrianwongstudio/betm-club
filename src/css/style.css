@@ -1549,14 +1549,15 @@ button { font: inherit; cursor: pointer; }
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 36px 40px;
   transition: border-color 180ms ease;
   min-width: 0;
-  overflow: hidden;
+  min-height: 140px;   /* fallback if aspect-ratio isn't honoured on <button> */
 }
 .logo-grid--lg .logo-tile {
   aspect-ratio: 5 / 3;
   padding: 40px 48px;
+  min-height: 200px;
 }
 .logo-tile:hover { border-color: var(--rich-maroon); }
 .logo-tile img {
@@ -1576,7 +1577,8 @@ button { font: inherit; cursor: pointer; }
 }
 @media (max-width: 640px) {
   .logo-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-  .logo-tile { padding: 16px; }
+  .logo-tile { padding: 24px 28px; min-height: 110px; }
+  .logo-grid--lg .logo-tile { padding: 28px 32px; min-height: 160px; }
 }
 
 /* Company details slide-in panel (Gala supporters) */
