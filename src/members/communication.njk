@@ -61,19 +61,21 @@ permalink: /members/communication/
     </div>
     <p style="max-width: 60ch; margin: 0 0 40px; font-size: 17px; line-height: 1.7; color: var(--secondary-ink);">{{ pw.intro }}</p>
 
-    <div class="two-col" style="margin-bottom: 48px;">
+    <div class="{% if pw.paths and pw.paths.length %}two-col{% endif %}" style="margin-bottom: 48px;">
       <div>
         <h3 style="font-family: var(--sans); font-size: 20px; font-weight: 700; color: var(--loyal-blue); margin: 0 0 16px;">How it works</h3>
         <ul class="checked-list">
           {% for it in pw.features %}<li>{{ icons.icon("check", "checked-list__icon") }}<span>{{ it }}</span></li>{% endfor %}
         </ul>
       </div>
+      {% if pw.paths and pw.paths.length %}
       <div>
-        <h3 style="font-family: var(--sans); font-size: 20px; font-weight: 700; color: var(--loyal-blue); margin: 0 0 16px;">{{ pw.paths_heading }}</h3>
+        {% if pw.paths_heading %}<h3 style="font-family: var(--sans); font-size: 20px; font-weight: 700; color: var(--loyal-blue); margin: 0 0 16px;">{{ pw.paths_heading }}</h3>{% endif %}
         <div class="competencies">
           {% for p in pw.paths %}<span class="competencies__pill">{{ p }}</span>{% endfor %}
         </div>
       </div>
+      {% endif %}
     </div>
 
     {% if pw.more_link and pw.more_link.href %}
