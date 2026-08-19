@@ -315,21 +315,6 @@ content:
             fields:
               - { name: label, label: Label, type: string }
               - { name: href, label: Link, type: string }
-      - name: ladder
-        label: Role ladder (Members page only)
-        type: object
-        fields:
-          - { name: eyebrow, label: Eyebrow, type: string }
-          - { name: heading, label: Heading, type: string }
-          - { name: intro, label: Intro paragraph, type: text }
-          - name: rows
-            label: Ladder rungs (ordered)
-            type: object
-            list: true
-            fields:
-              - { name: role, label: Role name, type: string }
-              - { name: why, label: Why it's at this level, type: text }
-          - { name: note, label: Footnote (optional), type: string, required: false }
       - name: role_details
         label: Meeting roles in full (Members page only)
         type: object

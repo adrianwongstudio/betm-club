@@ -34,23 +34,6 @@
       "image": ""
     }
   ],
-  "ladder": {
-    "eyebrow": "Which role next?",
-    "heading": "The role ladder",
-    "intro": "Meeting roles get harder in a fairly predictable order. If you're not sure what to sign up for, work down this ladder. Most members are ready to move a rung every three or four meetings.",
-    "rows": [
-      { "role": "SAA",                    "why": "Warms up the audience and announces housekeeping items." },
-      { "role": "Timer",                  "why": "Minimal speaking. You learn the agenda from the inside and start noticing pacing in every speech you hear." },
-      { "role": "Ah-Counter",             "why": "Short report, low stakes. Trains the ear that later makes you a good evaluator — and kills your own filler words fast." },
-      { "role": "Grammarian",             "why": "A slightly longer report and your first piece of prepared content: the Word of the Day." },
-      { "role": "Speaker",                "why": "Your Pathways speeches. Start here early and keep going — everything else supports this." },
-      { "role": "Topicsmaster",           "why": "Your first time holding the room. You're facilitating, reading experience levels, and improvising off other people's answers." },
-      { "role": "Speech Evaluator",       "why": "The hardest thinking on the list: listen once, in real time, and deliver useful feedback that lands well." },
-      { "role": "Toastmaster of the Day", "why": "You run the whole meeting. Every earlier role is a component of this one." },
-      { "role": "General Evaluator",      "why": "You run the evaluation team and assess the meeting itself. Take this once you've done most of the others." }
-    ],
-    "note": "BETM addition — not official Toastmasters material."
-  },
   "role_details": {
     "eyebrow": "The meeting roles in full",
     "heading": "What each role does — and what it teaches",
