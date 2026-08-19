@@ -13,24 +13,24 @@
   "link": { "label": "Join us", "href": "/attend/" },
   "cards": [
     {
-      "eyebrow": "Speeches",
-      "title": "Prepared Speeches",
-      "body": "Advance through your Pathways projects and receive written and spoken evaluation on every speech you give.",
+      "eyebrow": "",
+      "title": "Communication",
+      "body": "Develop your communication skills through a series of public speaking projects that build your fundamentals.",
       "cta": { "label": "See the pathways →", "href": "/members/" },
       "image": ""
     },
     {
-      "eyebrow": "Impromptu",
-      "title": "Table Topics",
-      "body": "Answer a surprise question in one to two minutes with no preparation. The fastest way to train thinking on your feet.",
+      "eyebrow": "",
+      "title": "Leadership",
+      "body": "Develop your leadership skills through meeting roles and involvement with an active Toastmasters club.",
       "cta": { "label": "How it works →", "href": "/members/" },
       "image": ""
     },
     {
-      "eyebrow": "Network",
-      "title": "Roles & Connections",
-      "body": "Take a leadership role at the meeting, run part of the agenda, and build a network of people who see you every week.",
-      "cta": { "label": "Roles explained →", "href": "/members/" },
+      "eyebrow": "",
+      "title": "Network",
+      "body": "Develop your network with like-minded entrepreneurial people. Support the businesses that matter.",
+      "cta": { "label": "Meet the members →", "href": "/members/" },
       "image": ""
     }
   ],

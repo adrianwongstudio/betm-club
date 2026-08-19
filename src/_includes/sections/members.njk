@@ -21,7 +21,7 @@
           </div>
           {% endif %}
           <div class="card__body">
-            <span class="card__eyebrow">{{ card.eyebrow }}</span>
+            {% if card.eyebrow %}<span class="card__eyebrow">{{ card.eyebrow }}</span>{% endif %}
             <h3 class="card__title">{{ card.title }}</h3>
             <p class="card__excerpt">{{ card.body }}</p>
             {% if card.cta %}<a href="{{ card.cta.href | url }}" class="card__link text-link text-link--sm">{{ card.cta.label }}</a>{% endif %}
