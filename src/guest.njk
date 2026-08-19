@@ -1,0 +1,191 @@
+---
+layout: layout.njk
+title: For Guests
+description: What to expect when you visit the Burnaby Entrepreneurs Toastmasters Club — meeting flow, cost, and why entrepreneurs specifically get value from Toastmasters.
+permalink: /guests/
+---
+
+{% import "macros/icons.njk" as icons %}
+{% set ph = guest.page_hero %}
+{% include "sections/page-hero.njk" %}
+
+{# ───────── Club experience wheel-of-six ───────── #}
+{% set ce = guest.club_experience %}
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="section-head" style="margin-bottom: 44px;">
+      <div>
+        <div class="eyebrow">{{ ce.eyebrow }}</div>
+        <h2 class="section-h2">{{ ce.heading }}</h2>
+      </div>
+    </div>
+    <div class="ce-grid">
+      {% for it in ce.items %}
+        <div class="ce-tile">
+          <div class="ce-tile__icon">{{ icons.icon(it.icon, "ce-tile__svg") }}</div>
+          <p class="ce-tile__text">{{ it.text }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# ───────── Why entrepreneurs ───────── #}
+{% set w = guest.why %}
+<section class="section section--white">
+  <div class="wrap">
+    <div class="two-col">
+      <div>
+        <div class="eyebrow">{{ w.eyebrow }}</div>
+        <h2 class="section-h2">{{ w.headline }}</h2>
+      </div>
+      <div class="two-col__body">
+        {% for p in w.paragraphs %}<p>{{ p }}</p>{% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ───────── Situations training table ───────── #}
+{% set s = guest.situations %}
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="section-head" style="margin-bottom: 40px;">
+      <div>
+        <div class="eyebrow">{{ s.eyebrow }}</div>
+        <h2 class="section-h2">{{ s.heading }}</h2>
+      </div>
+    </div>
+    <div class="mapping">
+      <div class="mapping__head">
+        <div class="mapping__col-label">The situation</div>
+        <div class="mapping__col-label">What the club drills</div>
+      </div>
+      {% for row in s.rows %}
+        <div class="mapping__row">
+          <div class="mapping__situation">{{ row.situation }}</div>
+          <div class="mapping__drill">{{ row.drill }}</div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# ───────── Pull quotes ───────── #}
+{% if guest.quotes and guest.quotes.length %}
+<section class="section section--dark">
+  <div class="wrap">
+    <div class="quotes">
+      {% for q in guest.quotes %}
+        <blockquote class="quote">
+          <p class="quote__body">“{{ q.body }}”</p>
+          <cite class="quote__cite">— {{ q.attribution }}</cite>
+        </blockquote>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# ───────── Meeting agenda timeline ───────── #}
+{% set ag = guest.agenda %}
+<section class="section section--white">
+  <div class="wrap">
+    <div class="section-head" style="margin-bottom: 44px;">
+      <div>
+        <div class="eyebrow">{{ ag.eyebrow }}</div>
+        <h2 class="section-h2">{{ ag.heading }}</h2>
+      </div>
+    </div>
+    <ol class="agenda">
+      {% for it in ag.items %}
+        <li class="agenda__item">
+          <div class="agenda__time">{{ it.time }}</div>
+          <div class="agenda__text">{{ it.text }}</div>
+        </li>
+      {% endfor %}
+    </ol>
+    {% if ag.promise %}
+      <div class="promise">
+        <div class="eyebrow">{{ ag.promise_label }}</div>
+        <p class="promise__line">{{ ag.promise }}</p>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{# ───────── Pathways programme ───────── #}
+{% set pw = guest.pathways %}
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="two-col">
+      <div>
+        <div class="eyebrow">{{ pw.eyebrow }}</div>
+        <h2 class="section-h2">{{ pw.headline }}</h2>
+        <p style="font-size: 17px; line-height: 1.68; color: var(--secondary-ink); margin: 20px 0 0;">{{ pw.intro }}</p>
+      </div>
+      <div class="two-col__body">
+        <h3 style="font-family: var(--sans); font-size: 20px; font-weight: 700; color: var(--loyal-blue); margin: 0 0 16px;">{{ pw.how_heading }}</h3>
+        <ul class="checked-list">
+          {% for it in pw.how_items %}
+            <li>{{ icons.icon("check", "checked-list__icon") }}<span>{{ it }}</span></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <div style="margin-top: 56px;">
+      <div class="eyebrow" style="margin-bottom: 18px;">{{ pw.competencies_heading }}</div>
+      <div class="competencies">
+        {% for c in pw.competencies %}<span class="competencies__pill">{{ c }}</span>{% endfor %}
+      </div>
+      {% if pw.more_link and pw.more_link.href %}
+        <p style="margin: 32px 0 0;"><a class="text-link" href="{{ pw.more_link.href }}" target="_blank" rel="noopener">{{ pw.more_link.label }}</a></p>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{# ───────── Cost ───────── #}
+{% set c = guest.cost %}
+<section class="section section--white">
+  <div class="wrap">
+    <div class="two-col">
+      <div>
+        <div class="eyebrow">{{ c.eyebrow }}</div>
+        <h2 class="section-h2">{{ c.headline }}</h2>
+      </div>
+      <div class="two-col__body">
+        <p style="margin-bottom: 24px;">{{ c.intro }}</p>
+        <dl class="price-list">
+          {% for it in c.items %}
+            <div class="price-list__row">
+              <dt>{{ it.item }}</dt>
+              <dd>{{ it.amount }}</dd>
+            </div>
+          {% endfor %}
+        </dl>
+        {% if c.footer %}<p style="margin-top: 24px; font-size: 15.5px; color: var(--secondary-ink);">{{ c.footer }}</p>{% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ───────── Closing CTA ───────── #}
+{% set cl = guest.closing %}
+<section class="section section--dark">
+  <div class="wrap">
+    <div class="closing">
+      <div class="eyebrow eyebrow--yellow" style="margin-bottom: 20px;">{{ cl.eyebrow }}</div>
+      <h2 class="closing__headline">{{ cl.headline }}</h2>
+      <p class="closing__body">{{ cl.body }}</p>
+      <div class="closing__ctas">
+        {% if cl.primary_cta %}<a class="btn btn--yellow" href="{{ cl.primary_cta.href }}">{{ cl.primary_cta.label }}</a>{% endif %}
+        {% if cl.secondary_cta %}<a class="btn btn--ghost" href="{{ cl.secondary_cta.href }}" {% if cl.secondary_cta.href.startsWith('http') %}target="_blank" rel="noopener"{% endif %}>{{ cl.secondary_cta.label }}</a>{% endif %}
+      </div>
+      {% if cl.tertiary_link and cl.tertiary_link.href %}
+        <p class="closing__tertiary">{{ cl.tertiary_prefix }} <a href="{{ cl.tertiary_link.href }}" target="_blank" rel="noopener">{{ cl.tertiary_link.label }}</a></p>
+      {% endif %}
+    </div>
+  </div>
+</section>

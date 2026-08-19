@@ -38,6 +38,7 @@
 
       <nav class="nav" id="primary-nav" aria-label="Primary">
         <a href="{{ '/' | url }}" class="{{ 'active' if page.url == '/' }}">Home</a>
+        <a href="{{ '/guests/' | url }}" class="{{ 'active' if '/guests/' in page.url }}">Guests</a>
         <a href="{{ '/members/' | url }}" class="{{ 'active' if '/members/' in page.url }}">Members</a>
         <a href="{{ '/gallery/' | url }}" class="{{ 'active' if '/gallery/' in page.url }}">Gallery</a>
         <a href="{{ '/blog/' | url }}" class="{{ 'active' if '/blog/' in page.url }}">Blog</a>
@@ -79,6 +80,7 @@
       <div class="footer-col">
         <h4>Quick Links</h4>
         <ul>
+          <li><a href="{{ '/guests/' | url }}">Guests</a></li>
           <li><a href="{{ '/members/' | url }}">Members</a></li>
           <li><a href="{{ '/gallery/' | url }}">Gallery</a></li>
           <li><a href="{{ '/blog/' | url }}">Blog</a></li>

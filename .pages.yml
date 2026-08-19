@@ -77,6 +77,155 @@ content:
       - { name: stat_label, label: Stat sub-line, type: string }
 
   # ─────────────────────────────────────────────────────────────────────────
+  #   Guests page — the marketing landing page for prospective visitors
+  # ─────────────────────────────────────────────────────────────────────────
+  - name: guest
+    label: "👋 Guests page"
+    type: file
+    path: src/_data/guest.json
+    format: json
+    fields:
+      - name: meta
+        label: SEO
+        type: object
+        fields:
+          - { name: title, label: Page title, type: string }
+          - { name: description, label: Meta description, type: text }
+      - name: page_hero
+        label: Page top band
+        type: object
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: string }
+          - { name: headline, label: Headline, type: string }
+          - { name: intro, label: Intro paragraph, type: text, required: false }
+      - name: club_experience
+        label: Club experience (icon grid)
+        type: object
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: string }
+          - { name: heading, label: Heading, type: string }
+          - name: items
+            label: Tiles (6 recommended)
+            type: object
+            list: true
+            fields:
+              - name: icon
+                label: Icon
+                type: select
+                options:
+                  values: [mic, star, thumbs-up, laptop, users, gavel, clock, check, arrow-right]
+              - { name: text, label: Text, type: string }
+      - name: why
+        label: "Why entrepreneurs specifically"
+        type: object
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: string }
+          - { name: headline, label: Headline, type: string }
+          - name: paragraphs
+            label: Body paragraphs
+            type: string
+            list: true
+      - name: situations
+        label: Situations mapping table
+        type: object
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: string }
+          - { name: heading, label: Heading, type: string }
+          - name: rows
+            label: Rows
+            type: object
+            list: true
+            fields:
+              - { name: situation, label: The situation, type: string }
+              - { name: drill, label: What the club drills, type: text }
+      - name: quotes
+        label: Pull quotes
+        type: object
+        list: true
+        fields:
+          - { name: body, label: Quote, type: text }
+          - { name: attribution, label: Attribution, type: string }
+      - name: agenda
+        label: "Meeting agenda timeline"
+        type: object
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: string }
+          - { name: heading, label: Heading, type: string }
+          - name: items
+            label: Timeline items
+            type: object
+            list: true
+            fields:
+              - { name: time, label: Time, type: string }
+              - { name: text, label: Description, type: text }
+          - { name: promise_label, label: Promise label, type: string, required: false }
+          - { name: promise, label: "The one-line promise", type: text, required: false }
+      - name: pathways
+        label: "Pathways programme"
+        type: object
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: string }
+          - { name: headline, label: Headline, type: string }
+          - { name: intro, label: Intro, type: text }
+          - { name: how_heading, label: How-it-works heading, type: string }
+          - name: how_items
+            label: How-it-works items
+            type: string
+            list: true
+          - { name: competencies_heading, label: Competencies heading, type: string }
+          - name: competencies
+            label: Competency pills
+            type: string
+            list: true
+          - name: more_link
+            label: More-link (external)
+            type: object
+            fields:
+              - { name: label, label: Label, type: string }
+              - { name: href, label: URL, type: string }
+      - name: cost
+        label: "What it costs"
+        type: object
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: string }
+          - { name: headline, label: Headline, type: string }
+          - { name: intro, label: Intro, type: text, required: false }
+          - name: items
+            label: Price rows
+            type: object
+            list: true
+            fields:
+              - { name: item, label: Item, type: string }
+              - { name: amount, label: Amount, type: string }
+          - { name: footer, label: Footer note, type: text, required: false }
+      - name: closing
+        label: "Closing call to action"
+        type: object
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: string }
+          - { name: headline, label: Headline, type: string }
+          - { name: body, label: Body, type: text }
+          - name: primary_cta
+            label: Primary button
+            type: object
+            fields:
+              - { name: label, label: Label, type: string }
+              - { name: href, label: Link, type: string }
+          - name: secondary_cta
+            label: Secondary button
+            type: object
+            fields:
+              - { name: label, label: Label, type: string }
+              - { name: href, label: Link, type: string }
+          - { name: tertiary_prefix, label: Tertiary prefix (e.g. "Not in Burnaby?"), type: string, required: false }
+          - name: tertiary_link
+            label: Tertiary text link
+            type: object
+            fields:
+              - { name: label, label: Label, type: string }
+              - { name: href, label: URL, type: string }
+
+  # ─────────────────────────────────────────────────────────────────────────
   #   About page
   # ─────────────────────────────────────────────────────────────────────────
   - name: about
@@ -166,19 +315,75 @@ content:
             fields:
               - { name: label, label: Label, type: string }
               - { name: href, label: Link, type: string }
-      - name: roles
-        label: Meeting roles (Members page only)
+      - name: ladder
+        label: Role ladder (Members page only)
         type: object
         fields:
+          - { name: eyebrow, label: Eyebrow, type: string }
+          - { name: heading, label: Heading, type: string }
+          - { name: intro, label: Intro paragraph, type: text }
+          - name: rows
+            label: Ladder rungs (ordered)
+            type: object
+            list: true
+            fields:
+              - { name: role, label: Role name, type: string }
+              - { name: why, label: Why it's at this level, type: text }
+          - { name: note, label: Footnote (optional), type: string, required: false }
+      - name: role_details
+        label: Meeting roles in full (Members page only)
+        type: object
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: string }
           - { name: heading, label: Section heading, type: string }
-          - { name: body, label: Intro paragraph, type: text }
-          - name: items
+          - { name: intro, label: Intro paragraph, type: text, required: false }
+          - name: roles
             label: Roles
             type: object
             list: true
             fields:
               - { name: name, label: Role name, type: string }
-              - { name: body, label: What they do, type: text }
+              - { name: summary, label: One-line summary, type: text }
+              - name: do
+                label: "What you'll do"
+                type: string
+                list: true
+              - name: skills
+                label: Real-world skills
+                type: string
+                list: true
+              - { name: pro_tip, label: Pro tip (optional), type: text, required: false }
+      - name: checklists
+        label: Prep checklists (Members page only)
+        type: object
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: string }
+          - { name: heading, label: Heading, type: string }
+          - { name: intro, label: Intro paragraph, type: text, required: false }
+          - name: groups
+            label: Checklist groups
+            type: object
+            list: true
+            fields:
+              - { name: name, label: "Group name (e.g. \"If you're speaking\")", type: string }
+              - name: items
+                label: Checklist items
+                type: string
+                list: true
+      - name: first_90
+        label: First 90 days (Members page only)
+        type: object
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: string }
+          - { name: heading, label: Heading, type: string }
+          - { name: intro, label: Footer note (optional), type: text, required: false }
+          - name: milestones
+            label: Milestones (ordered)
+            type: object
+            list: true
+            fields:
+              - { name: when, label: "When (e.g. \"Week 1\")", type: string }
+              - { name: text, label: What to do, type: text }
 
   # ─────────────────────────────────────────────────────────────────────────
   #   Gallery page

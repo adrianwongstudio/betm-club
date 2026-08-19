@@ -1,7 +1,7 @@
 ---
 layout: layout.njk
 title: Members
-description: Three ways members grow every week — prepared speeches, table topics, and meeting roles.
+description: Three ways members grow every week — prepared speeches, table topics, and meeting roles — plus a full guide to Toastmasters roles and your first 90 days.
 permalink: /members/
 ---
 
@@ -9,24 +9,123 @@ permalink: /members/
 {% include "sections/page-hero.njk" %}
 {% include "sections/members.njk" %}
 
-{% if members.roles %}
+{# ───────── Role ladder ───────── #}
+{% if members.ladder and members.ladder.rows.length %}
 <section class="section section--white">
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head" style="margin-bottom: 32px;">
       <div>
-        <div class="eyebrow">Roles</div>
-        <h2 class="section-h2">{{ members.roles.heading }}</h2>
+        <div class="eyebrow">{{ members.ladder.eyebrow }}</div>
+        <h2 class="section-h2">{{ members.ladder.heading }}</h2>
       </div>
     </div>
-    <p style="max-width: 60ch; margin: 0 0 40px; font-size: 17px; color: var(--secondary-ink);">{{ members.roles.body }}</p>
-    <ul class="roles-list">
-      {% for role in members.roles.items %}
-        <li class="roles-list__item">
-          <h3 class="roles-list__name">{{ role.name }}</h3>
-          <p class="roles-list__body">{{ role.body }}</p>
+    <p style="max-width: 60ch; margin: 0 0 32px; font-size: 17px; line-height: 1.7; color: var(--secondary-ink);">{{ members.ladder.intro }}</p>
+    <ol class="ladder">
+      {% for r in members.ladder.rows %}
+        <li class="ladder__step">
+          <div class="ladder__num">{{ loop.index }}</div>
+          <div class="ladder__body">
+            <h3 class="ladder__role">{{ r.role }}</h3>
+            <p class="ladder__why">{{ r.why }}</p>
+          </div>
         </li>
       {% endfor %}
-    </ul>
+    </ol>
+    {% if members.ladder.note %}<p class="footnote">{{ members.ladder.note }}</p>{% endif %}
+  </div>
+</section>
+{% endif %}
+
+{# ───────── Role details ───────── #}
+{% if members.role_details and members.role_details.roles.length %}
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="section-head" style="margin-bottom: 40px;">
+      <div>
+        <div class="eyebrow">{{ members.role_details.eyebrow }}</div>
+        <h2 class="section-h2">{{ members.role_details.heading }}</h2>
+        {% if members.role_details.intro %}<p style="max-width: 60ch; margin: 20px 0 0; font-size: 16.5px; line-height: 1.65; color: var(--secondary-ink);">{{ members.role_details.intro }}</p>{% endif %}
+      </div>
+    </div>
+    <div class="role-list">
+      {% for role in members.role_details.roles %}
+        <article class="role-card">
+          <div class="role-card__intro">
+            <h3 class="role-card__name">{{ role.name }}</h3>
+            {% if role.summary %}<p class="role-card__summary">{{ role.summary }}</p>{% endif %}
+          </div>
+          <div class="role-card__grid">
+            <div>
+              <div class="role-card__col-label">What you'll do</div>
+              <ul class="role-card__list">
+                {% for it in role.do %}<li>{{ it }}</li>{% endfor %}
+              </ul>
+            </div>
+            <div>
+              <div class="role-card__col-label">Real-world skills</div>
+              <ul class="role-card__list role-card__list--skills">
+                {% for it in role.skills %}<li>{{ it }}</li>{% endfor %}
+              </ul>
+            </div>
+          </div>
+          {% if role.pro_tip %}
+            <div class="role-card__tip">
+              <span class="role-card__tip-label">Pro tip</span>
+              <p>{{ role.pro_tip }}</p>
+            </div>
+          {% endif %}
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# ───────── Prep checklists ───────── #}
+{% if members.checklists and members.checklists.groups.length %}
+{% import "macros/icons.njk" as icons %}
+<section class="section section--white">
+  <div class="wrap">
+    <div class="section-head" style="margin-bottom: 32px;">
+      <div>
+        <div class="eyebrow">{{ members.checklists.eyebrow }}</div>
+        <h2 class="section-h2">{{ members.checklists.heading }}</h2>
+      </div>
+    </div>
+    {% if members.checklists.intro %}<p style="max-width: 60ch; margin: 0 0 44px; font-size: 17px; line-height: 1.7; color: var(--secondary-ink);">{{ members.checklists.intro }}</p>{% endif %}
+    <div class="checklist-grid">
+      {% for g in members.checklists.groups %}
+        <div class="checklist">
+          <h3 class="checklist__name">{{ g.name }}</h3>
+          <ul class="checked-list">
+            {% for it in g.items %}<li>{{ icons.icon("check", "checked-list__icon") }}<span>{{ it }}</span></li>{% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# ───────── First 90 days ───────── #}
+{% if members.first_90 and members.first_90.milestones.length %}
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="section-head" style="margin-bottom: 32px;">
+      <div>
+        <div class="eyebrow">{{ members.first_90.eyebrow }}</div>
+        <h2 class="section-h2">{{ members.first_90.heading }}</h2>
+      </div>
+    </div>
+    <ol class="milestones">
+      {% for m in members.first_90.milestones %}
+        <li class="milestones__item">
+          <div class="milestones__when">{{ m.when }}</div>
+          <div class="milestones__text">{{ m.text }}</div>
+        </li>
+      {% endfor %}
+    </ol>
+    {% if members.first_90.intro %}<p class="footnote" style="margin-top: 32px;">{{ members.first_90.intro }}</p>{% endif %}
   </div>
 </section>
 {% endif %}

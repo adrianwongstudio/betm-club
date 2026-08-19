@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "title": "For Guests",
+    "description": "What to expect when you visit the Burnaby Entrepreneurs Toastmasters Club — meeting flow, cost, and why entrepreneurs specifically get value from Toastmasters."
+  },
+  "page_hero": {
+    "eyebrow": "For guests",
+    "headline": "Come see a meeting.",
+    "intro": "Wednesdays, 6:00 – 8:00 pm at Metropolis at Metrotown. Visiting is free — no membership, no commitment, and you will not have to speak in front of the room."
+  },
+  "club_experience": {
+    "eyebrow": "The club experience",
+    "heading": "What does the club experience offer?",
+    "items": [
+      { "icon": "thumbs-up", "text": "Feedback and evaluations in a supportive environment" },
+      { "icon": "star",      "text": "An opportunity to take on club leadership positions" },
+      { "icon": "laptop",    "text": "An interactive learning environment" },
+      { "icon": "users",     "text": "Access to a mentor" },
+      { "icon": "gavel",     "text": "The ability to assume club meeting roles" },
+      { "icon": "mic",       "text": "Practice giving prepared and impromptu speeches" }
+    ]
+  },
+  "why": {
+    "eyebrow": "Why entrepreneurs specifically",
+    "headline": "A surprising number of business problems are communication problems in a strategy costume.",
+    "paragraphs": [
+      "The pitch didn't land. The team left the meeting with three different interpretations. The great hire went elsewhere because someone else told a better story. The conference invite came and you said no.",
+      "Toastmasters is a weekly, low-stakes place to practise the things that are high-stakes everywhere else — and to hear honest feedback from people who have no reason to flatter you."
+    ]
+  },
+  "situations": {
+    "eyebrow": "What you're actually training",
+    "heading": "Mapped to the business you're building",
+    "rows": [
+      {
+        "situation": "Investor & client pitching",
+        "drill": "Prepared speeches teach you to open hard, structure an argument, and land a close in a fixed time — with a timer running, exactly like a real pitch."
+      },
+      {
+        "situation": "Sales calls & objections",
+        "drill": "Table Topics (impromptu speaking) is 1–2 minutes of thinking on your feet in front of an audience. It is the closest simulation of an unexpected question there is."
+      },
+      {
+        "situation": "Running meetings people don't dread",
+        "drill": "Every meeting is member-run. You will chair, keep time, and move an agenda — skills nobody teaches and everyone is judged on."
+      },
+      {
+        "situation": "Hiring and retaining people",
+        "drill": "Evaluation trains you to give specific, useful, non-crushing feedback. That single skill changes how a team performs."
+      },
+      {
+        "situation": "Conference stages & podcasts",
+        "drill": "Vocal variety, gesture, and pacing are separate trainable projects, not vague talent."
+      },
+      {
+        "situation": "Networking that goes somewhere",
+        "drill": "A room of ~20 Burnaby-area entrepreneurs who see you every week. Repeated exposure beats a hundred cold coffee chats."
+      }
+    ]
+  },
+  "quotes": [
+    {
+      "body": "Being in Toastmasters pushes you to take on challenges that you wouldn't have taken on by yourself. You start stepping up more for a project and want to take on more responsibility and become a leader.",
+      "attribution": "Sven Dejean, Senior Associate, PricewaterhouseCoopers"
+    },
+    {
+      "body": "The training has made me more focused and disciplined at work and improved my interactions with colleagues.",
+      "attribution": "Adrian Jefferson Chofor, Marketing Operations Consultant, Kaiser Permanente"
+    }
+  ],
+  "agenda": {
+    "eyebrow": "What actually happens in those two hours",
+    "heading": "Start to finish — so you can picture the whole thing before you arrive.",
+    "items": [
+      { "time": "5:55 pm", "text": "Doors open. Networking." },
+      { "time": "6:05 pm", "text": "Meeting begins. The Toastmaster of the evening (a member, rotating each week) welcomes everyone and introduces guests by name. You'll be asked to wave or say hello — that's it." },
+      { "time": "6:15 pm", "text": "Officers introductions." },
+      { "time": "6:20 pm", "text": "Prepared speeches and evaluations. Two or three members deliver 5–7 minute speeches from their Pathways projects — each one working on a specific skill like persuasion, vocal variety, or storytelling." },
+      { "time": "6:50 pm", "text": "Break / networking." },
+      { "time": "7:05 pm", "text": "Table Topics and evaluations. Members and guests are called at random to give a 1–2 minute impromptu answer to a question. Guests may be invited but can pass with zero awkwardness. This is the fun part and the part that makes people join." },
+      { "time": "7:40 pm", "text": "Reports and awards. The timer, the grammarian, and the ah-counter report back. Best Speaker and Best Table Topics are voted on." },
+      { "time": "7:55 pm", "text": "Guest feedback. We ask what you thought. Say anything, including 'not for me' — nobody chases you." },
+      { "time": "8:00 pm", "text": "Close. Some members head out for dinner afterwards." }
+    ],
+    "promise_label": "The one-line promise",
+    "promise": "You will not speak in front of the audience if you do not want to."
+  },
+  "pathways": {
+    "eyebrow": "The programme behind it — Pathways",
+    "headline": "Toastmasters isn't an open-mic night.",
+    "intro": "Members work through Pathways, the organisation's structured education programme, so every speech has a specific skill objective and a rubric behind it.",
+    "how_heading": "How it works",
+    "how_items": [
+      "Take a short online assessment when you join; it suggests a learning path based on your goals.",
+      "Choose from six paths. New members receive one path free.",
+      "Each path has five levels — fundamentals first, then increasingly demanding projects.",
+      "You progress by delivering speeches at club meetings and applying the feedback. Entirely self-paced.",
+      "Over 300 practical workplace skills are covered across the programme, available online and in multiple languages."
+    ],
+    "competencies_heading": "The five core competencies",
+    "competencies": [
+      "Public Speaking",
+      "Interpersonal Communication",
+      "Strategic Leadership",
+      "Management",
+      "Confidence"
+    ],
+    "more_link": { "label": "More at toastmasters.org/Pathways", "href": "https://www.toastmasters.org/Pathways" }
+  },
+  "cost": {
+    "eyebrow": "What it costs — stated plainly",
+    "headline": "Visiting is free and always will be.",
+    "intro": "If you decide to join:",
+    "items": [
+      { "item": "One-time new-member fee", "amount": "$40 CAD" },
+      { "item": "Semi-Annual fee",         "amount": "$135 CAD per six months" }
+    ],
+    "footer": "For context: a single day of corporate presentation-skills training typically runs into four figures. This is roughly the price of a monthly streaming bundle, and it runs every week, forever."
+  },
+  "closing": {
+    "eyebrow": "See you Wednesday",
+    "headline": "The next meeting is this Wednesday.",
+    "body": "6:00 pm, Winners Community Room at Metropolis at Metrotown — through the two double doors beside Winners. Come at 5:45 and we'll introduce you around. No RSVP required, but it's nice to know you're coming.",
+    "primary_cta":   { "label": "Let us know you're coming", "href": "/attend/" },
+    "secondary_cta": { "label": "Get directions",           "href": "https://maps.app.goo.gl/NTDq15y8gdfJzbcZ7" },
+    "tertiary_prefix": "Not in Burnaby?",
+    "tertiary_link":  { "label": "Find a club at toastmasters.org/Find", "href": "https://www.toastmasters.org/Find" }
+  }
+}

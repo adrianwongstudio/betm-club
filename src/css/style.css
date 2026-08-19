@@ -965,6 +965,401 @@ button { font: inherit; cursor: pointer; }
   .feature-row__heading { font-size: 24px; }
 }
 
+/* ==========================================================================
+   Guest page
+   ========================================================================== */
+
+/* Club-experience 6-tile grid (icon-driven) */
+.ce-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.ce-tile {
+  background: var(--white);
+  border: 1px solid rgba(169, 178, 177, 0.55);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: border-color 180ms ease, transform 180ms ease;
+}
+.ce-tile:hover { border-color: var(--rich-maroon); }
+.ce-tile__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--alt-bg);
+  color: var(--rich-maroon);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.ce-tile__svg { width: 28px; height: 28px; }
+.ce-tile__text {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 1.4;
+  color: var(--loyal-blue);
+  margin: 0;
+}
+@media (max-width: 900px) { .ce-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .ce-grid { grid-template-columns: 1fr; } }
+
+/* Two-column layout (heading left, body right) */
+.two-col {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 80px;
+  align-items: start;
+}
+.two-col__body p { font-size: 17px; line-height: 1.68; color: var(--secondary-ink); margin: 0 0 20px; }
+.two-col__body p:last-child { margin-bottom: 0; }
+@media (max-width: 900px) { .two-col { grid-template-columns: 1fr; gap: 32px; } }
+
+/* Situation → drill mapping table */
+.mapping {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(169, 178, 177, 0.55);
+}
+.mapping__head {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 32px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(169, 178, 177, 0.55);
+}
+.mapping__col-label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--rich-maroon);
+}
+.mapping__row {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 32px;
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(169, 178, 177, 0.35);
+  align-items: start;
+}
+.mapping__row:last-child { border-bottom: none; }
+.mapping__situation {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--loyal-blue);
+  line-height: 1.35;
+}
+.mapping__drill {
+  font-size: 16.5px;
+  line-height: 1.65;
+  color: var(--secondary-ink);
+}
+@media (max-width: 700px) {
+  .mapping__head { display: none; }
+  .mapping__row { grid-template-columns: 1fr; gap: 8px; }
+}
+
+/* Pull quotes on dark band */
+.quotes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+@media (max-width: 900px) { .quotes { grid-template-columns: 1fr; gap: 32px; } }
+.quote {
+  margin: 0;
+  padding-left: 20px;
+  border-left: 3px solid var(--happy-yellow);
+}
+.quote__body {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.5;
+  color: var(--white);
+  margin: 0 0 16px;
+  letter-spacing: -0.005em;
+}
+.quote__cite {
+  font-style: normal;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Meeting agenda timeline */
+.agenda {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid rgba(169, 178, 177, 0.55);
+}
+.agenda__item {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 32px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(169, 178, 177, 0.35);
+  align-items: baseline;
+}
+.agenda__time {
+  font-family: var(--mono);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--rich-maroon);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+.agenda__text { font-size: 16.5px; line-height: 1.62; color: var(--secondary-ink); }
+@media (max-width: 640px) {
+  .agenda__item { grid-template-columns: 1fr; gap: 6px; }
+}
+.promise {
+  margin-top: 48px;
+  padding: 32px;
+  background: var(--happy-yellow);
+  border-left: 4px solid var(--rich-maroon);
+}
+.promise .eyebrow { margin-bottom: 12px; display: inline-block; color: var(--rich-maroon); }
+.promise__line {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.35;
+  color: var(--loyal-blue);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+/* Pathways checked list + competency pills */
+.checked-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+.checked-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 16.5px;
+  line-height: 1.55;
+  color: var(--secondary-ink);
+}
+.checked-list__icon { width: 20px; height: 20px; flex-shrink: 0; color: var(--rich-maroon); margin-top: 2px; }
+.competencies { display: flex; flex-wrap: wrap; gap: 12px; }
+.competencies__pill {
+  background: var(--white);
+  border: 1px solid rgba(169, 178, 177, 0.65);
+  color: var(--loyal-blue);
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 14.5px;
+  padding: 10px 16px;
+}
+
+/* Cost / price list */
+.price-list {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid rgba(169, 178, 177, 0.55);
+}
+.price-list__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 20px;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(169, 178, 177, 0.35);
+}
+.price-list__row dt { color: var(--secondary-ink); font-size: 16.5px; }
+.price-list__row dd {
+  margin: 0;
+  font-family: var(--sans);
+  font-weight: 700;
+  color: var(--loyal-blue);
+  font-size: 18px;
+}
+
+/* Closing dark CTA block */
+.closing { max-width: 720px; }
+.closing__headline {
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  margin: 0 0 20px;
+}
+.closing__body { font-size: 18px; line-height: 1.65; color: rgba(255, 255, 255, 0.85); margin: 0 0 32px; }
+.closing__ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+.closing__tertiary { margin: 28px 0 0; font-size: 15px; color: rgba(255, 255, 255, 0.7); }
+.closing__tertiary a { color: var(--happy-yellow); border-bottom: 1px solid rgba(242, 223, 116, 0.4); }
+.closing__tertiary a:hover { color: var(--white); }
+@media (max-width: 640px) { .closing__headline { font-size: 30px; } }
+
+/* ==========================================================================
+   Members page — role ladder, role details, checklists, first-90-days
+   ========================================================================== */
+
+.footnote { margin-top: 24px; font-family: var(--mono); font-size: 12px; color: var(--gala-small); letter-spacing: 0.02em; }
+
+/* Ladder — numbered steps */
+.ladder {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid rgba(169, 178, 177, 0.55);
+}
+.ladder__step {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 24px;
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(169, 178, 177, 0.35);
+  align-items: baseline;
+}
+.ladder__num {
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: 22px;
+  color: var(--rich-maroon);
+  line-height: 1;
+}
+.ladder__role {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--loyal-blue);
+  margin: 0 0 6px;
+}
+.ladder__why { font-size: 16px; line-height: 1.6; color: var(--secondary-ink); margin: 0; }
+
+/* Role details cards */
+.role-list { display: flex; flex-direction: column; gap: 32px; }
+.role-card {
+  background: var(--white);
+  border: 1px solid rgba(169, 178, 177, 0.55);
+  padding: 32px 32px 28px;
+}
+.role-card__intro { margin-bottom: 24px; }
+.role-card__name {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--loyal-blue);
+  margin: 0 0 10px;
+  letter-spacing: -0.005em;
+}
+.role-card__summary { font-size: 16.5px; line-height: 1.6; color: var(--secondary-ink); margin: 0; max-width: 60ch; }
+.role-card__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+.role-card__col-label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--rich-maroon);
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(169, 178, 177, 0.4);
+}
+.role-card__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.role-card__list li {
+  font-size: 15.5px;
+  line-height: 1.55;
+  color: var(--secondary-ink);
+  padding-left: 16px;
+  position: relative;
+}
+.role-card__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 6px;
+  height: 6px;
+  background: var(--happy-yellow);
+}
+.role-card__list--skills li::before { background: var(--rich-maroon); }
+.role-card__tip {
+  margin-top: 24px;
+  padding: 18px 22px;
+  background: var(--happy-yellow);
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.role-card__tip-label {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--rich-maroon);
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+.role-card__tip p { margin: 0; font-size: 15.5px; line-height: 1.6; color: var(--loyal-blue); }
+@media (max-width: 700px) {
+  .role-card__grid { grid-template-columns: 1fr; gap: 28px; }
+  .role-card { padding: 24px 20px; }
+}
+
+/* Prep checklists */
+.checklist-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 48px;
+}
+.checklist { border-top: 3px solid var(--happy-yellow); padding-top: 18px; }
+.checklist__name {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--loyal-blue);
+  margin: 0 0 16px;
+}
+@media (max-width: 700px) { .checklist-grid { grid-template-columns: 1fr; gap: 32px; } }
+
+/* First 90 days milestones */
+.milestones {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-left: 2px solid rgba(169, 178, 177, 0.55);
+}
+.milestones__item {
+  position: relative;
+  padding: 4px 0 28px 32px;
+}
+.milestones__item::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: 8px;
+  width: 14px;
+  height: 14px;
+  background: var(--rich-maroon);
+  border: 3px solid var(--alt-bg);
+  border-radius: 50%;
+}
+.milestones__item:last-child { padding-bottom: 0; }
+.milestones__when {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--rich-maroon);
+  margin-bottom: 6px;
+}
+.milestones__text { font-size: 16.5px; line-height: 1.65; color: var(--secondary-ink); }
+
 /* Video highlight row — text left, video right (matches feature-row rhythm) */
 .video-row {
   display: grid;

@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Members",
-    "description": "Three ways members grow every week: prepared speeches, table topics, and roles."
+    "description": "Three ways members grow every week — prepared speeches, table topics, and meeting roles — plus a full guide to Toastmasters roles and your first 90 days."
   },
   "page_hero": {
     "eyebrow": "Members",
@@ -15,38 +15,248 @@
     {
       "eyebrow": "Speeches",
       "title": "Prepared Speeches",
-      "body": "Work through Pathways projects at your own pace, from your icebreaker to a keynote. Every speech gets a written and spoken evaluation.",
+      "body": "Advance through your Pathways projects and receive written and spoken evaluation on every speech you give.",
       "cta": { "label": "See the pathways →", "href": "/members/" },
       "image": ""
     },
     {
       "eyebrow": "Impromptu",
       "title": "Table Topics",
-      "body": "One question, one to two minutes, no preparation. The fastest way to get comfortable answering a client, an investor, or a room.",
+      "body": "Answer a surprise question in one to two minutes with no preparation. The fastest way to train thinking on your feet.",
       "cta": { "label": "How it works →", "href": "/members/" },
-      "image": "",
-      "placeholder": "photo: table topics"
+      "image": ""
     },
     {
       "eyebrow": "Network",
       "title": "Roles & Connections",
-      "body": "Chair a meeting, mentor a newer member, stay for the after-chat. Leadership practice and a network of people building businesses.",
+      "body": "Take a leadership role at the meeting, run part of the agenda, and build a network of people who see you every week.",
       "cta": { "label": "Roles explained →", "href": "/members/" },
-      "image": "",
-      "placeholder": "photo: members networking"
+      "image": ""
     }
   ],
-  "roles": {
-    "heading": "Meeting roles",
-    "body": "Each Wednesday, roles rotate among members. Signing up for one is the fastest way to grow — you get real practice under real time pressure, in front of a supportive room.",
-    "items": [
-      { "name": "Toastmaster", "body": "Chairs the meeting and sets its tone." },
-      { "name": "General Evaluator", "body": "Runs the evaluation portion and evaluates the meeting overall." },
-      { "name": "Speech Evaluator", "body": "Provides constructive feedback on one prepared speech." },
-      { "name": "Table Topics Master", "body": "Prepares and delivers the impromptu-speaking questions." },
-      { "name": "Timer", "body": "Tracks each segment and reports back at the close." },
-      { "name": "Ah-Counter", "body": "Notes filler words so speakers can hear them and improve." },
-      { "name": "Grammarian", "body": "Selects a word of the day and comments on language use." }
+  "ladder": {
+    "eyebrow": "Which role next?",
+    "heading": "The role ladder",
+    "intro": "Meeting roles get harder in a fairly predictable order. If you're not sure what to sign up for, work down this ladder. Most members are ready to move a rung every three or four meetings.",
+    "rows": [
+      { "role": "SAA",                    "why": "Warms up the audience and announces housekeeping items." },
+      { "role": "Timer",                  "why": "Minimal speaking. You learn the agenda from the inside and start noticing pacing in every speech you hear." },
+      { "role": "Ah-Counter",             "why": "Short report, low stakes. Trains the ear that later makes you a good evaluator — and kills your own filler words fast." },
+      { "role": "Grammarian",             "why": "A slightly longer report and your first piece of prepared content: the Word of the Day." },
+      { "role": "Speaker",                "why": "Your Pathways speeches. Start here early and keep going — everything else supports this." },
+      { "role": "Topicsmaster",           "why": "Your first time holding the room. You're facilitating, reading experience levels, and improvising off other people's answers." },
+      { "role": "Speech Evaluator",       "why": "The hardest thinking on the list: listen once, in real time, and deliver useful feedback that lands well." },
+      { "role": "Toastmaster of the Day", "why": "You run the whole meeting. Every earlier role is a component of this one." },
+      { "role": "General Evaluator",      "why": "You run the evaluation team and assess the meeting itself. Take this once you've done most of the others." }
+    ],
+    "note": "BETM addition — not official Toastmasters material."
+  },
+  "role_details": {
+    "eyebrow": "The meeting roles in full",
+    "heading": "What each role does — and what it teaches",
+    "intro": "Transcribed from the official Toastmasters International role series, \"How Club Meeting Roles Build Real-World Skills.\"",
+    "roles": [
+      {
+        "name": "Chairperson",
+        "summary": "As the Toastmaster of the Day, you're the showrunner of the meeting, guiding the energy, pacing, and flow.",
+        "do": [
+          "Receive the agenda from a club officer to start filling meeting roles.",
+          "Coordinate with the Vice President Education or General Evaluator to make sure everyone knows their role and is set up for success.",
+          "Once the meeting begins, take the lead — introducing the theme and each functionary role for the day.",
+          "Keep the energy up by guiding smooth, engaging transitions throughout the meeting.",
+          "Close the meeting by thanking participants and guests."
+        ],
+        "skills": [
+          "Organization",
+          "Meeting management and facilitation",
+          "Time management",
+          "Preparation and communication",
+          "Public speaking",
+          "Flexibility, adaptability, and logistics management — adapting the meeting to what is happening in the room, and adjusting to missing roles."
+        ]
+      },
+      {
+        "name": "Speaker",
+        "summary": "The Speaker shares a prepared speech with the club, bringing stories and ideas to life while sharpening their public speaking skills.",
+        "do": [
+          "Deliver a prepared speech that helps others grow through your example.",
+          "Rehearse and refine your message to make it impactful.",
+          "Coordinate with your evaluator to align on goals and get meaningful feedback.",
+          "Arrive early to check mic, lighting, and setup."
+        ],
+        "skills": [
+          "Craft clear, effective speech structure.",
+          "Strengthen storytelling and persuasion skills.",
+          "Manage time and pacing with precision.",
+          "Boost confidence and self-awareness.",
+          "Receive and apply constructive feedback.",
+          "Develop core public speaking skills."
+        ]
+      },
+      {
+        "name": "Topicsmaster",
+        "summary": "The Topicsmaster leads the Table Topics® session, helping members practise thinking and speaking on their feet in an impromptu setting.",
+        "do": [
+          "Choose topics ahead of the meeting.",
+          "Before asking questions, explain that the role of Table Topics® is to help members improve their impromptu speaking skills and that responses should be 1–2 minutes long.",
+          "Invite members and guests from the audience to volunteer to answer a question."
+        ],
+        "skills": [
+          "Plan creatively, considering the club's atmosphere, experience levels, and overall tone.",
+          "Deliver an engaging presentation that encourages participation.",
+          "Demonstrate emotional intelligence by reading the room and selecting participants appropriately.",
+          "Apply strong facilitation skills to guide the session smoothly.",
+          "Practise active listening and effectively synthesize responses."
+        ],
+        "pro_tip": "Volunteer to answer a Table Topics® question. It's a great way to strengthen your improvisational skills, boost critical thinking and creativity, and step outside your comfort zone."
+      },
+      {
+        "name": "Speech Evaluator",
+        "summary": "The Speech Evaluator role is about evaluating, not judging.",
+        "do": [
+          "Connect with the speaker to understand their goals.",
+          "Review the Pathways project criteria.",
+          "Prepare notes or an evaluation form.",
+          "Listen actively to the speech, taking notes on strengths and areas for improvement.",
+          "Consider key elements like structure, delivery, content, vocal variety, gestures, eye contact, and use of time.",
+          "Give a 2–3 minute evaluation.",
+          "Start with encouragement, highlighting what the speaker did well.",
+          "Offer specific, actionable suggestions for improvement.",
+          "End on a positive note, reinforcing the speaker's progress and potential."
+        ],
+        "skills": [
+          "Critical thinking",
+          "Preparation",
+          "Active listening",
+          "Observation",
+          "Deliver honest, constructive, and actionable feedback.",
+          "Identify and clearly articulate specific areas for improvement.",
+          "Tailor your messages to specific audiences.",
+          "Write thoughtful, reflective evaluations."
+        ]
+      },
+      {
+        "name": "General Evaluator",
+        "summary": "Want to be the one who watches it all and gives the club helpful feedback at the end? Try the General Evaluator role.",
+        "do": [
+          "Lead the evaluation portion of the meeting.",
+          "Oversee the evaluation team.",
+          "Confirm roles and responsibilities with each evaluator.",
+          "Observe the meeting and take notes on: timeliness, preparation, organization, enthusiasm, and execution of roles.",
+          "Deliver a verbal report evaluating the overall meeting."
+        ],
+        "skills": [
+          "Critical thinking and observation",
+          "Active listening",
+          "Meeting management",
+          "Time awareness",
+          "Clear, constructive feedback delivery",
+          "Ability to identify and communicate key insights"
+        ]
+      },
+      {
+        "name": "Timer",
+        "summary": "The Timer keeps track of time for every speaker and meeting segment.",
+        "do": [
+          "Know the time limits for each type of speaker at the meeting.",
+          "Be ready to explain timing rules and show how the time signals work.",
+          "Listen closely during the meeting and signal each speaker on time.",
+          "When asked, report each speaker's name and time."
+        ],
+        "skills": [
+          "Timekeeping and meeting management",
+          "Greater awareness of timing and pacing while speaking",
+          "Multitasking and situational awareness",
+          "Supporting others with confidence and clarity",
+          "Delivering clear, concise reports based on observations"
+        ]
+      },
+      {
+        "name": "Wordmaster (Ah-Counter & Grammarian)",
+        "summary": "The Wordmaster listens for filler words like \"um,\" \"ah,\" or \"you know\" that sneak into speeches and keep us from sounding our best. Also encourages club members to expand their vocabulary and speak more thoughtfully.",
+        "do": [
+          "Ask the Toastmaster or a club officer for the Ah-Counter log, or be ready to take your own notes.",
+          "When introduced, briefly explain your role as the Ah-Counter.",
+          "Track filler words, overused phrases, and long pauses — for example: and, but, so, you know, ah, um.",
+          "Share your observations during the evaluation section of the meeting.",
+          "Introduce the Word of the Day and challenge members to use it during the meeting.",
+          "Listen for how language and grammar are used, including incomplete sentences, mispronunciations, grammar errors, and word mix-ups.",
+          "Take notes on each speaker's language to share helpful feedback.",
+          "Present your full report on language and grammar when called upon at the end of the meeting."
+        ],
+        "skills": [
+          "Active listening",
+          "Professional communication",
+          "Clear and confident speaking",
+          "Give constructive feedback",
+          "Focus and attention to detail in fast-paced environments",
+          "Improved vocabulary",
+          "Critical thinking",
+          "Explain new concepts clearly",
+          "Observation and listening"
+        ]
+      }
+    ]
+  },
+  "checklists": {
+    "eyebrow": "The week before",
+    "heading": "Prep checklists — 15 minutes that make the role work",
+    "intro": "The difference between a role that helps you and a role that just fills a slot is about fifteen minutes of preparation. Here's the minimum for each.",
+    "groups": [
+      {
+        "name": "If you're speaking",
+        "items": [
+          "Confirm your Pathways project and its objectives — your evaluator will be marked against them, not against your topic.",
+          "Message your evaluator with your project and one specific thing you want watched (e.g. \"I over-explain; tell me where to cut\").",
+          "Rehearse out loud at least twice, timed. Reading it in your head is not rehearsal.",
+          "Arrive early to check the mic, lighting, and where you'll stand."
+        ]
+      },
+      {
+        "name": "If you're evaluating",
+        "items": [
+          "Contact the speaker before the meeting and ask what they're working on.",
+          "Read the project criteria in Pathways so your feedback is on-target.",
+          "Bring the evaluation form or your own note structure — do not improvise the structure.",
+          "Plan the shape in advance: what worked → one specific, actionable change → close on their progress."
+        ]
+      },
+      {
+        "name": "If you're Topicsmaster",
+        "items": [
+          "Write more questions than you need, and vary them — some light, some that require a real opinion.",
+          "Tie them to the meeting theme if there is one.",
+          "Plan who you'll call first: never open with the newest member, and always leave guests an easy opt-out."
+        ]
+      },
+      {
+        "name": "If you're Chairperson",
+        "items": [
+          "Get the agenda early and chase any unfilled roles yourself — don't assume someone else is doing it.",
+          "Prepare a short introduction for each speaker and a one-line transition between segments.",
+          "Have a plan for a no-show: know which segment you'd extend and who you'd call on."
+        ]
+      },
+      {
+        "name": "If you're Timer or Wordmaster",
+        "items": [
+          "Know the time limits and signal system before the meeting starts — ask a club officer if you're unsure.",
+          "Prepare the one or two sentences you'll use to explain your role when introduced.",
+          "Wordmaster: choose a Word of the Day that people will plausibly use. Obscure words go unused and the exercise fails."
+        ]
+      }
+    ]
+  },
+  "first_90": {
+    "eyebrow": "Your first 90 days",
+    "heading": "A month-by-month plan for new members",
+    "intro": "BETM addition — not official Toastmasters material.",
+    "milestones": [
+      { "when": "Week 1",       "text": "Talk to the VP of Education about your communication and leadership goals." },
+      { "when": "Week 2",       "text": "Volunteer for Table Topics whenever you're offered. This is where confidence moves fastest." },
+      { "when": "Weeks 3–4",    "text": "Take a functionary role. Timer is the easiest first step and teaches you the agenda." },
+      { "when": "Weeks 5–8",    "text": "Deliver your Ice Breaker, the first speech in every path. It's about you, so there's nothing to research." },
+      { "when": "Weeks 9–12",   "text": "Give your second and third speeches, and take your first evaluation role. Ask a longer-standing member to mentor you." }
     ]
   }
 }
