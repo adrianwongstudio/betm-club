@@ -110,6 +110,10 @@
           <li><span>Winners Community Room</span></li>
           <li><span>Metropolis at Metrotown</span></li>
           <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          {% if site.instagram_url %}
+            {% import "macros/icons.njk" as icons %}
+            <li><a href="{{ site.instagram_url }}" target="_blank" rel="noopener" class="footer-social">{{ icons.icon("instagram", "footer-social__icon") }}@{{ site.instagram_handle }}</a></li>
+          {% endif %}
         </ul>
       </div>
     </div>

@@ -5,9 +5,25 @@ description: A Wednesday night at Burnaby Entrepreneurs Toastmasters, in picture
 permalink: /gallery/
 ---
 
+{% import "macros/icons.njk" as icons %}
 {% set ph = gallery.page_hero %}
 {% include "sections/page-hero.njk" %}
 
 {# Render the full gallery cell list on this page. #}
 {% set gl_cells = gallery.cells %}
 {% include "sections/gallery.njk" %}
+
+{% if site.instagram_url %}
+<section class="section--dark ig-cta">
+  <div class="wrap">
+    <div class="ig-cta__row">
+      <div class="ig-cta__mark">{{ icons.icon("instagram", "ig-cta__icon") }}</div>
+      <div class="ig-cta__body">
+        <h2 class="ig-cta__heading">See more on Instagram</h2>
+        <p class="ig-cta__lead">Follow <span class="ig-cta__handle">@{{ site.instagram_handle }}</span> for meeting photos, speaker spotlights, and Gala highlights.</p>
+      </div>
+      <a class="btn btn--yellow ig-cta__btn" href="{{ site.instagram_url }}" target="_blank" rel="noopener">Follow @{{ site.instagram_handle }}</a>
+    </div>
+  </div>
+</section>
+{% endif %}

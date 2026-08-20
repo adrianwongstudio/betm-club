@@ -965,6 +965,53 @@ button { font: inherit; cursor: pointer; }
   .feature-row__heading { font-size: 24px; }
 }
 
+/* Instagram CTA (Gallery page) */
+.ig-cta { padding: 56px 32px; }
+.ig-cta__row {
+  max-width: var(--container);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px 32px;
+}
+.ig-cta__mark {
+  width: 64px;
+  height: 64px;
+  border: 2px solid var(--happy-yellow);
+  color: var(--happy-yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.ig-cta__icon { width: 32px; height: 32px; }
+.ig-cta__body { flex: 1; min-width: 220px; }
+.ig-cta__heading {
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 1.2;
+  color: var(--white);
+  margin: 0 0 8px;
+  letter-spacing: -0.01em;
+}
+.ig-cta__lead { font-size: 16.5px; line-height: 1.55; color: rgba(255, 255, 255, 0.82); margin: 0; }
+.ig-cta__handle {
+  font-family: var(--mono);
+  color: var(--happy-yellow);
+  font-weight: 500;
+}
+.ig-cta__btn { flex-shrink: 0; }
+@media (max-width: 640px) {
+  .ig-cta__heading { font-size: 22px; }
+  .ig-cta__btn { width: 100%; text-align: center; }
+}
+
+/* Footer social link */
+.footer-social { display: inline-flex; align-items: center; gap: 8px; }
+.footer-social__icon { width: 18px; height: 18px; flex-shrink: 0; }
+
 /* ==========================================================================
    Guest page
    ========================================================================== */
