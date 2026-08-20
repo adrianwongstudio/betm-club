@@ -1034,7 +1034,7 @@ button { font: inherit; cursor: pointer; }
 }
 .mapping__col-label {
   font-family: var(--mono);
-  font-size: 12px;
+  font-size: 15px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--rich-maroon);
@@ -1359,7 +1359,7 @@ button { font: inherit; cursor: pointer; }
 }
 .role-card__col-label {
   font-family: var(--mono);
-  font-size: 12px;
+  font-size: 15px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--rich-maroon);
@@ -1525,7 +1525,7 @@ button { font: inherit; cursor: pointer; }
 }
 .logo-group__eyebrow {
   font-family: var(--mono);
-  font-size: 13px;
+  font-size: 15px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--rich-maroon);
@@ -1681,7 +1681,7 @@ button { font: inherit; cursor: pointer; }
 }
 .company-panel__section-label {
   font-family: var(--mono);
-  font-size: 12px;
+  font-size: 15px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--rich-maroon);

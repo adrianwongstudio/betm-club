@@ -16,21 +16,21 @@
       "eyebrow": "",
       "title": "Communication",
       "body": "Develop your communication skills through a series of public speaking projects that build your fundamentals.",
-      "cta": { "label": "See the pathways →", "href": "/members/" },
+      "cta": { "label": "See the pathways →", "href": "/members/communication/" },
       "image": ""
     },
     {
       "eyebrow": "",
       "title": "Leadership",
       "body": "Develop your leadership skills through meeting roles and involvement with an active Toastmasters club.",
-      "cta": { "label": "How it works →", "href": "/members/" },
+      "cta": { "label": "How it works →", "href": "/members/leadership/" },
       "image": ""
     },
     {
       "eyebrow": "",
       "title": "Network",
       "body": "Develop your network with like-minded entrepreneurial people. Support the businesses that matter.",
-      "cta": { "label": "Meet the members →", "href": "/members/" },
+      "cta": { "label": "Meet the businesses →", "href": "/members/member-business/" },
       "image": ""
     }
   ],
@@ -233,7 +233,7 @@
   "first_90": {
     "eyebrow": "Your first 90 days",
     "heading": "A month-by-month plan for new members",
-    "intro": "BETM addition — not official Toastmasters material.",
+    "intro": "",
     "milestones": [
       { "when": "Week 1",       "text": "Talk to the VP of Education about your communication and leadership goals." },
       { "when": "Week 2",       "text": "Volunteer for Table Topics whenever you're offered. This is where confidence moves fastest." },

@@ -488,7 +488,7 @@ content:
               - { name: href, label: Link, type: string, required: false }
 
   - name: memberBusiness
-    label: "💼 Member business (sub-page)"
+    label: "💼 Members Businesses (sub-page)"
     type: file
     path: src/_data/memberBusiness.json
     format: json
