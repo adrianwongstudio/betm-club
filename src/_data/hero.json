@@ -3,7 +3,7 @@
   "headline_html": "Where Burnaby<br />entrepreneurs learn<br />to speak up.",
   "lead": "A friendly Wednesday-evening club for entrepreneurial-minded people — you don't need to be an entrepreneur. Practise speaking, get honest feedback, and build a network among people who are building something.",
   "primary_cta": { "label": "Attend a Meeting", "href": "/attend/" },
-  "secondary_cta": { "label": "What to Expect", "href": "/about/" },
+  "secondary_cta": { "label": "What to Expect", "href": "/guests/#what-happens" },
   "slides": [
     { "caption": "gala 2025 — head table", "image": "" },
     { "caption": "photo: member at the lectern", "image": "" },
