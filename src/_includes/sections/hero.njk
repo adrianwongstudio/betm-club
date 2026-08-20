@@ -31,10 +31,12 @@
         {% endfor %}
       </div>
       {% endif %}
+      {% if h.stat_number or h.stat_label %}
       <div class="hero__stat">
-        <div class="hero__stat-num">{{ h.stat_number }}</div>
-        <div class="hero__stat-label">{{ h.stat_label }}</div>
+        {% if h.stat_number %}<div class="hero__stat-num">{{ h.stat_number }}</div>{% endif %}
+        {% if h.stat_label %}<div class="hero__stat-label">{{ h.stat_label }}</div>{% endif %}
       </div>
+      {% endif %}
     </div>
   </div>
 </section>
