@@ -1281,17 +1281,17 @@ button { font: inherit; cursor: pointer; }
 }
 .path-selector__select:focus { outline: 2px solid var(--loyal-blue); outline-offset: 2px; border-color: var(--loyal-blue); }
 
+.explorer-heading {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.25;
+  letter-spacing: -0.005em;
+  color: var(--loyal-blue);
+  margin: 0;
+}
 .path-panel { margin-top: 8px; }
 .path-panel__head { max-width: 60ch; margin-bottom: 32px; }
-.path-panel__name {
-  font-family: var(--sans);
-  font-weight: 800;
-  font-size: 32px;
-  letter-spacing: -0.015em;
-  color: var(--loyal-blue);
-  margin: 0 0 12px;
-  line-height: 1.15;
-}
 .path-panel__desc { font-size: 17px; line-height: 1.68; color: var(--secondary-ink); margin: 0; }
 
 .level-header {

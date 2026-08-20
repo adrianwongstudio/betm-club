@@ -78,21 +78,17 @@ permalink: /members/communication/
       {% endif %}
     </div>
 
-    {% if pw.more_link and pw.more_link.href %}
-      <p><a class="text-link" href="{{ pw.more_link.href }}" target="_blank" rel="noopener">{{ pw.more_link.label }}</a></p>
-    {% endif %}
   </div>
 </section>
 
-{# ───────── Path explorer — interactive per-path level breakdown ───────── #}
+{# ───────── Interactive per-path level breakdown ───────── #}
 {% if pathways and pathways.paths and pathways.paths.length %}
 <section class="section section--white">
   <div class="wrap">
     <div class="section-head" style="margin-bottom: 24px;">
       <div>
-        <div class="eyebrow">Path explorer</div>
-        <h2 class="section-h2">{{ pw.explorer_heading or "Explore each path" }}</h2>
-        {% if pw.explorer_intro %}<p style="max-width: 60ch; margin: 16px 0 0; font-size: 17px; line-height: 1.68; color: var(--secondary-ink);">{{ pw.explorer_intro }}</p>{% endif %}
+        <h3 class="explorer-heading">{{ pw.explorer_heading or "Explore each path" }}</h3>
+        {% if pw.explorer_intro %}<p style="max-width: 60ch; margin: 12px 0 0; font-size: 16.5px; line-height: 1.65; color: var(--secondary-ink);">{{ pw.explorer_intro }}</p>{% endif %}
       </div>
     </div>
 
@@ -108,7 +104,6 @@ permalink: /members/communication/
     {% for p in pathways.paths %}
       <article class="path-panel" data-path="{{ p.slug }}" {% if not loop.first %}hidden{% endif %}>
         <header class="path-panel__head">
-          <h3 class="path-panel__name">{{ p.name }}</h3>
           <p class="path-panel__desc">{{ p.description }}</p>
         </header>
 
@@ -139,6 +134,10 @@ permalink: /members/communication/
         </div>
       </article>
     {% endfor %}
+
+    {% if pw.more_link and pw.more_link.href %}
+      <p style="margin-top: 40px;"><a class="text-link" href="{{ pw.more_link.href }}" target="_blank" rel="noopener">{{ pw.more_link.label }}</a></p>
+    {% endif %}
   </div>
 </section>
 {% endif %}
