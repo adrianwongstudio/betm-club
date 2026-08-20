@@ -16,21 +16,21 @@
       "eyebrow": "",
       "title": "Communication",
       "body": "Develop your communication skills through a series of public speaking projects that build your fundamentals.",
-      "cta": { "label": "See the pathways →", "href": "/members/communication/" },
+      "cta": { "label": "Communication Development →", "href": "/members/communication/" },
       "image": ""
     },
     {
       "eyebrow": "",
       "title": "Leadership",
       "body": "Develop your leadership skills through meeting roles and involvement with an active Toastmasters club.",
-      "cta": { "label": "How it works →", "href": "/members/leadership/" },
+      "cta": { "label": "Leadership Development →", "href": "/members/leadership/" },
       "image": ""
     },
     {
       "eyebrow": "",
       "title": "Network",
       "body": "Develop your network with like-minded entrepreneurial people. Support the businesses that matter.",
-      "cta": { "label": "Meet the businesses →", "href": "/members/member-business/" },
+      "cta": { "label": "Member Businesses →", "href": "/members/member-business/" },
       "image": ""
     }
   ],
