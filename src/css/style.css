@@ -1254,6 +1254,155 @@ button { font: inherit; cursor: pointer; }
    Members sub-pages — Communication, Leadership, Member business
    ========================================================================== */
 
+/* Pathways path explorer (Communication page) */
+.path-selector { display: flex; flex-direction: column; gap: 10px; max-width: 480px; margin-bottom: 40px; }
+.path-selector__label {
+  font-family: var(--mono);
+  font-size: 15px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--rich-maroon);
+}
+.path-selector__select {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--loyal-blue);
+  padding: 14px 44px 14px 18px;
+  border: 1px solid rgba(169, 178, 177, 0.85);
+  background: var(--white)
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='10' viewBox='0 0 16 10' fill='none'><path d='M1 1l7 7 7-7' stroke='%23004165' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>")
+    no-repeat right 18px center;
+  border-radius: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  width: 100%;
+}
+.path-selector__select:focus { outline: 2px solid var(--loyal-blue); outline-offset: 2px; border-color: var(--loyal-blue); }
+
+.path-panel { margin-top: 8px; }
+.path-panel__head { max-width: 60ch; margin-bottom: 32px; }
+.path-panel__name {
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: 32px;
+  letter-spacing: -0.015em;
+  color: var(--loyal-blue);
+  margin: 0 0 12px;
+  line-height: 1.15;
+}
+.path-panel__desc { font-size: 17px; line-height: 1.68; color: var(--secondary-ink); margin: 0; }
+
+.level-header {
+  background: var(--loyal-blue);
+  color: var(--white);
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 18px;
+  padding: 14px 22px;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.level-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  align-items: start;
+}
+.level-card {
+  background: var(--alt-bg);
+  padding: 24px 22px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.level-card__badge {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--loyal-blue);
+  color: var(--happy-yellow);
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.04em;
+}
+.level-card__title {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--loyal-blue);
+  margin: 0;
+  line-height: 1.25;
+}
+.level-card__req {
+  list-style: disc;
+  padding-left: 18px;
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: var(--secondary-ink);
+  font-style: italic;
+}
+.level-card__req li { margin-bottom: 4px; }
+.level-card__toggle {
+  margin-top: auto;
+  background: var(--rich-maroon);
+  color: var(--white);
+  border: none;
+  padding: 12px 16px;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 12.5px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  transition: background 180ms ease;
+}
+.level-card__toggle:hover { background: var(--true-maroon); }
+.level-card__caret { font-size: 16px; line-height: 1; transition: transform 180ms ease; }
+.level-card__toggle[aria-expanded="true"] .level-card__caret { transform: rotate(180deg); }
+.level-card__electives {
+  border-top: 3px solid var(--rich-maroon);
+  background: var(--white);
+  padding: 16px 18px 20px;
+  margin-top: -2px;
+}
+.level-card__choose {
+  font-size: 14px;
+  color: var(--nav-rest);
+  margin: 0 0 10px;
+  font-weight: 500;
+}
+.level-card__electives ul {
+  list-style: disc;
+  padding-left: 18px;
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--secondary-ink);
+  font-style: italic;
+}
+.level-card__electives li { margin-bottom: 4px; }
+
+@media (max-width: 1100px) {
+  .level-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .level-grid { grid-template-columns: 1fr; }
+}
+
+
+
 /* Competent Communicator 10-project list */
 .cc-projects { list-style: none; margin: 0; padding: 0; border-top: 1px solid rgba(169, 178, 177, 0.55); }
 .cc-project {

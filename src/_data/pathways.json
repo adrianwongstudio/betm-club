@@ -1,0 +1,94 @@
+{
+  "paths": [
+    {
+      "slug": "dynamic-leadership",
+      "name": "Dynamic Leadership",
+      "description": "Strategic leadership development — leadership and communication styles, conflict management, organizational change, interpersonal skills, and public speaking applied to leadership.",
+      "levels": [
+        { "n": 1, "title": "Mastering Fundamentals",  "required": ["Ice Breaker", "Writing a Speech with Purpose", "Introduction to Vocal Variety and Body Language", "Evaluation and Feedback"] },
+        { "n": 2, "title": "Learning Your Style",     "required": ["Understanding Your Leadership Style", "Understanding Your Communication Style", "Introduction to Toastmasters Mentoring"] },
+        { "n": 3, "title": "Increasing Knowledge",    "required": ["Negotiate the Best Outcome"], "choose": 2,
+          "electives": ["Active Listening", "Connect with Storytelling", "Connect with Your Audience", "Creating Effective Visual Aids", "Deliver Social Speeches", "Effective Body Language", "Focus on the Positive", "Inspire Your Audience", "Know Your Sense of Humor", "Make Connections Through Networking", "Prepare for an Interview", "Understanding Vocal Variety", "Using Descriptive Language", "Using Presentation Software", "Researching and Presenting"] },
+        { "n": 4, "title": "Building Skills",         "required": ["Manage Change"], "choose": 1,
+          "electives": ["Building a Social Media Presence", "Create a Podcast", "Manage Online Meetings", "Manage Projects Successfully", "Managing a Difficult Audience", "Public Relations Strategies", "Question-and-Answer Session", "Write a Compelling Blog"] },
+        { "n": 5, "title": "Demonstrating Expertise", "required": ["Lead in Any Situation", "Reflect on Your Path"], "choose": 1,
+          "electives": ["Ethical Leadership", "High Performance Leadership", "Leading in Your Volunteer Organization", "Lessons Learned", "Moderate a Panel Discussion", "Prepare to Speak Professionally"] }
+      ]
+    },
+    {
+      "slug": "engaging-humor",
+      "name": "Engaging Humor",
+      "description": "Develop your skills as a humorous and engaging public speaker — understanding humor and applying it in speeches, including challenging situations and impromptu delivery.",
+      "levels": [
+        { "n": 1, "title": "Mastering Fundamentals",  "required": ["Ice Breaker", "Writing a Speech with Purpose", "Introduction to Vocal Variety and Body Language", "Evaluation and Feedback"] },
+        { "n": 2, "title": "Learning Your Style",     "required": ["Know Your Sense of Humor", "Connect with Your Audience", "Introduction to Toastmasters Mentoring"] },
+        { "n": 3, "title": "Increasing Knowledge",    "required": ["Engage Your Audience With Humor"], "choose": 2,
+          "electives": ["Active Listening", "Connect with Storytelling", "Creating Effective Visual Aids", "Deliver Social Speeches", "Effective Body Language", "Focus on the Positive", "Inspire Your Audience", "Make Connections Through Networking", "Prepare for an Interview", "Understanding Vocal Variety", "Using Descriptive Language", "Using Presentation Software", "Researching and Presenting"] },
+        { "n": 4, "title": "Building Skills",         "required": ["The Power of Humor in an Impromptu Speech"], "choose": 1,
+          "electives": ["Building a Social Media Presence", "Create a Podcast", "Manage Online Meetings", "Manage Projects Successfully", "Managing a Difficult Audience", "Public Relations Strategies", "Question-and-Answer Session", "Write a Compelling Blog"] },
+        { "n": 5, "title": "Demonstrating Expertise", "required": ["Deliver Your Message With Humor", "Reflect on Your Path"], "choose": 1,
+          "electives": ["Ethical Leadership", "High Performance Leadership", "Leading in Your Volunteer Organization", "Lessons Learned", "Moderate a Panel Discussion", "Prepare to Speak Professionally"] }
+      ]
+    },
+    {
+      "slug": "motivational-strategies",
+      "name": "Motivational Strategies",
+      "description": "Build skills as a powerful, effective communicator — learn strategies for building connections, understanding motivation, and leading small groups. Culminates in a comprehensive team-building project that draws on public speaking too.",
+      "levels": [
+        { "n": 1, "title": "Mastering Fundamentals",  "required": ["Ice Breaker", "Writing a Speech with Purpose", "Introduction to Vocal Variety and Body Language", "Evaluation and Feedback"] },
+        { "n": 2, "title": "Learning Your Style",     "required": ["Understanding Your Communication Style", "Active Listening", "Introduction to Toastmasters Mentoring"] },
+        { "n": 3, "title": "Increasing Knowledge",    "required": ["Understanding Emotional Intelligence"], "choose": 2,
+          "electives": ["Connect with Storytelling", "Connect with Your Audience", "Creating Effective Visual Aids", "Deliver Social Speeches", "Effective Body Language", "Focus on the Positive", "Inspire Your Audience", "Know Your Sense of Humor", "Make Connections Through Networking", "Prepare for an Interview", "Understanding Vocal Variety", "Using Descriptive Language", "Using Presentation Software", "Researching and Presenting"] },
+        { "n": 4, "title": "Building Skills",         "required": ["Motivate Others"], "choose": 1,
+          "electives": ["Building a Social Media Presence", "Create a Podcast", "Manage Online Meetings", "Manage Projects Successfully", "Managing a Difficult Audience", "Public Relations Strategies", "Question-and-Answer Session", "Write a Compelling Blog"] },
+        { "n": 5, "title": "Demonstrating Expertise", "required": ["Team Building", "Reflect on Your Path"], "choose": 1,
+          "electives": ["Ethical Leadership", "High Performance Leadership", "Leading in Your Volunteer Organization", "Lessons Learned", "Moderate a Panel Discussion", "Prepare to Speak Professionally"] }
+      ]
+    },
+    {
+      "slug": "persuasive-influence",
+      "name": "Persuasive Influence",
+      "description": "Build skills as an innovative communicator and leader — negotiation, interpersonal communication, and public speaking, with leadership practice for complex situations.",
+      "levels": [
+        { "n": 1, "title": "Mastering Fundamentals",  "required": ["Ice Breaker", "Writing a Speech with Purpose", "Introduction to Vocal Variety and Body Language", "Evaluation and Feedback"] },
+        { "n": 2, "title": "Learning Your Style",     "required": ["Understanding Your Leadership Style", "Active Listening", "Introduction to Toastmasters Mentoring"] },
+        { "n": 3, "title": "Increasing Knowledge",    "required": ["Understanding Conflict Resolution"], "choose": 2,
+          "electives": ["Connect with Storytelling", "Connect with Your Audience", "Creating Effective Visual Aids", "Deliver Social Speeches", "Effective Body Language", "Focus on the Positive", "Inspire Your Audience", "Know Your Sense of Humor", "Make Connections Through Networking", "Prepare for an Interview", "Understanding Vocal Variety", "Using Descriptive Language", "Using Presentation Software", "Researching and Presenting"] },
+        { "n": 4, "title": "Building Skills",         "required": ["Leading in Difficult Situations"], "choose": 1,
+          "electives": ["Building a Social Media Presence", "Create a Podcast", "Manage Online Meetings", "Manage Projects Successfully", "Managing a Difficult Audience", "Public Relations Strategies", "Question-and-Answer Session", "Write a Compelling Blog"] },
+        { "n": 5, "title": "Demonstrating Expertise", "required": ["High Performance Leadership", "Reflect on Your Path"], "choose": 1,
+          "electives": ["Ethical Leadership", "Leading in Your Volunteer Organization", "Lessons Learned", "Moderate a Panel Discussion", "Prepare to Speak Professionally"] }
+      ]
+    },
+    {
+      "slug": "presentation-mastery",
+      "name": "Presentation Mastery",
+      "description": "Build skills as an accomplished public speaker — audience response, connection, technique, writing, and delivery. Culminates in an extended speech.",
+      "levels": [
+        { "n": 1, "title": "Mastering Fundamentals",  "required": ["Ice Breaker", "Writing a Speech with Purpose", "Introduction to Vocal Variety and Body Language", "Evaluation and Feedback"] },
+        { "n": 2, "title": "Learning Your Style",     "required": ["Understanding Your Communication Style", "Effective Body Language", "Introduction to Toastmasters Mentoring"] },
+        { "n": 3, "title": "Increasing Knowledge",    "required": ["Persuasive Speaking"], "choose": 2,
+          "electives": ["Active Listening", "Connect with Storytelling", "Connect with Your Audience", "Creating Effective Visual Aids", "Deliver Social Speeches", "Focus on the Positive", "Inspire Your Audience", "Know Your Sense of Humor", "Make Connections Through Networking", "Prepare for an Interview", "Understanding Vocal Variety", "Using Descriptive Language", "Using Presentation Software", "Researching and Presenting"] },
+        { "n": 4, "title": "Building Skills",         "required": ["Managing a Difficult Audience"], "choose": 1,
+          "electives": ["Building a Social Media Presence", "Create a Podcast", "Manage Online Meetings", "Manage Projects Successfully", "Public Relations Strategies", "Question-and-Answer Session", "Write a Compelling Blog"] },
+        { "n": 5, "title": "Demonstrating Expertise", "required": ["Prepare to Speak Professionally", "Reflect on Your Path"], "choose": 1,
+          "electives": ["Ethical Leadership", "High Performance Leadership", "Leading in Your Volunteer Organization", "Lessons Learned", "Moderate a Panel Discussion"] }
+      ]
+    },
+    {
+      "slug": "visionary-communication",
+      "name": "Visionary Communication",
+      "description": "Build skills as a strategic communicator and leader — emphasis on speech writing and delivery, culminating in developing a long-term personal or professional vision.",
+      "levels": [
+        { "n": 1, "title": "Mastering Fundamentals",  "required": ["Ice Breaker", "Writing a Speech with Purpose", "Introduction to Vocal Variety and Body Language", "Evaluation and Feedback"] },
+        { "n": 2, "title": "Learning Your Style",     "required": ["Understanding Your Leadership Style", "Understanding Your Communication Style", "Introduction to Toastmasters Mentoring"] },
+        { "n": 3, "title": "Increasing Knowledge",    "required": ["Develop a Communication Plan"], "choose": 2,
+          "electives": ["Active Listening", "Connect with Storytelling", "Connect with Your Audience", "Creating Effective Visual Aids", "Deliver Social Speeches", "Effective Body Language", "Focus on the Positive", "Inspire Your Audience", "Know Your Sense of Humor", "Make Connections Through Networking", "Prepare for an Interview", "Understanding Vocal Variety", "Using Descriptive Language", "Using Presentation Software", "Researching and Presenting"] },
+        { "n": 4, "title": "Building Skills",         "required": ["Communicate Change"], "choose": 1,
+          "electives": ["Building a Social Media Presence", "Create a Podcast", "Manage Online Meetings", "Manage Projects Successfully", "Managing a Difficult Audience", "Public Relations Strategies", "Question-and-Answer Session", "Write a Compelling Blog"] },
+        { "n": 5, "title": "Demonstrating Expertise", "required": ["Develop Your Vision", "Reflect on Your Path"], "choose": 1,
+          "electives": ["Ethical Leadership", "High Performance Leadership", "Leading in Your Volunteer Organization", "Lessons Learned", "Moderate a Panel Discussion", "Prepare to Speak Professionally"] }
+      ]
+    }
+  ]
+}

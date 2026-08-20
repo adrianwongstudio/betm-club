@@ -83,3 +83,62 @@ permalink: /members/communication/
     {% endif %}
   </div>
 </section>
+
+{# ───────── Path explorer — interactive per-path level breakdown ───────── #}
+{% if pathways and pathways.paths and pathways.paths.length %}
+<section class="section section--white">
+  <div class="wrap">
+    <div class="section-head" style="margin-bottom: 24px;">
+      <div>
+        <div class="eyebrow">Path explorer</div>
+        <h2 class="section-h2">{{ pw.explorer_heading or "Explore each path" }}</h2>
+        {% if pw.explorer_intro %}<p style="max-width: 60ch; margin: 16px 0 0; font-size: 17px; line-height: 1.68; color: var(--secondary-ink);">{{ pw.explorer_intro }}</p>{% endif %}
+      </div>
+    </div>
+
+    <div class="path-selector">
+      <label class="path-selector__label" for="pathway-select">Choose a path</label>
+      <select id="pathway-select" class="path-selector__select" data-pathway-select>
+        {% for p in pathways.paths %}
+          <option value="{{ p.slug }}">{{ p.name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+
+    {% for p in pathways.paths %}
+      <article class="path-panel" data-path="{{ p.slug }}" {% if not loop.first %}hidden{% endif %}>
+        <header class="path-panel__head">
+          <h3 class="path-panel__name">{{ p.name }}</h3>
+          <p class="path-panel__desc">{{ p.description }}</p>
+        </header>
+
+        <div class="level-header">Five Levels</div>
+
+        <div class="level-grid">
+          {% for lv in p.levels %}
+            <div class="level-card">
+              <div class="level-card__badge">L{{ lv.n }}</div>
+              <h4 class="level-card__title">{{ lv.title }}</h4>
+              <ul class="level-card__req">
+                {% for r in lv.required %}<li>{{ r }}</li>{% endfor %}
+              </ul>
+              {% if lv.electives and lv.electives.length %}
+                <button type="button" class="level-card__toggle" data-electives-toggle aria-expanded="false">
+                  Elective Projects
+                  <span class="level-card__caret" aria-hidden="true">▾</span>
+                </button>
+                <div class="level-card__electives" hidden>
+                  <p class="level-card__choose">Choose {{ lv.choose }} of the following:</p>
+                  <ul>
+                    {% for e in lv.electives %}<li>{{ e }}</li>{% endfor %}
+                  </ul>
+                </div>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}

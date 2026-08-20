@@ -373,6 +373,40 @@ content:
               - { name: text, label: What to do, type: text }
 
   # ─────────────────────────────────────────────────────────────────────────
+  #   Pathways reference data (drives the path explorer on Communication)
+  # ─────────────────────────────────────────────────────────────────────────
+  - name: pathways
+    label: "🛤 Pathways (reference data)"
+    type: file
+    path: src/_data/pathways.json
+    format: json
+    fields:
+      - name: paths
+        label: Pathways paths
+        type: object
+        list: true
+        fields:
+          - { name: slug, label: URL slug (lowercase, hyphens), type: string }
+          - { name: name, label: Path name, type: string }
+          - { name: description, label: Path description, type: text }
+          - name: levels
+            label: 5 levels (in order)
+            type: object
+            list: true
+            fields:
+              - { name: n, label: Level number (1–5), type: number }
+              - { name: title, label: Level title, type: string }
+              - name: required
+                label: Required project names
+                type: string
+                list: true
+              - { name: choose, label: "How many electives to choose (leave blank for levels 1–2)", type: number, required: false }
+              - name: electives
+                label: Elective project names (levels 3–5 only)
+                type: string
+                list: true
+
+  # ─────────────────────────────────────────────────────────────────────────
   #   Members sub-pages
   # ─────────────────────────────────────────────────────────────────────────
   - name: communication

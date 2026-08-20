@@ -40,15 +40,10 @@
       "Progress is self-paced. You give speeches at club meetings and apply the feedback.",
       "Over 300 practical workplace skills are covered across the programme, in multiple languages."
     ],
-    "paths_heading": "The current paths",
-    "paths": [
-      "Dynamic Leadership",
-      "Engaging Humor",
-      "Innovative Planning",
-      "Presentation Mastery",
-      "Strategic Relationships",
-      "Visionary Communication"
-    ],
-    "more_link": { "label": "More at toastmasters.org/Pathways", "href": "https://www.toastmasters.org/Pathways" }
+    "paths_heading": "",
+    "paths": [],
+    "more_link": { "label": "More at toastmasters.org/Pathways", "href": "https://www.toastmasters.org/Pathways" },
+    "explorer_heading": "Explore each path",
+    "explorer_intro": "Pick a path and see its five levels, required projects, and elective choices."
   }
 }
