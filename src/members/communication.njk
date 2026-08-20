@@ -51,7 +51,7 @@ permalink: /members/communication/
 
 {# ───────── Pathways ───────── #}
 {% set pw = communication.pathways %}
-<section class="section section--alt">
+<section class="section section--alt" style="padding-bottom: 40px;">
   <div class="wrap">
     <div class="section-head" style="margin-bottom: 32px;">
       <div>
@@ -59,9 +59,9 @@ permalink: /members/communication/
         <h2 class="section-h2">{{ pw.heading }}</h2>
       </div>
     </div>
-    <p style="max-width: 60ch; margin: 0 0 40px; font-size: 17px; line-height: 1.7; color: var(--secondary-ink);">{{ pw.intro }}</p>
+    <p style="max-width: 60ch; margin: 0 0 32px; font-size: 17px; line-height: 1.7; color: var(--secondary-ink);">{{ pw.intro }}</p>
 
-    <div class="{% if pw.paths and pw.paths.length %}two-col{% endif %}" style="margin-bottom: 48px;">
+    <div class="{% if pw.paths and pw.paths.length %}two-col{% endif %}">
       <div>
         <h3 style="font-family: var(--sans); font-size: 20px; font-weight: 700; color: var(--loyal-blue); margin: 0 0 16px;">How it works</h3>
         <ul class="checked-list">
