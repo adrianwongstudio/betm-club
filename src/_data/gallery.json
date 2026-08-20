@@ -17,9 +17,13 @@
     "widget_url": ""
   },
   "preview_cells": [
-    { "span": "tall", "caption": "gala 2025 — head table", "image": "" }
+    { "span": "tall", "caption": "2026 summer BBQ",  "image": "/images/gallery/2026-summer-bbq.jpeg" },
+    { "span": "wide", "caption": "Meeting · Aug 12", "image": "/images/gallery/meeting-2026-08-12.jpeg" },
+    { "span": "wide", "caption": "Meeting · Aug 19", "image": "/images/gallery/meeting-2026-08-19.jpeg" }
   ],
   "cells": [
-    { "span": "tall", "caption": "gala 2025 — head table", "image": "" }
+    { "span": "tall", "caption": "2026 summer BBQ",  "image": "/images/gallery/2026-summer-bbq.jpeg" },
+    { "span": "wide", "caption": "Meeting · Aug 12", "image": "/images/gallery/meeting-2026-08-12.jpeg" },
+    { "span": "wide", "caption": "Meeting · Aug 19", "image": "/images/gallery/meeting-2026-08-19.jpeg" }
   ]
 }

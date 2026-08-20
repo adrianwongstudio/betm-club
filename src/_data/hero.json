@@ -5,10 +5,10 @@
   "primary_cta": { "label": "Attend a Meeting", "href": "/attend/" },
   "secondary_cta": { "label": "What to Expect", "href": "/guests/#what-happens" },
   "slides": [
-    { "caption": "gala 2025 — head table", "image": "" },
-    { "caption": "photo: member at the lectern", "image": "" },
-    { "caption": "photo: table topics in full swing", "image": "" },
-    { "caption": "photo: evaluation & feedback", "image": "" }
+    { "caption": "", "image": "/images/header/1.JPG" },
+    { "caption": "", "image": "/images/header/2.jpeg" },
+    { "caption": "", "image": "/images/header/3.jpeg" },
+    { "caption": "", "image": "/images/header/4.jpeg" }
   ],
   "stat_number": "10 yrs",
   "stat_label": "meeting in Metrotown since 2016"
