@@ -556,6 +556,23 @@ content:
         fields:
           - { name: label, label: Label, type: string }
           - { name: href, label: Link, type: string }
+      - name: instagram_feed
+        label: Instagram feed (LightWidget)
+        type: object
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: string }
+          - { name: heading, label: Section heading, type: string }
+          - name: widget_url
+            label: LightWidget iframe URL
+            type: string
+            required: false
+            description: |
+              Get this from https://lightwidget.com (free tier is fine):
+              1. Sign up and connect the @betm_toastmasters Instagram account.
+              2. Create a widget → choose grid layout, pick columns/rows.
+              3. Copy just the `src=` URL from the iframe snippet — it looks like
+                 //cdn.lightwidget.com/widgets/XXXXX.html
+              Leave blank to hide the live-feed section.
       - name: preview_cells
         label: Homepage preview tiles (5 recommended)
         type: object

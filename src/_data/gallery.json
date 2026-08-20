@@ -11,6 +11,11 @@
   "eyebrow": "Gallery",
   "headline": "A Wednesday night, in pictures",
   "link": { "label": "View all photos", "href": "/gallery/" },
+  "instagram_feed": {
+    "eyebrow": "Latest on Instagram",
+    "heading": "Fresh from @betm_toastmasters",
+    "widget_url": ""
+  },
   "preview_cells": [
     { "span": "tall", "caption": "gala 2025 — head table", "image": "" }
   ],

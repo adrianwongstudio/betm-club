@@ -965,6 +965,10 @@ button { font: inherit; cursor: pointer; }
   .feature-row__heading { font-size: 24px; }
 }
 
+/* Instagram feed (LightWidget iframe) */
+.ig-feed { width: 100%; min-height: 300px; }
+.ig-feed__frame { width: 100%; border: 0; overflow: hidden; display: block; }
+
 /* Instagram CTA (Gallery page) */
 .ig-cta { padding: 56px 32px; }
 .ig-cta__row {
