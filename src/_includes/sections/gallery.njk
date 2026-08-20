@@ -11,7 +11,7 @@
     </div>
     <div class="mosaic">
       {% for cell in cells %}
-        <div class="mosaic__cell mosaic__cell--{{ cell.span }} ph">
+        <div class="mosaic__cell mosaic__cell--{{ cell.span }} {% if not cell.image %}ph{% endif %}">
           {% if cell.image %}
             <img src="{{ cell.image }}" alt="{{ cell.caption }}">
           {% else %}
