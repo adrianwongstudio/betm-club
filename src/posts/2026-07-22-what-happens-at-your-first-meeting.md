@@ -10,7 +10,7 @@ Your first visit is easier than most people expect. You arrive, take a seat, and
 
 ## The opening
 
-The Toastmaster of the evening welcomes the room, introduces themselves, and hands off to the various meeting roles: the Timer, the Ah-Counter, the Grammarian, and the General Evaluator. Each has one job, and each explains it in about thirty seconds.
+The Chairperson welcomes the room, introduces themselves, and hands off to the various meeting roles: the Timer, the Ah-Counter, the Grammarian, and the General Evaluator. Each has one job, and each explains it in about thirty seconds.
 
 ## Prepared speeches
 

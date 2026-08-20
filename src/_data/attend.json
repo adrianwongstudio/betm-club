@@ -18,7 +18,7 @@
   "expect": {
     "heading": "What to expect on your first visit",
     "items": [
-      { "step": "Arrive a few minutes early", "body": "The Toastmaster of the evening will greet you at the door and show you to a seat." },
+      { "step": "Arrive a few minutes early", "body": "The Chairperson will greet you at the door and show you to a seat." },
       { "step": "Meeting starts at 6:00", "body": "Two hours of prepared speeches, impromptu Table Topics, and structured evaluations. Guests are welcome to try Table Topics, but nobody is called on without asking first." },
       { "step": "Stay for a few minutes after", "body": "This is when the real introductions happen. Everyone is friendly — most members were guests once." }
     ]
