@@ -516,8 +516,16 @@ content:
           - { name: eyebrow, label: Eyebrow, type: string }
           - { name: heading, label: Heading, type: string }
           - { name: body, label: Body, type: text }
+          - { name: more_label, label: "Expand-button label (default: Learn more)", type: string, required: false }
+          - name: more_items
+            label: Expanded list (shown when the button is clicked)
+            type: object
+            list: true
+            fields:
+              - { name: name, label: Item name, type: string }
+              - { name: body, label: Item description, type: text, required: false }
           - name: cta
-            label: Optional text link
+            label: Optional text link (used when there are no expandable items)
             type: object
             fields:
               - { name: label, label: Label, type: string, required: false }

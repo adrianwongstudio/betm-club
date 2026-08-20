@@ -16,18 +16,44 @@
     {
       "eyebrow": "Meeting roles",
       "heading": "Every meeting is member-run",
-      "body": "Chair the meeting, run Table Topics, evaluate a speech, keep time, or track filler words. Each role is a small, structured leadership rep — you get one every Wednesday. The detailed role guide is on the main Members page.",
-      "cta": { "label": "See the role guide →", "href": "/members/" }
+      "body": "Chair the meeting, run Table Topics, evaluate a speech, keep time, or track filler words. Each role is a small, structured leadership rep — you get one every Wednesday.",
+      "more_label": "Learn more",
+      "more_items": [
+        { "name": "Toastmaster of the Day", "body": "Chairs the whole meeting — introduces the theme, cues each role, keeps energy and pacing." },
+        { "name": "General Evaluator", "body": "Runs the evaluation portion and gives the meeting itself a report card." },
+        { "name": "Speech Evaluator", "body": "Delivers a 2–3 minute evaluation of one prepared speech against the Pathways project criteria." },
+        { "name": "Topicsmaster", "body": "Runs the Table Topics session — writes questions, reads the room, and calls speakers." },
+        { "name": "Timer", "body": "Signals each speaker on time and reports the numbers." },
+        { "name": "Ah-Counter", "body": "Tracks filler words and reports back so speakers can hear their own habits." },
+        { "name": "Grammarian / Wordmaster", "body": "Picks a Word of the Day, notes language use, gives a report at the end." }
+      ]
     },
     {
       "eyebrow": "Officer positions",
       "heading": "Take on a club officer role",
-      "body": "Elected officer terms are six months. Roles include President, VP Education, VP Membership, VP Public Relations, Secretary, Treasurer, and Sergeant-at-Arms. Each role runs a piece of the club and represents real project-management practice — with a supportive board around you."
+      "body": "Elected officer terms are six months. Each role runs a piece of the club and represents real project-management practice — with a supportive board around you.",
+      "more_label": "Learn more",
+      "more_items": [
+        { "name": "President",            "body": "Leads the club, chairs the executive committee, sets the year's direction." },
+        { "name": "VP Education",         "body": "Programs the year — assigns Pathways mentors, schedules speeches, tracks progress." },
+        { "name": "VP Membership",        "body": "Recruits guests, onboards new members, handles retention." },
+        { "name": "VP Public Relations",  "body": "Marketing, social, external comms — the club's voice to the world." },
+        { "name": "Secretary",            "body": "Keeps meeting minutes, member records, and club correspondence." },
+        { "name": "Treasurer",            "body": "Runs dues, budget, and the annual filings." },
+        { "name": "Sergeant-at-Arms",     "body": "Sets up the room, brings the banner and timer, greets guests." }
+      ]
     },
     {
       "eyebrow": "Leadership Pathways",
       "heading": "Structured leadership tracks",
-      "body": "Several of the current Pathways paths focus directly on leadership — from running teams to setting long-range direction. Each path has five levels and its own rubric, so leadership becomes a set of practised, evaluated projects rather than an abstract idea."
+      "body": "Several of the current Pathways paths focus directly on leadership — from running teams to setting long-range direction. Each path has five levels and its own rubric, so leadership becomes a set of practised, evaluated projects rather than an abstract idea.",
+      "more_label": "Learn more",
+      "more_items": [
+        { "name": "Dynamic Leadership",       "body": "Leadership and communication styles, conflict management, organisational change, and public speaking applied to leadership." },
+        { "name": "Persuasive Influence",     "body": "Negotiation, interpersonal communication, and leadership through complex situations." },
+        { "name": "Motivational Strategies",  "body": "Building connections, understanding motivation, and leading small groups — culminates in a team-building project." },
+        { "name": "Visionary Communication",  "body": "Strategic communication, speech writing and delivery, and developing a long-term personal or professional vision." }
+      ]
     }
   ]
 }

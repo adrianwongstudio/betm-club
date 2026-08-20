@@ -200,6 +200,17 @@
     });
   })();
 
+  // ---------- Leadership "Learn more" collapsibles ----------
+  document.querySelectorAll('[data-lead-toggle]').forEach((btn) => {
+    const panel = btn.nextElementSibling;
+    if (!panel) return;
+    btn.addEventListener('click', () => {
+      const open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      panel.hidden = open;
+    });
+  });
+
   // ---------- Pathways path explorer (Communication page) ----------
   (() => {
     const select = document.querySelector('[data-pathway-select]');

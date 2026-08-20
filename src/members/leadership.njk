@@ -28,7 +28,23 @@ permalink: /members/leadership/
           <div class="eyebrow">{{ s.eyebrow }}</div>
           <h3 class="section-h2" style="font-size: 26px; margin: 12px 0 14px;">{{ s.heading }}</h3>
           <p style="font-size: 17px; line-height: 1.7; color: var(--secondary-ink); margin: 0;">{{ s.body }}</p>
-          {% if s.cta %}
+
+          {% if s.more_items and s.more_items.length %}
+            <button type="button" class="lead-section__toggle" data-lead-toggle aria-expanded="false">
+              {{ s.more_label or "Learn more" }}
+              <span class="lead-section__caret" aria-hidden="true">▾</span>
+            </button>
+            <div class="lead-section__more" hidden>
+              <ul class="lead-section__items">
+                {% for it in s.more_items %}
+                  <li>
+                    <div class="lead-section__item-name">{{ it.name }}</div>
+                    {% if it.body %}<p class="lead-section__item-body">{{ it.body }}</p>{% endif %}
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% elif s.cta %}
             <p style="margin: 16px 0 0;"><a class="text-link text-link--sm" href="{{ s.cta.href }}">{{ s.cta.label }}</a></p>
           {% endif %}
         </div>
