@@ -4,7 +4,7 @@
     <div>
       <div class="eyebrow eyebrow--yellow hero__eyebrow">{{ h.eyebrow }}</div>
       <h1>{{ h.headline_html | safe }}</h1>
-      <p class="hero__lead">{{ h.lead }}</p>
+      {% if h.lead %}<p class="hero__lead">{{ h.lead }}</p>{% endif %}
       <div class="hero__ctas">
         <a href="{{ h.primary_cta.href | url }}" class="btn btn--yellow">{{ h.primary_cta.label }}</a>
         <a href="{{ h.secondary_cta.href | url }}" class="btn btn--ghost">{{ h.secondary_cta.label }}</a>
